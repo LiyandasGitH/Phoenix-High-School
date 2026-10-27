@@ -1,0 +1,188 @@
+/* ==================================================
+    1. VARIABLES & DESIGN TOKENS
+   ================================================== */
+:root {
+    /* Brand Colors */
+    --primary-red: #8B0000;         /* Crimson Red */
+    --secondary-dark: #1E293B;      /* Slate / Black */
+    --accent-gold: #D97706;         /* Gold / Yellow Accent */
+    --bg-light: #F8FAFC;            /* off-white Backgorund */
+    --white: #FFFFFF;
+    --text-muted: #64748b;
+
+    /* Typography */
+    --font-heading: 'Helvetica Neue', Arial, sans-serif;
+    --font-body: 'Segoe UI', system-ui, sans-serif;
+
+    /* Spacing & Borders */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+
+    /* Layout */
+    --max-width: 1200px;
+}
+
+/* ==================================================
+    1. RESET & BASE STYLES
+   ================================================== */
+   *, *::before, *::after {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+   }
+
+   body {
+    font-family: var(--font-body);
+    background-color: var(--bg-light);
+    color: var(--secondary-dark);
+    line-height: 1.6;
+   }
+
+   h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    line-height: 1.2;
+   }
+
+   a {
+    text-decoration: none;
+    color: inherit;
+   }
+
+   img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+   }
+
+   /* ==================================================
+    3. LAYOUT & CONTAINERS
+   ================================================== */
+   .container {
+    width: 90%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+   }
+
+   .site-header {
+    background-color: var(--white);
+    border-bottom: 2px solid var(--primary-red);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+   }
+
+   .main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+   }
+
+   .site-footer {
+    background-color: var(--secondary-dark);
+    color: var(--white);
+    padding: 3rem 0 1.5rem;
+   }
+
+   /* ==================================================
+    4. REUSABLE COMPONENTS
+   ================================================== */
+   /* Buttons */
+   .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+   }
+
+   .btn-primary {
+    background-color: var(--primary-red);
+    color: var(--white);
+   }
+
+   .btn-primary:hover {
+    background-color: #6b0000;
+   }
+
+   .btn-secondary {
+    background-color: var(--accent-gold);
+    color: var(--secondary-dark);
+   }
+
+   /* Cards & Badges */
+   .card {
+    background: var(--white);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+   }
+
+   .badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.8rem;
+    background: var(--primary-red);
+    color: var(--white);
+    border-radius: var(--radius-sm);
+   }
+
+   /* Announcement Ticker */
+   .announcement-ticker {
+    background-color: var(--accent-gold);
+    color: var(--secondary-dark);
+    padding: 0.5rem 0;
+    font-weight: bold;
+   }
+
+   /* ==================================================
+    5. PAGE-SPECIFIC SECTIONS
+   ================================================== */
+   /* Hero Section */
+   .hero {
+    background: linear-gradient(rgba(30, 41, 59, 0.8), rgba(30, 41, 59, 0.8)), url('../images/hero-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    padding: 5rem 0;
+    text-align: center;
+   }
+
+   /* Grid Layouts for Cards (News, Extracurriculars) */
+   .grid-3 { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 1.5rem; 
+    margin: 2rem 0;
+    }
+
+    /* ==================================================
+    6. RESPONSIVE DESIGN (MEDIA QUERIES)
+    ================================================== */
+    /* Tablet & Mobile (under 768px) */
+    @media (max-width: 768px) {
+        .main-nav {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .nav-links {
+            display: none;     /* Toggles with JS */
+            width: 100%;
+            flex-direction: column;
+        }
+
+        .nav-links.active {
+            display: flex;
+        }
+
+        .grid-3 {
+            grid-template-columns: 1fr;     /* Stack cards vertically */
+        }
+
+        .hero {
+            padding: 3rem 1rem;
+        }
+    }
