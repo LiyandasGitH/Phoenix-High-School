@@ -6,6 +6,9 @@
 
 **Motto:** "Building Brighter Futures" / "Learn • Grow • Achieve"
 
+**Program:** WeThinkCode_Tech Enterprise
+**Schedule:** 08:00 - 16:00 SAST 
+
 ---
 
 ## 1. Executive Summary & Project Vision
@@ -14,7 +17,10 @@ Phoenix Secondary School requires a professional, robust, and culturally resonan
 
 Drawing from regional public school benchmarks (such as WCED portal integrations and bilingual accessibility) and international design standards (high-impact calls to action, clean information architecture, and storytelling), this document outlines a phased, scalable roadmap. 
 
-The primary focus is to celebrate the school's rich 43-year history (founded in 1983, rooted in anti-apartheid student activism), highlight unique academic milestones like the Kreisgymnasium Heinsberg German exchange programme, and streamline everyday access to critical school notices, admissions info, and downloadable resources.
+The primary focus of the website is to:
+* **Celebrate Insitutional History:** Honor the school's 43-year legacy (founded in 1983, deeply rooted in anti-apartheid student activism).
+* **Highlight Academic Exellence:** Feature signature initiatives such as the Kreisgymnasium Heinsberg German exchange partnership and top Matric achievements.
+* **Streamline Operations:** Provide frictionless access to critical school notices, admissions timelines, and downloadable resources.
 
 ---
 
@@ -129,4 +135,9 @@ To deliver value quickly while managing technical capacity, the project is broke
 - **Technical Security:** Enforce HTTPS, restrict administrative accounts, maintain regular code backups via GitHub, and establish a clear ownership schedule for content updates to prevent stale information.
 
 
-## Authors  
+## Authors  & Team Roles
+* **Team Lead / Documentation Lead:** Repository setup, task tracking, and evidence synthesis
+* **Research Member (Local Public Schools):** Regional public school benchmarking.
+* **Research Member (Local Private Schools):** High-end branding and portal feature analysis. 
+* **Research Member (International Schools):** Global UI/UX design trends and feature benchmarking (AISCT, Peak Academy, ISCT, DSK). 
+* **Research Member (Phoenix High Context):** Extracurriculars, school history, and community requirements.
