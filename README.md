@@ -127,5 +127,6 @@ To deliver value quickly while managing technical capacity, the project is broke
 - **Learner Protection:** Never publish private academic marks, attendance records, or unconsented student identifiers on public pages.
 - **Media Consent:** Strictly utilize approved photography and maintain a clear removal request protocol.
 - **Technical Security:** Enforce HTTPS, restrict administrative accounts, maintain regular code backups via GitHub, and establish a clear ownership schedule for content updates to prevent stale information.
--
 
+
+## Authors  
