@@ -3,6 +3,7 @@
    ================================================== */
 :root {
     /* Brand Palette */
+    --white: #FFFFFF;
     --primary-red: #8B0000;         /* Crimson Red */
     --primary-red-hover: #6B0000;   /* Darker Red for Hover States */
     --secondary-slate: #1E293B;     /* Slate / Dark Neutral */
@@ -219,6 +220,22 @@ ul {
     display: flex;
     align-items: center;
     gap: 1.5rem;
+}
+
+.site-logo {
+    color: var(--primary-red);
+    font-weight: 800;
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.hero h2 {
+    color: var(--white);
 }
 
 .nav-list {
@@ -639,10 +656,10 @@ ul {
         padding: 1.5rem;
         box-shadow: var(--shadow-md);
         border-bottom: 2px solid var(--primary-red);
-        display: none; /* Dynamic toggle with JS */
+        display: none;
     }
 
-    .main-nav.active {
+    .main-nav.is-open {
         display: flex;
     }
 
@@ -851,7 +868,6 @@ textarea:focus-visible {
         background: transparent !important;
     }
 }
-
 
 
 

@@ -20,12 +20,15 @@
 
         <!--    site header -->
         <header class="site-header">
-            <div class="container">
-                <a href="index.html" class="site-logo">
-                    <h1>Phoenix Secondary School</h1>
+            <div class="container header-container">
+                <a href="index.html" class="brand-logo">
+                    <img class="brand-crest" src="images/logo-crest.png" alt="">
+                    <span class="brand-text">
+                        <span class="school-name">Phoenix Secondary School</span>
+                        <span class="school-motto">Building Brighter Futures</span>
+                    </span>
                 </a>
 
-<!--                Needs to be hidden or reposition on larger screens in css, and should behave properly on mobile-->
                 <button
                     type="button"
                     class="mobile-toggle"
@@ -37,15 +40,14 @@
                     ☰
                 </button>
 
-
-                <nav id="site-nav" aria-label="Main navigation">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="academics.html">Academics</a>
-                    <a href="admissions.html">Admissions</a>
-                    <a href="student-life.html">Student Life</a>
-                    <a href="news.html">News</a>
-                    <a href="contact.html">Contact</a>
+                <nav id="site-nav" class="main-nav" aria-label="Main navigation">
+                    <a class="nav-link" href="index.html" aria-current="page">Home</a>
+                    <a class="nav-link" href="about.html">About</a>
+                    <a class="nav-link" href="academics.html">Academics</a>
+                    <a class="nav-link" href="admissions.html">Admissions</a>
+                    <a class="nav-link" href="phoenix-highschool/student-life.html">Student Life</a>
+                    <a class="nav-link" href="phoenix-highschool/news.html">News</a>
+                    <a class="nav-link" href="contact.html">Contact</a>
                 </nav>
             </div>
         </header>
@@ -55,8 +57,7 @@
             <div class="container ticker-content">
                 <span>
                     <span class="ticker-badge">Notice</span>
-<!--                    2027 Admissions Pop-Up Centre open Saturdays from 09:00 - 13:00-->
-                    2027 Admissions Pop-Up Centre Saturdays Coming
+                    2027 Admissions Pop-Up Centre dates will be announced soon.
                 </span>
             </div>
         </div>
@@ -66,27 +67,32 @@
 
         <!--    welcome section -->
             <section class="hero">
-                <h2>Welcome to Phoenix Secondary School!</h2>
-
-                <p>
+                <div class="hero-content">
+                    <p class="hero-tagline">Learn • Grow • Achieve</p>
+                    <h2 class="hero-title">Welcome to Phoenix Secondary School!</h2>
+                    <p class="hero-description">
                     Discover a learning community dedicated to academic achievement,
                     personal growth, sports, and preparing
                     learners for a successful future
-                </p>
+                    </p>
 
-                <div class="hero-ctas">
-                    <a href="admissions.html" class="btn btn-primary">
-                        Apply Now
-                    </a>
+                    <div class="hero-actions">
+                        <a href="admissions.html" class="btn btn-primary">
+                            Admissions Information
+                        </a>
 
-                    <a href="about.html" class="btn btn-secondary">
-                        Learn More About Us
-                    </a>
+                        <a href="about.html" class="btn btn-secondary">
+                            Learn More About Us
+                        </a>
+                    </div>
                 </div>
             </section>
 
-            <section aria-labelledby="highlights-heading">
-                <h2 id="highlights-heading">Explore Our School</h2>
+            <section class="section" aria-labelledby="highlights-heading">
+                <div class="section-header">
+                    <h2 id="highlights-heading" class="section-title">Explore Our School</h2>
+                    <p class="section-subtitle">Discover learning, activities, and community at Phoenix.</p>
+                </div>
 
                 <div class="grid-3">
 
@@ -176,6 +182,6 @@
             </div>
         </footer>
 
-        <script src="phoenix-highschool/js/main.js" defer></script>
+        <script src="js/main.js" defer></script>
     </body>
 </html>
