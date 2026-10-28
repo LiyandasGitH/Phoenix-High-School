@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description"
+              content="Welcome to Phoenix High Secondary School. Explore our academics, sports, and admissions information.">
+
+        <title>Phoenix Secondary School | Home</title>
+
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+
+    <body>
+
+        <a href="#main-content" class="skip-link">
+            Skip to main content
+        </a>
+
+        <!--    site header -->
+        <header class="site-header">
+            <div class="container">
+                <a href="index.html" class="site-logo">
+                    <h1>Phoenix Secondary School</h1>
+                </a>
+
+<!--                Needs to be hidden or reposition on larger screens in css, and should behave properly on mobile-->
+                <button
+                    type="button"
+                    class="mobile-toggle"
+                    data-nav-toggle
+                    aria-label="Open menu"
+                    aria-expanded="false"
+                    aria-controls="site-nav">
+                    <span class="sr-only">Open main menu</span>
+                    ☰
+                </button>
+
+
+                <nav id="site-nav" aria-label="Main navigation">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="academics.html">Academics</a>
+                    <a href="admissions.html">Admissions</a>
+                    <a href="student-life.html">Student Life</a>
+                    <a href="news.html">News</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- announcement ticker -->
+        <div class="announcement-ticker">
+            <div class="container ticker-content">
+                <span>
+                    <span class="ticker-badge">Notice</span>
+<!--                    2027 Admissions Pop-Up Centre open Saturdays from 09:00 - 13:00-->
+                    2027 Admissions Pop-Up Centre Saturdays Coming
+                </span>
+            </div>
+        </div>
+
+        <!-- main content -->
+        <main id="main-content" class="container">
+
+        <!--    welcome section -->
+            <section class="hero">
+                <h2>Welcome to Phoenix Secondary School!</h2>
+
+                <p>
+                    Discover a learning community dedicated to academic achievement,
+                    personal growth, sports, and preparing
+                    learners for a successful future
+                </p>
+
+                <div class="hero-ctas">
+                    <a href="admissions.html" class="btn btn-primary">
+                        Apply Now
+                    </a>
+
+                    <a href="about.html" class="btn btn-secondary">
+                        Learn More About Us
+                    </a>
+                </div>
+            </section>
+
+            <section aria-labelledby="highlights-heading">
+                <h2 id="highlights-heading">Explore Our School</h2>
+
+                <div class="grid-3">
+
+                    <article class="card">
+                        <div class="card-body">
+                            <span class="badge badge-gold">About</span>
+                            <h3 class="card-title">About Us</h3>
+                            <p class="card-text">
+                                Learn more about our school,
+                                our mission and our goals.
+                            </p>
+                            <a href="about.html" class="btn btn-secondary">
+                                Learn About Us
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-body">
+                            <span class="badge badge-red">Academic</span>
+                            <h3 class="card-title">Academics</h3>
+                            <p class="card-text">
+                                Explore educational opportunities that
+                                encourage learning and academic excellence.
+                            </p>
+                            <a href="academics.html" class="btn btn-primary">
+                                Explore Our Academics
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-body">
+                            <span class="badge badge-gold">Sports</span>
+                            <h3 class="card-title">Sports & Activities</h3>
+                            <p class="card-text">
+                                Discover opportunities for teamwork,
+                                fitness, leadership, and school spirit.
+                            </p>
+                            <a href="phoenix-highschool/student-life.html" class="btn btn-secondary">
+                                Discover Student Life
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-body">
+                            <span class="badge badge-red">Admissions</span>
+                            <h3 class="card-title">Join Phoenix</h3>
+                            <p class="card-text">
+                                Find admissions information and learn
+                                how to begin your registration process.
+                            </p>
+                            <a href="admissions.html" class="btn btn-primary">
+                                Admissions Information
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-body">
+                            <span class="badge badge-red">News</span>
+                            <h3 class="card-title">School News</h3>
+                            <p class="card-text">
+                                Keep up with school announcements and recent activities.
+                            </p>
+                            <a href="phoenix-highschool/news.html" class="btn btn-secondary">
+                                Read School News
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+        </main>
+
+        <!-- site footer -->
+        <footer class="site-footer">
+            <div class="container">
+                <p>
+                    &copy; Phoenix Secondary School.
+                    All rights reserved.
+                </p>
+                <p>
+                    <a href="contact.html">Contact the School</a>
+                </p>
+            </div>
+        </footer>
+
+        <script src="phoenix-highschool/js/main.js" defer></script>
+    </body>
+</html>
