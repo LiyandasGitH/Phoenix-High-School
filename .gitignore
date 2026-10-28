@@ -1,0 +1,26 @@
+## IDE settings
+.idea/
+.vscode/
+*.iws
+
+## secrets
+.env
+.log
+
+## build tools
+target/
+.gradle/
+build/
+
+## package files
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+
+## compiled sources
+.class
+
+
