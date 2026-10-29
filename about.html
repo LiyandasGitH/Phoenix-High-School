@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn about Phoenix Secondary School, its community, values, and identity in Manenberg, Cape Town.">
+    <meta name="description" content="The history, identity and leadership of Phoenix Secondary School in Manenberg, Cape Town — a dual-medium school serving the Cape Flats since 1983.">
     <title>About | Phoenix Secondary School</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/about-academics.css">
     <script src="js/main.js" defer></script>
 </head>
-<body>
+<body class="page-about">
     <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <header class="site-header">
         <div class="container header-container">
             <a href="index.html" class="brand-logo">
@@ -33,46 +35,458 @@
             </nav>
         </div>
     </header>
-    <main id="main-content" class="container">
-        <section class="section">
-            <div class="section-header">
-                <h1 class="section-title">About Phoenix</h1>
-                <p class="section-subtitle">A school community rooted in Manenberg, Cape Town.</p>
-            </div>
-            <div class="grid-2">
-                <article class="card">
-                    <div class="card-body">
-                        <h2 class="card-title">Our community</h2>
-                        <p class="card-text">Phoenix Secondary School serves learners and families in Manenberg. We are committed to a welcoming school environment where young people can learn, grow, and work toward their goals.</p>
+
+    <main id="main-content">
+
+        <!-- ============================================
+             HERO
+             ============================================ -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <p class="hero-tagline">Phoenix Sekondêr • Est. 1983</p>
+                    <h1 class="hero-title">About Phoenix</h1>
+                    <p class="hero-description">
+                        A dual-medium school rooted in Manenberg, and a beacon of hope and resilience
+                        on the Cape Flats for more than four decades.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#our-history" class="btn btn-primary">Read our history</a>
+                        <a href="#principal" class="btn btn-outline">Message from the Principal</a>
                     </div>
-                </article>
-                <article class="card">
-                    <div class="card-body">
-                        <h2 class="card-title">Our values</h2>
-                        <p class="card-text">Our motto, “Building Brighter Futures,” reflects a focus on learning, respect, responsibility, and participation in the school community.</p>
-                    </div>
-                </article>
+                </div>
             </div>
         </section>
+
+        <!-- ============================================
+             OUR HISTORY — timeline
+             ============================================ -->
+        <section class="section" id="our-history">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Our history</h2>
+                    <p class="section-subtitle">
+                        Phoenix was not built in comfortable times, and that history still shapes who we are.
+                    </p>
+                </div>
+
+                <div class="grid-2">
+                    <ol class="timeline">
+                        <li class="timeline-item">
+                            <span class="timeline-year">1966</span>
+                            <h3 class="timeline-title">Manenberg is established</h3>
+                            <p class="timeline-text">
+                                The apartheid government creates Manenberg as a township for low-income
+                                Coloured families removed from District Six and Constantia. The community's
+                                story begins with forced displacement.
+                            </p>
+                        </li>
+                        <li class="timeline-item is-highlight">
+                            <span class="timeline-year">1983</span>
+                            <h3 class="timeline-title">Phoenix opens its doors</h3>
+                            <p class="timeline-text">
+                                Phoenix Secondary School is founded on Silverstream Road as a dual-medium
+                                school offering Grades 8 to 12 in both English and Afrikaans — a decision
+                                that still defines how the school serves its community.
+                            </p>
+                        </li>
+                        <li class="timeline-item">
+                            <span class="timeline-year">1980s</span>
+                            <h3 class="timeline-title">Forged in the struggle</h3>
+                            <p class="timeline-text">
+                                Manenberg's anti-apartheid activism is nurtured at its three high schools —
+                                Phoenix High, Silverstream High and Manenberg High — by politically aware
+                                educators. Learners and teachers organise through the Manenberg Action
+                                Student Congress (MASCO) and the Manenberg Action Committee (MAC), using
+                                music, drama and poetry to speak against the regime.
+                            </p>
+                        </li>
+                        <li class="timeline-item">
+                            <span class="timeline-year">2009</span>
+                            <h3 class="timeline-title">A partnership with Germany begins</h3>
+                            <p class="timeline-text">
+                                The Kreisgymnasium Heinsberg in North Rhine-Westphalia opens a learner
+                                exchange with Phoenix. Seventeen years later it is still running.
+                            </p>
+                        </li>
+                        <li class="timeline-item">
+                            <span class="timeline-year">2010</span>
+                            <h3 class="timeline-title">The Phoenix Cycling Club</h3>
+                            <p class="timeline-text">
+                                Bicycles donated through the Aachen–Cape Town partnership become a school
+                                cycling club, giving learners a way to travel safely to and from school.
+                            </p>
+                        </li>
+                        <li class="timeline-item">
+                            <span class="timeline-year">2011</span>
+                            <h3 class="timeline-title">The school writes its name on the wall</h3>
+                            <p class="timeline-text">
+                                A joint mural project with German partners paints the Phoenix name and crest
+                                across a front wall of the building, visible from the surrounding streets.
+                            </p>
+                        </li>
+                        <li class="timeline-item">
+                            <span class="timeline-year">2018</span>
+                            <h3 class="timeline-title">Balls Not Guns launches at Phoenix</h3>
+                            <p class="timeline-text">
+                                The street-sports initiative is officially launched at our school, and a
+                                Phoenix educator serves as its coordinator. Its leagues still play their
+                                finals on our fields.
+                            </p>
+                        </li>
+                        <li class="timeline-item">
+                            <span class="timeline-year">2025</span>
+                            <!-- VERIFY: confirm the 2025 NSC pass rate with the SMT before publishing -->
+                            <h3 class="timeline-title">76.9% — and rising</h3>
+                            <p class="timeline-text">
+                                Our National Senior Certificate pass rate climbs to 76.9%, up from 64.2%
+                                in 2023, while the school hosts its fourth annual Manenberg career expo
+                                with Manenberg SAPS, the WCED and Safe Schools.
+                            </p>
+                        </li>
+                        <li class="timeline-item">
+                            <span class="timeline-year">2026</span>
+                            <h3 class="timeline-title">Welcomed in Heinsberg</h3>
+                            <p class="timeline-text">
+                                A Phoenix delegation is officially received at the Kreis Heinsberg district
+                                office in Germany, after seventeen years of exchange.
+                            </p>
+                        </li>
+                    </ol>
+
+                    <div>
+                        <article class="card highlight-card">
+                            <div class="card-body">
+                                <span class="badge badge-gold">Our name</span>
+                                <h3 class="card-title">Why "Phoenix"?</h3>
+                                <p class="card-text">
+                                    A phoenix is a bird that burns and rises again from its own ashes.
+                                    For a school built for a community that was displaced and then left to
+                                    rebuild itself, the name was never decorative. It is a promise.
+                                </p>
+                                <blockquote class="pull-quote">
+                                    <p>
+                                        "As long as the community keeps the flame of hope alive at Phoenix
+                                        High, we will rise from the ashes and soar to the skies once again."
+                                    </p>
+                                    <footer>— Shameeg Fredericks, Principal</footer>
+                                </blockquote>
+                            </div>
+                        </article>
+
+                        <article class="card" style="margin-top: 1.5rem;">
+                            <div class="card-body">
+                                <span class="badge badge-red">43 years</span>
+                                <h3 class="card-title">Still here, still teaching</h3>
+                                <p class="card-text">
+                                    Since 1983 this school has graduated learners through a state of
+                                    emergency, a transition to democracy, and every wave of change in
+                                    Manenberg since. Generations of families in this community are
+                                    Phoenix families — parents and grandparents who sat in the same
+                                    classrooms their children sit in today.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             PRINCIPAL'S WELCOME
+             ============================================ -->
+        <section class="section section-alt" id="principal">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">A message from the Principal</h2>
+                    <p class="section-subtitle">Shameeg Fredericks, Principal of Phoenix Secondary School</p>
+                </div>
+
+                <div class="principal-block">
+                    <!-- VERIFY: replace with an approved photograph of the Principal -->
+                    <div class="principal-portrait">
+                        <span>Principal's photograph<br>(pending approval)</span>
+                    </div>
+
+                    <div class="principal-message">
+                        <p>
+                            Welcome to Phoenix Secondary School.
+                        </p>
+                        <p>
+                            When people hear the name Manenberg, they often think first of gangsterism,
+                            vandalism and substance abuse. We are working every day to change that
+                            perception — and to make this school the beacon of hope and resilience it
+                            has always been for this community.
+                        </p>
+                        <p>
+                            Our learners grow up inside real and difficult circumstances. Our task is
+                            not to pretend otherwise. Our task is to give every one of them a quality
+                            education, a safe place to be during the day, and adults who believe in
+                            them without conditions. We do that in partnership: with parents, with the
+                            police, with the Western Cape Education Department, with NGOs and
+                            neighbourhood watches, and with our friends at the Kreisgymnasium
+                            Heinsberg in Germany.
+                        </p>
+                        <p>
+                            To parents considering Phoenix for your child: come and see the school.
+                            Meet the teachers. Look at what our learners achieve in a classroom, on a
+                            soccer field, and on a stage. And to our learners: your future is not in a
+                            gang, and it is not decided for you. It is built here, one subject, one
+                            practice, one day at a time.
+                        </p>
+                        <p>
+                            As long as the community keeps the flame of hope alive at Phoenix, we will
+                            rise from the ashes and soar to the skies once again.
+                        </p>
+
+                        <div class="principal-signoff">
+                            <strong>Shameeg Fredericks</strong>
+                            <span>Principal, Phoenix Secondary School</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             BY THE NUMBERS
+             ============================================ -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Phoenix at a glance</h2>
+                </div>
+                <ul class="stat-strip">
+                    <li class="stat">
+                        <span class="stat-value">1983</span>
+                        <span class="stat-label">Year the school was founded</span>
+                    </li>
+                    <li class="stat">
+                        <span class="stat-value">43</span>
+                        <span class="stat-label">Years serving Manenberg</span>
+                    </li>
+                    <li class="stat">
+                        <span class="stat-value">2</span>
+                        <span class="stat-label">Mediums of instruction:<br>English &amp; Afrikaans</span>
+                    </li>
+                    <li class="stat">
+                        <span class="stat-value">17</span>
+                        <span class="stat-label">Years of the German<br>exchange partnership</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ============================================
+             IDENTITY & ETHOS
+             ============================================ -->
         <section class="section section-alt">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Learn more</h2>
-                    <p class="section-subtitle">Explore the opportunities and information available on our website.</p>
+                    <h2 class="section-title">Who we are</h2>
+                    <p class="section-subtitle">
+                        A dual-medium, no-nonsense, community-first secondary school.
+                    </p>
                 </div>
-                <div class="quick-hub-grid">
-                    <a class="quick-box" href="academics.html"><h3>Academics</h3><p>Explore curriculum and learning programmes.</p></a>
-                    <a class="quick-box" href="phoenix-highschool/student-life.html"><h3>Student life</h3><p>Discover sports, culture, and learner leadership.</p></a>
-                    <a class="quick-box" href="contact.html"><h3>Get in touch</h3><p>Find the school address and contact information.</p></a>
+
+                <div class="grid-2">
+                    <article class="card">
+                        <div class="card-body">
+                            <span class="badge badge-red">Identity</span>
+                            <h3 class="card-title">Dual-medium, one school</h3>
+                            <p class="card-text">
+                                Phoenix teaches Grades 8 to 12 in both English and Afrikaans. For families
+                                on the Cape Flats, that matters: a learner can be taught in the language
+                                they think in, and parents can follow their child's schooling in their own
+                                language. Being dual-medium is one of the clearest expressions of who we
+                                serve.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-body">
+                            <span class="badge badge-red">Ethos</span>
+                            <h3 class="card-title">Building Brighter Futures</h3>
+                            <p class="card-text">
+                                Our motto is a statement of intent rather than a slogan. It commits us to
+                                three things: that learning comes first, that every learner is treated
+                                with dignity, and that the school belongs to the community around it.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- VERIFY: confirm these four values with the SMT before publishing -->
+                <div class="grid-4" style="margin-top: 1.5rem;">
+                    <article class="card highlight-card">
+                        <div class="card-body">
+                            <h3 class="card-title">Learning</h3>
+                            <p class="card-text">Academic work is the core of the school day, not an add-on.</p>
+                        </div>
+                    </article>
+                    <article class="card highlight-card">
+                        <div class="card-body">
+                            <h3 class="card-title">Respect</h3>
+                            <p class="card-text">Learners, staff and parents treat one another with dignity.</p>
+                        </div>
+                    </article>
+                    <article class="card highlight-card">
+                        <div class="card-body">
+                            <h3 class="card-title">Responsibility</h3>
+                            <p class="card-text">We own our choices, our work and our part in the community.</p>
+                        </div>
+                    </article>
+                    <article class="card highlight-card">
+                        <div class="card-body">
+                            <h3 class="card-title">Participation</h3>
+                            <p class="card-text">Sport, culture and service belong to a complete education.</p>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
+
+        <!-- ============================================
+             OUR COMMUNITY
+             ============================================ -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Our community</h2>
+                    <p class="section-subtitle">Manenberg is not the background to this school. It is the reason for it.</p>
+                </div>
+
+                <div class="grid-2">
+                    <div>
+                        <p style="margin-bottom: 1rem;">
+                            Phoenix sits in the middle of Manenberg, a community built by forced removals
+                            in 1966 and shaped ever since by poverty, unemployment and gang violence —
+                            and equally by churches, neighbourhood watches, sports clubs, and generations
+                            of families who refused to give up on the place.
+                        </p>
+                        <p style="margin-bottom: 1rem;">
+                            We do not describe our learners by their circumstances. We describe them by
+                            what they do: the matriculants who pass, the soccer teams that beat schools
+                            with far more resources, the learners who board a plane to Germany, and the
+                            old scholars who come back and teach here.
+                        </p>
+                        <p>
+                            What we ask of the community is simple — keep the flame of hope alive.
+                            What we owe the community in return is a school that is worth that hope.
+                        </p>
+                    </div>
+
+                    <article class="card">
+                        <div class="card-body">
+                            <span class="badge badge-gold">Partners</span>
+                            <h3 class="card-title">We do not do this alone</h3>
+                            <p class="card-text" style="margin-bottom: 1rem;">
+                                Our work is supported by a network of partners who show up for this community:
+                            </p>
+                            <ul class="checklist-card" style="list-style: none; padding: 1.25rem;">
+                                <li class="checklist-item">
+                                    <span class="check-icon" aria-hidden="true">✓</span>
+                                    <span>Kreisgymnasium Heinsberg, Germany — learner exchange since 2009</span>
+                                </li>
+                                <li class="checklist-item">
+                                    <span class="check-icon" aria-hidden="true">✓</span>
+                                    <span>Manenberg SAPS and the Western Cape Education Department (Safe Schools)</span>
+                                </li>
+                                <li class="checklist-item">
+                                    <span class="check-icon" aria-hidden="true">✓</span>
+                                    <span>Balls Not Guns and local sports initiatives</span>
+                                </li>
+                                <li class="checklist-item">
+                                    <span class="check-icon" aria-hidden="true">✓</span>
+                                    <span>Neighbourhood watches, NGOs and community organisations across Manenberg</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             EXPLORE MORE
+             ============================================ -->
+        <section class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Explore Phoenix</h2>
+                    <p class="section-subtitle">Where would you like to go next?</p>
+                </div>
+                <div class="quick-hub-grid">
+                    <a class="quick-box" href="academics.html">
+                        <h3>Academics</h3>
+                        <p>The CAPS curriculum and our German exchange programme.</p>
+                    </a>
+                    <a class="quick-box" href="admissions.html">
+                        <h3>Admissions</h3>
+                        <p>How to apply, what documents you need, and where to get help.</p>
+                    </a>
+                    <a class="quick-box" href="contact.html">
+                        <h3>Contact us</h3>
+                        <p>Silverstream Road, Manenberg. Phone, email and office hours.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             CTA
+             ============================================ -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Come and see the school</h2>
+                    <p class="section-subtitle">
+                        The best way to understand Phoenix is to walk through it. Contact the office to
+                        arrange a visit, or speak to us about admissions for the next school year.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="admissions.html">Admissions information</a>
+                        <a class="btn btn-secondary" href="contact.html">Contact the school</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
+
     <footer class="site-footer">
         <div class="container">
-            <p>Phoenix Secondary School (Phoenix Sekondêr) • Silverstream Road, Manenberg, Cape Town, 7764</p>
-            <p><a href="tel:+27216384577">(021) 638 4577</a> • <a href="mailto:phoenixsecondaryschool@gmail.com">phoenixsecondaryschool@gmail.com</a></p>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Phoenix Secondary School</h3>
+                    <p>Phoenix Sekondêr · Building Brighter Futures</p>
+                    <p>A dual-medium public school serving Manenberg since 1983.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Find us</h3>
+                    <p>Silverstream Road<br>Manenberg, Cape Town<br>7764</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <p><a href="tel:+27216384577">(021) 638 4577</a></p>
+                    <p><a href="/cdn-cgi/l/email-protection#5121393e343f38292234323e3f353023282232393e3e3d11363c30383d7f323e3c"><span class="__cf_email__" data-cfemail="f7879f9892999e8f84929498999396858e84949f98989bb7909a969e9bd994989a">[email&#160;protected]</span></a></p>
+                    <p><a href="/cdn-cgi/l/email-protection#75051d1a101b1c0d5b061016350216101106161d1a1a19065b121a035b0f14"><span class="__cf_email__" data-cfemail="74041c1b111a1d0c5a071117340317111007171c1b1b18075a131b025a0e15">[email&#160;protected]</span></a></p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick links</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="academics.html">Academics</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Phoenix Secondary School. All rights reserved.</p>
+            </div>
         </div>
     </footer>
-</body>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
 </html>

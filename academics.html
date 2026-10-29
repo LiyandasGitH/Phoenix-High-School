@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Academic information and learning programmes at Phoenix Secondary School.">
+    <meta name="description" content="The CAPS curriculum, subjects, assessment and the Kreisgymnasium Heinsberg German exchange programme at Phoenix Secondary School, Manenberg.">
     <title>Academics | Phoenix Secondary School</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/about-academics.css">
     <script src="js/main.js" defer></script>
 </head>
-<body>
+<body class="page-academics">
     <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <header class="site-header">
         <div class="container header-container">
             <a href="index.html" class="brand-logo">
@@ -33,51 +35,447 @@
             </nav>
         </div>
     </header>
-    <main id="main-content" class="container">
-        <section class="section">
-            <div class="section-header">
-                <h1 class="section-title">Academics</h1>
-                <p class="section-subtitle">Learning, assessment, and opportunities for Phoenix learners.</p>
-            </div>
-            <div class="grid-3">
-                <article class="card">
-                    <div class="card-body">
-                        <span class="badge badge-red">Grades 8–12</span>
-                        <h2 class="card-title">Curriculum</h2>
-                        <p class="card-text">The school follows the South African CAPS curriculum. Contact the school for current subject choices and grade-specific information.</p>
+
+    <main id="main-content">
+
+        <!-- ============================================
+             HERO
+             ============================================ -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <p class="hero-tagline">Grades 8 – 12 • English &amp; Afrikaans</p>
+                    <h1 class="hero-title">Academics at Phoenix</h1>
+                    <p class="hero-description">
+                        A National Curriculum (CAPS) education from Grade 8 to the National Senior
+                        Certificate — taught in two languages, and opened up by a seventeen-year
+                        partnership with a school in Germany.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#curriculum" class="btn btn-primary">Explore the curriculum</a>
+                        <a href="#exchange" class="btn btn-outline">The German exchange</a>
                     </div>
-                </article>
-                <article class="card">
-                    <div class="card-body">
-                        <span class="badge badge-gold">Partnership</span>
-                        <h2 class="card-title">German exchange</h2>
-                        <p class="card-text">The school highlights a partnership with Kreisgymnasium Heinsberg. Programme availability and selection details should be confirmed with the school.</p>
-                    </div>
-                </article>
-                <article class="card">
-                    <div class="card-body">
-                        <span class="badge badge-red">Support</span>
-                        <h2 class="card-title">Assessment and support</h2>
-                        <p class="card-text">Learners and families can contact the school for assessment dates, academic support arrangements, and individual timetable information.</p>
-                    </div>
-                </article>
+                </div>
             </div>
         </section>
+
+        <!-- ============================================
+             CURRICULUM OVERVIEW
+             ============================================ -->
+        <section class="section" id="curriculum">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">The curriculum</h2>
+                    <p class="section-subtitle">
+                        Phoenix follows the National Curriculum and Assessment Policy Statement (CAPS),
+                        as set by the Department of Basic Education and administered in the Western Cape
+                        by the WCED.
+                    </p>
+                </div>
+
+                <div class="grid-2">
+                    <article class="card">
+                        <div class="card-body">
+                            <span class="badge badge-red">Grades 8 – 9</span>
+                            <h3 class="card-title">Senior Phase</h3>
+                            <p class="card-text" style="margin-bottom: 0.75rem;">
+                                Learners follow a broad, compulsory programme across all learning areas.
+                                The purpose of these two years is simple: build the reading, writing,
+                                mathematical and thinking foundations that make subject choices at the end
+                                of Grade 9 possible.
+                            </p>
+                            <p class="card-text">
+                                Grade 9 closes with the WCED systemic assessment, alongside the school's
+                                own year-end examinations.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-body">
+                            <span class="badge badge-gold">Grades 10 – 12</span>
+                            <h3 class="card-title">Further Education &amp; Training Phase</h3>
+                            <p class="card-text" style="margin-bottom: 0.75rem;">
+                                Learners narrow to a subject package that leads to the
+                                <strong>National Senior Certificate (NSC)</strong> at the end of Grade 12.
+                                Subject choice at the end of Grade 9 is the single most important academic
+                                decision a Phoenix learner makes — it determines what they can study after
+                                school.
+                            </p>
+                            <p class="card-text">
+                                Guidance on subject packages is provided by the school before Grade 10
+                                registration.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- VERIFY: confirm the exact subject offering for the current year with the SMT -->
+                <div class="section-header" style="margin-top: 3rem;">
+                    <h3 class="section-title" style="font-size: 1.35rem;">Learning areas</h3>
+                    <p class="section-subtitle">
+                        Phoenix offers subjects across the standard CAPS learning areas below.
+                        The exact subject list for a given year is confirmed at registration.
+                    </p>
+                </div>
+
+                <div class="grid-3">
+                    <article class="card highlight-card">
+                        <div class="card-body">
+                            <span class="badge badge-red">Languages</span>
+                            <h3 class="card-title">English &amp; Afrikaans</h3>
+                            <p class="card-text">
+                                Home Language and First Additional Language. Both languages are mediums of
+                                instruction at Phoenix, so language teaching is not a side issue here — it
+                                is the foundation of the whole curriculum.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="card highlight-card">
+                        <div class="card-body">
+                            <span class="badge badge-red">Mathematics</span>
+                            <h3 class="card-title">Mathematics &amp; Maths Literacy</h3>
+                            <p class="card-text">
+                                Learners take either Mathematics or Mathematical Literacy. The choice
+                                affects which tertiary courses are open to them, and is made with the
+                                school's guidance.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="card highlight-card">
+                        <div class="card-body">
+                            <span class="badge badge-red">Sciences</span>
+                            <h3 class="card-title">Physical &amp; Life Sciences</h3>
+                            <p class="card-text">
+                                Science teaching is supported by practical work in the school's science
+                                laboratories.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="card highlight-card">
+                        <div class="card-body">
+                            <span class="badge badge-red">Commerce</span>
+                            <h3 class="card-title">Accounting &amp; Business Studies</h3>
+                            <p class="card-text">
+                                The commerce stream prepares learners for careers in finance, business and
+                                entrepreneurship.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="card highlight-card">
+                        <div class="card-body">
+                            <span class="badge badge-red">Humanities</span>
+                            <h3 class="card-title">Geography &amp; History</h3>
+                            <p class="card-text">
+                                History matters in a school built in the 1980s in Manenberg. Our learners
+                                study the country they live in with real context to draw on.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="card highlight-card">
+                        <div class="card-body">
+                            <span class="badge badge-red">Life Orientation</span>
+                            <h3 class="card-title">Life Orientation</h3>
+                            <p class="card-text">
+                                Compulsory for all learners: life skills, citizenship, careers, health and
+                                physical education.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             GERMAN EXCHANGE FEATURE
+             ============================================ -->
+        <section class="section section-alt" id="exchange">
+            <div class="container">
+                <div class="feature-panel">
+                    <span class="badge">Signature programme</span>
+                    <h2 style="margin: 0.75rem 0 1rem;">The Kreisgymnasium Heinsberg exchange</h2>
+                    <p class="feature-lead" style="margin-bottom: 2rem;">
+                        Since 2009, Phoenix Secondary School has partnered with the Kreisgymnasium
+                        Heinsberg — a secondary school in North Rhine-Westphalia, Germany — to send Grade
+                        11 learners abroad and host German learners here in Manenberg. Phoenix is the
+                        <strong>only African partner school</strong> in the Kreisgymnasium's international
+                        programme, alongside partners in Greece, Hungary, the USA, Belgium and the
+                        Netherlands.
+                    </p>
+
+                    <div class="grid-2">
+                        <div>
+                            <h3 style="font-size: 1.2rem; margin-bottom: 1rem;">How the exchange works</h3>
+                            <ul class="checklist-card" style="list-style: none;">
+                                <li class="checklist-item">
+                                    <span class="check-icon" aria-hidden="true">✓</span>
+                                    <span><strong>Alternating visits.</strong> One year a German group travels to Cape Town; the next, a Phoenix group travels to Heinsberg.</span>
+                                </li>
+                                <li class="checklist-item">
+                                    <span class="check-icon" aria-hidden="true">✓</span>
+                                    <span><strong>Home stays.</strong> Each learner is paired with a host learner and lives with their family for the duration of the visit — the part past participants say changes them most.</span>
+                                </li>
+                                <li class="checklist-item">
+                                    <span class="check-icon" aria-hidden="true">✓</span>
+                                    <span><strong>Around 15 Grade 11 learners per cycle.</strong> Selection is made by the school; learners who have not repeated a grade are prioritised.</span>
+                                </li>
+                                <li class="checklist-item">
+                                    <span class="check-icon" aria-hidden="true">✓</span>
+                                    <span><strong>More than a tour.</strong> Groups work on a joint project together — painting school walls, building a school garden — and then travel: Cologne, Aachen, Amsterdam and Paris on recent trips.</span>
+                                </li>
+                                <li class="checklist-item">
+                                    <span class="check-icon" aria-hidden="true">✓</span>
+                                    <span><strong>Funded by the community.</strong> Travel costs have historically been around R12 000 per learner. Families fundraise — and so does the school.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 style="font-size: 1.2rem; margin-bottom: 1rem;">The partnership at a glance</h3>
+                            <dl>
+                                <dt>Partner school</dt>
+                                <dd>Kreisgymnasium Heinsberg, North Rhine-Westphalia, Germany</dd>
+                                <dt>Established</dt>
+                                <dd>2009, on the initiative of then-KGH head Annegret Krewald</dd>
+                                <dt>Current KGH leadership</dt>
+                                <dd>Christof Schröder (head), Caroline Wolff and Alexander Dohmen (exchange coordinators)</dd>
+                                <dt>Frequency</dt>
+                                <dd>Annual, alternating direction</dd>
+                                <dt>Who travels</dt>
+                                <dd>Approximately 15 Grade 11 learners per cycle</dd>
+                                <dt>Joint projects</dt>
+                                <dd>The 2011 school-name mural, a partner-funded school garden, the 2010 Phoenix Cycling Club, and a 2022 dining-hall wall project</dd>
+                                <dt>Most recent visit</dt>
+                                <dd>July 2026 — our delegation was officially received at the Kreis Heinsberg district office by Landrat Stephan Pusch</dd>
+                            </dl>
+                            <p style="margin-top: 1.5rem;">
+                                <a class="btn btn-secondary" href="contact.html">Enquire about the exchange</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <blockquote class="pull-quote" style="border-left-color: var(--accent-gold); margin-top: 2.5rem;">
+                        <p style="color: #FFFFFF; font-size: 1.15rem;">
+                            "For many of our learners this is a once-in-a-lifetime experience. We are
+                            appealing for support towards the travelling costs of approximately R12 000
+                            per learner."
+                        </p>
+                        <footer style="color: #CBD5E1;">— Principal Shameeg Fredericks, on the exchange fundraising appeal</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             ASSESSMENT
+             ============================================ -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">How learners are assessed</h2>
+                    <p class="section-subtitle">
+                        In the FET phase (Grades 10–12), the NSC is made up of two parts.
+                    </p>
+                </div>
+
+                <div class="grid-2">
+                    <article class="card">
+                        <div class="card-body">
+                            <span class="badge badge-red">25%</span>
+                            <h3 class="card-title">School-Based Assessment</h3>
+                            <p class="card-text">
+                                Continuous assessment during the year: tests, practical work, projects,
+                                oral work and assignments, set and marked by the school. This is where
+                                consistent day-to-day work converts into marks.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-body">
+                            <span class="badge badge-red">75%</span>
+                            <h3 class="card-title">Final Examinations</h3>
+                            <p class="card-text">
+                                The externally set and moderated NSC examination at the end of Grade 12,
+                                written in October and November and set by the Department of Basic
+                                Education.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+                <p style="margin-top: 1.25rem; color: var(--text-muted); font-size: 0.9rem;">
+                    <!-- VERIFY: confirm current SBA / exam weighting and promotion requirements with the SMT -->
+                    Weightings and promotion requirements are set nationally in the CAPS programme of
+                    assessment; contact the school office for the specific requirements applicable to a
+                    given grade.
+                </p>
+            </div>
+        </section>
+
+        <!-- ============================================
+             RESULTS
+             ============================================ -->
+        <section class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Our National Senior Certificate results</h2>
+                    <p class="section-subtitle">Our pass rate has moved sharply upward.</p>
+                </div>
+
+                <div class="grid-2">
+                    <div>
+                        <table class="result-table">
+                            <caption>NSC pass rate, Phoenix Secondary School (Manenberg)</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Year</th>
+                                    <th scope="col">Pass rate</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td scope="row">2023</td>
+                                    <td>64.2%</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">2025</td>
+                                    <td><strong>76.9%</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--text-muted);">
+                            <!-- VERIFY: figures must be confirmed by the school before publishing.
+                                 Do not substitute statistics from other schools named Phoenix Secondary School. -->
+                            Figures as announced by the school.
+                        </p>
+                    </div>
+                    <div>
+                        <p style="margin-bottom: 1rem;">
+                            A pass rate is a single number standing in for hundreds of individual stories.
+                            Behind the improvement of the past three years are learners who did not take a
+                            day off, teachers who ran extra classes, and families who made sure someone
+                            was at the table to check a homework book.
+                        </p>
+                        <p style="margin-bottom: 1rem;">
+                            It also matters that the number is honest. Phoenix reports its results as they
+                            are, because the only useful measure of a school is whether it is genuinely
+                            improving.
+                        </p>
+                        <ul class="stat-strip" style="grid-template-columns: repeat(2, 1fr);">
+                            <li class="stat">
+                                <span class="stat-value">64.2%</span>
+                                <span class="stat-label">2023 NSC pass rate</span>
+                            </li>
+                            <li class="stat">
+                                <span class="stat-value">76.9%</span>
+                                <span class="stat-label">2025 NSC pass rate</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             SUPPORT
+             ============================================ -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Academic support</h2>
+                    <p class="section-subtitle">What we do when a learner struggles.</p>
+                </div>
+
+                <div class="grid-3">
+                    <article class="card">
+                        <div class="card-body">
+                            <span class="badge badge-gold">In class</span>
+                            <h3 class="card-title">Teacher support</h3>
+                            <p class="card-text">
+                                Subject teachers identify learners who need help and provide additional
+                                tasks and revision. Parents are contacted early in the year, not at the
+                                end of it.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-body">
+                            <span class="badge badge-gold">Careers</span>
+                            <h3 class="card-title">Career guidance</h3>
+                            <p class="card-text">
+                                Career exposure is built into the school year, including the annual
+                                Manenberg career expo hosted at Phoenix with Manenberg SAPS, the WCED and
+                                Safe Schools.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-body">
+                            <span class="badge badge-gold">Partners</span>
+                            <h3 class="card-title">External programmes</h3>
+                            <p class="card-text">
+                                Through partnerships with NGOs, community organisations and the WCED, our
+                                learners take part in programmes that go beyond the classroom — from
+                                motorsport career days to sport and leadership.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             CTA
+             ============================================ -->
         <section class="section section-alt">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Questions about learning?</h2>
-                    <p class="section-subtitle">Contact the school office for the latest academic information.</p>
-                    <a class="btn btn-primary" href="contact.html">Contact the School</a>
+                    <p class="section-subtitle">
+                        Subject choices, assessment dates, exchange applications, or your own child's
+                        progress — the school office can help.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="contact.html">Contact the school</a>
+                        <a class="btn btn-outline" href="admissions.html">Admissions information</a>
+                    </div>
                 </div>
             </div>
         </section>
+
     </main>
+
     <footer class="site-footer">
         <div class="container">
-            <p>Phoenix Secondary School (Phoenix Sekondêr) • Silverstream Road, Manenberg, Cape Town, 7764</p>
-            <p><a href="tel:+27216384577">(021) 638 4577</a> • <a href="mailto:phoenixsecondaryschool@gmail.com">phoenixsecondaryschool@gmail.com</a></p>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Phoenix Secondary School</h3>
+                    <p>Phoenix Sekondêr · Building Brighter Futures</p>
+                    <p>A dual-medium public school serving Manenberg since 1983.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Find us</h3>
+                    <p>Silverstream Road<br>Manenberg, Cape Town<br>7764</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <p><a href="tel:+27216384577">(021) 638 4577</a></p>
+                    <p><a href="/cdn-cgi/l/email-protection#6a1a02050f040312190f0905040e0b18131909020505062a0d070b030644090507"><span class="__cf_email__" data-cfemail="e99981868c8780919a8c8a86878d889b909a8a81868685a98e84888085c78a8684">[email&#160;protected]</span></a></p>
+                    <p><a href="/cdn-cgi/l/email-protection#44342c2b212a2d3c6a372127043327212037272c2b2b28376a232b326a3e25"><span class="__cf_email__" data-cfemail="5c2c343339323524722f393f1c2b3f39382f3f343333302f723b332a72263d">[email&#160;protected]</span></a></p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick links</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="academics.html">Academics</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Phoenix Secondary School. All rights reserved.</p>
+            </div>
         </div>
     </footer>
-</body>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a524e249ed5758d3',t:'MTc5MzMwNTI1OA=='};var l=window.parent.location,o;try{o=new URL(l.origin).origin}catch(e){try{o=new URL(new URL(l.href).origin).origin}catch(e){o=''}}var u='/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a524e249ed5758d3',a=document.createElement('script');a.src=o?new URL(u,o).href:u;document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>

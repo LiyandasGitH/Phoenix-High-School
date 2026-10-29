@@ -1,0 +1,359 @@
+/* ==================================================
+   PAGE COMPONENTS — About & Academics
+   Phoenix Secondary School
+
+   These are additive components used only by about.html
+   and academics.html. Everything is scoped under a page
+   class (.page-about / .page-academics) so it cannot
+   affect the other pages while styles.css is owned by
+   another team member. All colours come from the tokens
+   already defined in styles.css.
+
+   When the team is happy, these can be folded into
+   styles.css under a "7. PAGE COMPONENTS" heading.
+   ================================================== */
+
+/* ---------- Timeline (About: Our History) ---------- */
+
+.page-about .timeline {
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 2rem;
+}
+
+.page-about .timeline::before {
+    content: "";
+    position: absolute;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    left: 0.4rem;
+    width: 2px;
+    background-color: var(--border-color);
+}
+
+.page-about .timeline-item {
+    position: relative;
+    padding-bottom: 2rem;
+}
+
+.page-about .timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.page-about .timeline-item::before {
+    content: "";
+    position: absolute;
+    top: 0.45rem;
+    left: -1.85rem;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background-color: var(--bg-card);
+    border: 2px solid var(--primary-red);
+}
+
+.page-about .timeline-item.is-highlight::before {
+    background-color: var(--accent-gold);
+    border-color: var(--accent-gold);
+}
+
+.page-about .timeline-year {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--primary-red);
+    margin-bottom: 0.25rem;
+}
+
+.page-about .timeline-title {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    color: var(--secondary-slate);
+    margin: 0 0 0.4rem;
+}
+
+.page-about .timeline-text {
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* ---------- Pull quote ---------- */
+
+.page-about .pull-quote,
+.page-academics .pull-quote {
+    border-left: 4px solid var(--accent-gold);
+    padding: 0.5rem 0 0.5rem 1.5rem;
+    margin: 0;
+}
+
+.page-about .pull-quote p,
+.page-academics .pull-quote p {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    line-height: 1.45;
+    color: var(--secondary-slate);
+    margin: 0 0 0.75rem;
+}
+
+.page-about .pull-quote footer,
+.page-academics .pull-quote footer {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* ---------- Principal's welcome ---------- */
+
+.page-about .principal-block {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 2.5rem;
+    align-items: start;
+}
+
+.page-about .principal-portrait {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    border-radius: var(--radius-lg);
+    background: linear-gradient(160deg, var(--secondary-slate), #334155);
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #CBD5E1;
+    font-size: 0.75rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.page-about .principal-portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+}
+
+.page-about .principal-message p {
+    margin-bottom: 1rem;
+}
+
+.page-about .principal-signoff {
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.page-about .principal-signoff strong {
+    display: block;
+    font-family: var(--font-heading);
+    color: var(--secondary-slate);
+}
+
+.page-about .principal-signoff span {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* ---------- Stat strip (both pages) ---------- */
+
+.page-about .stat-strip,
+.page-academics .stat-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.page-about .stat,
+.page-academics .stat {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-top: 4px solid var(--primary-red);
+    border-radius: var(--radius-md);
+    padding: 1.5rem 1.25rem;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+}
+
+.page-about .stat-value,
+.page-academics .stat-value {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--primary-red);
+    margin-bottom: 0.4rem;
+}
+
+.page-about .stat-label,
+.page-academics .stat-label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+/* ---------- Feature panel (Academics: German exchange) ---------- */
+
+.page-academics .feature-panel {
+    background: var(--secondary-slate);
+    color: #E2E8F0;
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    box-shadow: var(--shadow-md);
+}
+
+.page-academics .feature-panel .badge {
+    background-color: var(--accent-gold);
+    color: #1F1300;
+}
+
+.page-academics .feature-panel h2,
+.page-academics .feature-panel h3 {
+    color: #FFFFFF;
+}
+
+.page-academics .feature-panel .feature-lead {
+    font-size: 1.05rem;
+    max-width: 65ch;
+    color: #CBD5E1;
+}
+
+.page-academics .feature-panel .checklist-card {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(226, 232, 240, 0.25);
+    box-shadow: none;
+}
+
+.page-academics .feature-panel .checklist-item {
+    border-bottom-color: rgba(226, 232, 240, 0.25);
+}
+
+.page-academics .feature-panel .check-icon {
+    border-color: var(--accent-gold);
+    color: var(--accent-gold);
+}
+
+.page-academics .feature-panel dt {
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.page-academics .feature-panel dd {
+    margin: 0 0 0.9rem;
+    color: #CBD5E1;
+}
+
+/* ---------- Result table (Academics) ---------- */
+
+.page-academics .result-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.page-academics .result-table caption {
+    text-align: left;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    padding-bottom: 0.75rem;
+}
+
+.page-academics .result-table th,
+.page-academics .result-table td {
+    text-align: left;
+    padding: 0.85rem 1.25rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.page-academics .result-table thead th {
+    background: var(--secondary-slate);
+    color: #FFFFFF;
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.page-academics .result-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.page-academics .result-table td strong {
+    color: var(--primary-red);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 768px) {
+    .page-about .principal-block {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .page-about .principal-portrait {
+        max-width: 200px;
+        aspect-ratio: 1 / 1;
+    }
+
+    .page-about .stat-strip,
+    .page-academics .stat-strip {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .page-academics .feature-panel {
+        padding: 1.75rem;
+    }
+
+    .page-academics .result-table th,
+    .page-academics .result-table td {
+        padding: 0.65rem 0.85rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* ---------- Print ---------- */
+
+@media print {
+    .page-about .principal-portrait {
+        background: #FFFFFF !important;
+        border: 1px solid #000000 !important;
+        color: #000000 !important;
+    }
+
+    .page-academics .feature-panel {
+        background: #FFFFFF !important;
+        color: #000000 !important;
+        border: 1px solid #000000 !important;
+    }
+
+    .page-academics .feature-panel h2,
+    .page-academics .feature-panel h3,
+    .page-academics .feature-panel dt,
+    .page-academics .feature-panel dd,
+    .page-academics .feature-panel .feature-lead {
+        color: #000000 !important;
+    }
+
+    .page-academics .result-table thead th {
+        background: #FFFFFF !important;
+        color: #000000 !important;
+        border-bottom: 1px solid #000000 !important;
+    }
+
+    .page-about .timeline-item,
+    .page-academics .stat,
+    .page-academics .result-table {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+}
