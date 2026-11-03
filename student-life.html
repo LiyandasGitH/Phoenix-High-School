@@ -1,201 +1,193 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Student life at Phoenix Secondary School in Manenberg: soccer, netball, clubs, culture, and campus community."
-    />
-    <title>Student Life &amp; Sport | Phoenix Secondary School</title>
-    <link rel="stylesheet" href="../css/styles.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              phoenix: { DEFAULT: "#8B0000", dark: "#5c0000" },
-            },
-          },
-        },
-      };
-    </script>
-    <style>
-      @media (max-width: 767px) {
-        #site-nav {
-          display: none;
-        }
-        #site-nav.is-open {
-          display: flex;
-        }
-      }
-    </style>
-  </head>
-  <body class="bg-slate-50 text-left text-slate-900">
-    <a
-      class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-white focus:px-3 focus:py-2"
-      href="#main"
-      >Skip to content</a
-    >
+    <meta name="description" content="Student life at Phoenix Secondary School in Manenberg: soccer, netball, clubs, culture, and campus community."/>
+    <title>Student Life & Sport | Phoenix Secondary School</title>
 
-    <header class="relative bg-phoenix text-white">
-      <div
-        class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4"
-      >
-        <a class="font-semibold tracking-wide" href="../index.html">
-          Phoenix Secondary School
-          <span class="block text-xs font-normal text-white/80"
-            >Learn • Grow • Achieve</span
-          >
-        </a>
-        <button
-          class="inline-flex items-center rounded border border-white/40 px-3 py-2 text-sm md:hidden"
-          type="button"
-          data-nav-toggle
-          aria-controls="site-nav"
-          aria-expanded="false"
-          aria-label="Open menu"
-        >
-          Menu
-        </button>
-        <nav
-          id="site-nav"
-          class="absolute left-0 right-0 top-full z-40 flex-col gap-2 bg-phoenix px-4 py-4 md:static md:flex md:flex-row md:items-center md:gap-5 md:bg-transparent md:p-0"
-        >
-          <a class="hover:underline" href="../index.html">Home</a>
-          <a class="hover:underline" href="../about.html">About</a>
-          <a class="hover:underline" href="../academics.html">Academics</a>
-          <a class="hover:underline" href="../admissions.html">Admissions</a>
-          <a class="font-semibold underline" href="student-life.html" aria-current="page"
-            >Student Life</a
-          >
-          <a class="hover:underline" href="news.html">News</a>
-          <a class="hover:underline" href="../contact.html">Contact</a>
+    <!-- Master Stylesheet Link -->
+    <link rel="stylesheet" href="css/styles.css" />
+    
+  </head>
+  <body>
+
+    <!-- Keyboard Accessibility Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header Navigation -->
+    <header class="site-header">
+      <div class="container" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0;">
+        <div class="brand">
+          <a href="index.html" style="text-decoration: none; color: inherit;">
+            <h1 style="font-size: 1.5rem; margin: 0; color: var(--primary-red, #8B0000);">Phoenix Secondary School</h1>
+            <p style="margin: 0; font-size: 0.85rem; color: var(--text-muted, #64748B);">Building Brighter Futures | Manenberg</p> 
+          </a>
+        </div>
+
+        <!-- Navigation Bar -->
+        <nav id="site-nav" class="nav-menu">
+          <ul style="display: flex; list-style: none; gap: 1rem; margin: 0; padding: 0;">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="academics.html">Academics</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="student-life.html" class="active" style="font-weight: bold; color: var(--primary-red, #8B0000);">Student Life</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
         </nav>
+
+        <!-- Mobile Hamburger Toggle Button -->
+        <button class="mobile-toggle" data-nav-toggle aria-label="Toggle navigation menu" style="display: none;">
+          ☰
+        </button>
       </div>
     </header>
 
-    <main id="main">
-      <section class="bg-black text-white">
-        <div class="mx-auto max-w-6xl px-4 py-12">
-          <p class="text-sm uppercase tracking-widest text-red-200">
-            Manenberg • Cape Town
-          </p>
-          <h1 class="mt-2 text-4xl font-bold">Student Life &amp; Sport</h1>
-          <p class="mt-4 max-w-3xl text-lg text-slate-200">
-            Phoenix learners compete, create, and lead. This page celebrates
-            approved campus sport, culture, and leadership — without publishing
-            private learner records.
-          </p>
-        </div>
-      </section>
-
-      <section class="mx-auto max-w-6xl px-4 py-12" id="soccer">
-        <h2 class="text-3xl font-bold text-phoenix">Competitive soccer</h2>
-        <p class="mt-3 max-w-3xl text-slate-700">
-          Soccer is a flagship code at Phoenix Secondary School. Age-group
-          squads compete across the Cape Town school circuit, including
-          documented fixtures against schools such as Wynberg Boys’ High.
+    <!-- Hero / Banner -->
+    <section class="section" style="background-color: var(--secondary-slate, #1E293B); color: #FFFFFF; padding: 3rem 0; text-align: center;">
+      <div class="container">
+        <span class="badge badge-gold" style="margin-bottom: 0.75rem; display: inline-block;">Manenberg • Cape Town</span>
+        <h2 style="font-size: 2.25rem; margin-bottom: 0.5rem; color: #FFFFFF;">Student Life & Sport</h2>
+        <p style="font-size: 1rem; margin-bottom: 0.5rem; color: #CBD5E1;">
+          Phoenix learners compete, create, and lead. Celebrating approved campus sport, culture, and student leadership milestones while maintaining strict learner protection under POPIA guidelines.
         </p>
-        <div class="mt-8 grid gap-6 md:grid-cols-3">
-          <article class="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
-            <h3 class="text-xl font-semibold">U15</h3>
-            <p class="mt-2 text-slate-600">
-              Development side focused on match fitness, discipline, and
-              pathway into senior school soccer.
-            </p>
-          </article>
-          <article class="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
-            <h3 class="text-xl font-semibold">U17</h3>
-            <p class="mt-2 text-slate-600">
-              Competitive league fixtures and inter-school friendlies that
-              build squad depth for the first team.
-            </p>
-          </article>
-          <article class="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
-            <h3 class="text-xl font-semibold">U19</h3>
-            <p class="mt-2 text-slate-600">
-              Senior team representing Phoenix in high-profile school matches
-              and community showcases.
-            </p>
-          </article>
-        </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="bg-white" id="culture">
-        <div class="mx-auto max-w-6xl px-4 py-12">
-          <h2 class="text-3xl font-bold text-phoenix">Culture, clubs &amp; leadership</h2>
-          <div class="mt-8 grid gap-6 md:grid-cols-2">
-            <article class="rounded-lg bg-slate-50 p-6">
-              <h3 class="text-xl font-semibold">Netball</h3>
-              <p class="mt-2 text-slate-700">
-                Netball remains a core code for Phoenix, with training and
-                inter-school play that sit alongside soccer in the sport
-                calendar.
-              </p>
+    <!-- Main Content Area -->
+    <main id="main-content" class="section">
+      <div class="container">
+
+        <!-- Section 1: Competitive Soccer -->
+        <section id="soccer" style="margin-bottom: 3rem;">
+          <h2 style="color: var(--primary-red, #8B0000); font-size: 1.75rem; margin-bottom: 0.5rem;">Competitive Soccer</h2>
+          <p style="color: var(--text-muted, #64748B); max-width: 700px; margin-bottom: 1.5rem;">
+            Soccer is a flagship sports code at Phoenix Secondary School. Age-group squads compete across the Cape Town school circuit, including documented inter-school fixtures against schools such as Wynberg Boys' High.
+          </p>
+
+          <div class="grid-3">
+            <!-- U15 Squad Card -->
+            <article class="card">
+              <div class="card-body">
+                <span class="badge badge-red" style="margin-bottom: 0.5rem; display: inline-block;">Junior Code</span>
+                <h3 class="card-title" style="font-size: 1.25rem; margin-bottom: 0.5rem;">U15 Football Squad</h3>
+                <p class="card-text" style="color: var(--text-muted, #64748B); font-size: 0.95rem;">
+                  Development side focused on core match fitness, tactical discipline, and creating a structured pathway into senior school soccer.
+                </p>
+              </div>
             </article>
-            <article class="rounded-lg bg-slate-50 p-6">
-              <h3 class="text-xl font-semibold">Cultural initiatives</h3>
-              <p class="mt-2 text-slate-700">
-                Dual-medium identity (English and Afrikaans) shapes assemblies,
-                cultural events, and learner-led performances rooted in
-                Manenberg.
-              </p>
+
+            <!-- U17 Squad Card -->
+            <article class="card">
+              <div class="card-body">
+                <span class="badge badge-red" style="margin-bottom: 0.5rem; display: inline-block;">Intermediate Code</span>
+                <h3 class="card-title" style="font-size: 1.25rem; margin-bottom: 0.5rem;">U17 Football Squad</h3>
+                <p class="card-text" style="color: var(--text-muted, #64748B); font-size: 0.95rem;">
+                  Competitive league fixtures and regional inter-school friendlies that build technical squad depth for the first team.
+                </p>
+              </div>
             </article>
-            <article class="rounded-lg bg-slate-50 p-6">
-              <h3 class="text-xl font-semibold">Student leadership</h3>
-              <p class="mt-2 text-slate-700">
-                Prefects and learner representative structures support
-                discipline, peer mentoring, and community programmes. Names
-                and photographs are published only with school approval.
-              </p>
-            </article>
-            <article class="rounded-lg bg-slate-50 p-6">
-              <h3 class="text-xl font-semibold">German exchange</h3>
-              <p class="mt-2 text-slate-700">
-                Selected Grade 11 learners join the Kreisgymnasium Heinsberg
-                partnership (about 15 learners per cycle). Programme detail
-                lives on the
-                <a class="font-semibold text-phoenix underline" href="../academics.html"
-                  >Academics</a
-                >
-                page.
-              </p>
+
+            <!-- U19 First Team Card -->
+            <article class="card">
+              <div class="card-body">
+                <span class="badge badge-gold" style="margin-bottom: 0.5rem; display: inline-block;">First Team</span>
+                <h3 class="card-title" style="font-size: 1.25rem; margin-bottom: 0.5rem;">U19 First Team</h3>
+                <p class="card-text" style="color: var(--text-muted, #64748B); font-size: 0.95rem;">
+                  Senior team representing Phoenix Secondary in high-profile school matches, derby showcases, and community tournaments.
+                </p>
+              </div>
             </article>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section class="mx-auto max-w-6xl px-4 py-12" id="gallery">
-        <h2 class="text-3xl font-bold text-phoenix">Campus gallery</h2>
-        <p class="mt-3 max-w-3xl text-slate-700">
-          Photography here is limited to approved, consented campus imagery.
-          Families may request removal of a photo by contacting the school
-          office.
-        </p>
-        <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          <figure class="rounded-lg bg-phoenix p-10 text-center text-white">
-            <figcaption>Crest &amp; campus identity</figcaption>
-          </figure>
-          <figure class="rounded-lg bg-slate-800 p-10 text-center text-white">
-            <figcaption>Soccer match day</figcaption>
-          </figure>
-          <figure class="rounded-lg bg-phoenix-dark p-10 text-center text-white">
-            <figcaption>Assembly &amp; learner leadership</figcaption>
-          </figure>
-        </div>
-      </section>
+        <!-- Section 2: Culture, Clubs & Leadership --> 
+        <section id="culture" style="margin-bottom: 3rem;">
+          <h2 style="color: var(--primary-red, #8B0000); font-size: 1.75rem; margin-bottom: 0.5rem;">Culture, Clubs & Leadership</h2>
+          <p style="color: var(--text-muted, #64748B); max-width: 700px; margin-bottom: 1.5rem;">
+            Extracurricular activities foster leadership, cultural expression, and international exchange opportunities for our learners.
+          </p>
+
+          <div class="grid-3">
+            <!-- Netball Card -->
+            <article class="card">
+              <div class="card-body">
+                <span class="badge badge-red" style="margin-bottom: 0.5rem; display: inline-block;">Girls Sport</span>
+                <h3 class="card-title" style="font-size: 1.25rem; margin-bottom: 0.5rem;">Netball League</h3>
+                <p class="card-text" style="color: var(--text-muted, #64748B); font-size: 0.95rem;">
+                  Netball remains a core sporting code for Phoenix, offering weekly league matches and skill development clinics alongside soccer in the term sports calendar.
+                </p>
+              </div>
+            </article>
+
+            <!-- Student Leadership Card -->
+            <article class="card">
+              <div class="card-body">
+                <span class="badge badge-gold" style="margin-bottom: 0.5rem; display: inline-block;">Learner Voice</span>
+                <h3 class="card-title" style="font-size: 1.25rem; margin-bottom: 0.5rem;">Student Representative Council</h3>
+                <p class="card-text" style="color: var(--text-muted, #64748B); font-size: 0.95rem;">
+                  Prefects and learner leaders support discipline, peer mentoring, and community initiatives. Names and photography are published with approved media consent.
+                </p>
+              </div>
+            </article>
+
+            <!-- German Exchange Spotlight Card -->
+            <article class="card" style="grid-column: span 3;">
+              <div class="card-body" style="background-color: #F8FAFC; border-left: 4px solid var(--primary-red, #8B0000);">
+                <span class="badge badge-gold" style="margin-bottom: 0.5rem; display: inline-block;">Signature Academic Exchange</span>
+                <h3 class="card-title" style="font-size: 1.25rem; margin-bottom: 0.5rem;">Kreisgymnasium Heinsberg Germany Partnership</h3>
+                <p class="card-text" style="color: var(--text-muted, #64748B); font-size: 0.95rem; margin-bottom: 1rem;">
+                  Selected Grade 11 learners participate in an international cultural exchange partnership with Kreisgymnasium Heinsberg (\~15 learners per cycle). Program details and application guidelines are available on our Academics page.
+                </p>
+                <a href="academics.html" class="btn btn-outline" style="font-size: 0.875rem;">Explore Academic Program →</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Section 3: Campus Life Gallery -->
+        <section id="gallery">
+          <h2 style="color: var(--primary-red, #8B0000); font-size: 1.75rem; margin-bottom: 0.5rem;">Campus Life Gallery</h2>
+          <p style="color: var(--text-muted, #64748B); max-width: 700px; margin-bottom: 1.5rem;">
+            Photography is strictly limited to approved campus visuals. Families may request image removals by contacting the school office.
+          </p>
+
+          <div class="grid-3">
+            <div class="card" style="text-align: center; padding: 2.5rem 1rem; background-color: var(--primary-red, #8B0000); color: #FFFFFF;">
+              <h4 style="margin: 0; color: #FFFFFF; font-size: 1.1rem;">Crest & Campus Identity</h4>
+              <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #FECACA;">Institutional Brand & Values</p>
+            </div>
+
+            <div class="card" style="text-align: center; padding: 2.5rem 1rem; background-color: var(--secondary-slate, #1E293B); color: #FFFFFF;">
+              <h4 style="margin: 0; color: #FFFFFF; font-size: 1.1rem;">Soccer Match Day</h4>
+              <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #94A3B8;">Inter-School Sports Fixtures</p>
+            </div>
+
+            <div class="card" style="text-align: center; padding: 2.5rem 1rem; background-color: #5C0000; color: #FFFFFF;">
+              <h4 style="margin: 0; color: #FFFFFF; font-size: 1.1rem;">Assembly & Leadership</h4>
+              <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #FECACA;">Learner Recognition Ceremonies</p>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
 
-    <footer class="bg-black py-8 text-sm text-white">
-      <div class="mx-auto max-w-6xl px-4">
-        <p>Phoenix Secondary School (Phoenix Sekondêr) • Silverstream Road, Manenberg, 7764</p>
-        <p class="mt-1">(021) 638 4577 • phoenixsecondaryschool@gmail.com</p>
-        <p class="mt-3 text-slate-400">Building Brighter Futures</p>
+    <!-- Global Footer -->
+    <footer class="site-footer" style="background-color: var(--secondary-slate, #1E293B); color: #94A3B8; padding: 2rem 0; margin-top: 3rem;">
+      <div class="container" style="text-align: center;">
+        <p style="margin-bottom: 0.5rem; color: #FFFFFF;">
+          <strong>Phoenix Secondary School</strong> | Silverstream Road, Manenberg, 7764
+        </p>
+        <p style="margin: 0; font-size: 0.875rem;">
+           © 2026 Phoenix Secondary School. All rights reserved. | POPIA Compliant |
+          <a href="login.html" style="color: #94A3B8; text-decoration: underline;">Staff Portal Login</a>
+        </p>
       </div>
     </footer>
 
-    <script src="../js/main.js" defer></script>
+    <!-- Master JavaScript File -->
+    <script src="js/main.js"></script>
   </body>
 </html>
