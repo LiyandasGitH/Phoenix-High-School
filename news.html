@@ -1,241 +1,163 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="News, term calendar, and notices for Phoenix Secondary School, Manenberg."
-    />
-    <title>News &amp; Events | Phoenix Secondary School</title>
-    <link rel="stylesheet" href="../css/styles.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              phoenix: { DEFAULT: "#8B0000", dark: "#5c0000" },
-            },
-          },
-        },
-      };
-    </script>
-    <style>
-      @media (max-width: 767px) {
-        #site-nav {
-          display: none;
-        }
-        #site-nav.is-open {
-          display: flex;
-        }
-      }
-      [data-calendar-filter].is-active {
-        background: #8b0000;
-        color: #fff;
-        border-color: #8b0000;
-      }
-    </style>
-  </head>
-  <body class="bg-slate-50 text-left text-slate-900">
-    <a
-      class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-white focus:px-3 focus:py-2"
-      href="#main"
-      >Skip to content</a
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>News & Events | Phoenix Secondary School</title>
 
-    <header class="relative bg-phoenix text-white">
-      <div
-        class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4"
-      >
-        <a class="font-semibold tracking-wide" href="../index.html">
-          Phoenix Secondary School
-          <span class="block text-xs font-normal text-white/80"
-            >Learn • Grow • Achieve</span
-          >
-        </a>
-        <button
-          class="inline-flex items-center rounded border border-white/40 px-3 py-2 text-sm md:hidden"
-          type="button"
-          data-nav-toggle
-          aria-controls="site-nav"
-          aria-expanded="false"
-          aria-label="Open menu"
-        >
-          Menu
-        </button>
-        <nav
-          id="site-nav"
-          class="absolute left-0 right-0 top-full z-40 flex-col gap-2 bg-phoenix px-4 py-4 md:static md:flex md:flex-row md:items-center md:gap-5 md:bg-transparent md:p-0"
-        >
-          <a class="hover:underline" href="../index.html">Home</a>
-          <a class="hover:underline" href="../about.html">About</a>
-          <a class="hover:underline" href="../academics.html">Academics</a>
-          <a class="hover:underline" href="../admissions.html">Admissions</a>
-          <a class="hover:underline" href="student-life.html">Student Life</a>
-          <a class="font-semibold underline" href="news.html" aria-current="page"
-            >News</a
-          >
-          <a class="hover:underline" href="../contact.html">Contact</a>
-        </nav>
+    <!-- Master Stylesheet Link -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+
+    <!-- Keyboard Accessibility Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header Navigation -->
+    <header class="site-header">
+      <div class="container" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0;">
+        <div class="brand">
+          <a href="index.html" style="text-decoration: none; color: inherit;">
+            <h1 style="font-size: 1.5rem; margin: 0; color: var(--primary-red, #8B0000);">Phoenix Secondary School</h1>
+            <p style="margin: 0; font-size: 0.85rem; color: var(--text-muted, #64748B);">Building Brighter Futures | Manenberg</p>
+          </a>
+        </div>
+
+        <!-- Navigation Bar -->
+         <nav id="site-nav" class="nav-menu">
+          <ul style="display: flex; list-style: none; gap: 1rem; margin: 0; padding: 0;">
+            <li><a href="index.html">Home</a>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="academics.html">Academics</a></li>
+            <li><a href="admissions.html">Admissions</a></li></li>
+            <li><a href="student-life.html">Student Life</a></li>
+            <li><a href="news.html" class="active" style="font-weight: bold; color: var(--primary-red, #8B0000);">News</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+         </nav>
+
+         <!-- Mobile Hamburger Toggle Button -->
+          <button class="mobile-toggle" data-nav-toggle aria-label="Toggle navigation menu" style="display: none;">
+            ☰
+          </button>
       </div>
     </header>
 
-    <div class="bg-black py-2 text-center text-sm text-white" role="status">
-      Urgent notices appear here. Confirm closures and timetable changes with
-      the school office or Facebook page.
-    </div>
-
-    <main id="main">
-      <section class="bg-white">
-        <div class="mx-auto max-w-6xl px-4 py-12">
-          <h1 class="text-4xl font-bold text-phoenix">News &amp; Events</h1>
-          <p class="mt-4 max-w-3xl text-lg text-slate-700">
-            Term planners, exam windows, ceremonies, and circulars for learners
-            and families. Dates below are planning markers and must be checked
-            against official school notices.
-          </p>
-        </div>
-      </section>
-
-      <section class="mx-auto max-w-6xl px-4 py-8" id="calendar">
-        <div class="flex flex-wrap items-center justify-between gap-4">
-          <h2 class="text-3xl font-bold text-phoenix">School calendar</h2>
-          <div class="flex flex-wrap gap-2" role="group" aria-label="Filter calendar">
-            <button
-              class="is-active rounded border border-phoenix px-3 py-1 text-sm font-semibold text-phoenix"
-              type="button"
-              data-calendar-filter="all"
-              aria-pressed="true"
-            >
-              All
-            </button>
-            <button
-              class="rounded border border-slate-300 px-3 py-1 text-sm"
-              type="button"
-              data-calendar-filter="exams"
-              aria-pressed="false"
-            >
-              Exams
-            </button>
-            <button
-              class="rounded border border-slate-300 px-3 py-1 text-sm"
-              type="button"
-              data-calendar-filter="events"
-              aria-pressed="false"
-            >
-              Events
-            </button>
-            <button
-              class="rounded border border-slate-300 px-3 py-1 text-sm"
-              type="button"
-              data-calendar-filter="holidays"
-              aria-pressed="false"
-            >
-              Holidays
-            </button>
-          </div>
-        </div>
-
-        <ul class="mt-8 space-y-4">
-          <li
-            class="rounded-lg border border-slate-200 bg-white p-5"
-            data-calendar-item="events"
-          >
-            <p class="text-sm font-semibold uppercase tracking-wide text-phoenix">
-              Event • Term 4
-            </p>
-            <h3 class="mt-1 text-xl font-semibold">Valedictory ceremony</h3>
-            <p class="mt-2 text-slate-700">
-              Grade 12 valedictory programme. Time and dress code will be
-              confirmed in the school circular.
-            </p>
-          </li>
-          <li
-            class="rounded-lg border border-slate-200 bg-white p-5"
-            data-calendar-item="exams"
-          >
-            <p class="text-sm font-semibold uppercase tracking-wide text-phoenix">
-              Exams
-            </p>
-            <h3 class="mt-1 text-xl font-semibold">NSC and internal exam window</h3>
-            <p class="mt-2 text-slate-700">
-              National Senior Certificate and school-based assessments follow
-              the WCED timetable. Learners collect personal timetables from the
-              office — individual results are not published on this site.
-            </p>
-          </li>
-          <li
-            class="rounded-lg border border-slate-200 bg-white p-5"
-            data-calendar-item="holidays"
-          >
-            <p class="text-sm font-semibold uppercase tracking-wide text-phoenix">
-              Holidays
-            </p>
-            <h3 class="mt-1 text-xl font-semibold">Term 4 close and 2027 return</h3>
-            <p class="mt-2 text-slate-700">
-              School-day end and reopening dates follow the Western Cape
-              Education Department calendar. Watch the notice board for staff
-              reporting days.
-            </p>
-          </li>
-          <li
-            class="rounded-lg border border-slate-200 bg-white p-5"
-            data-calendar-item="events"
-          >
-            <p class="text-sm font-semibold uppercase tracking-wide text-phoenix">
-              Event • Sport
-            </p>
-            <h3 class="mt-1 text-xl font-semibold">Inter-school soccer fixtures</h3>
-            <p class="mt-2 text-slate-700">
-              U15, U17, and U19 kick-off times are issued weekly. Historic
-              fixtures include matches against Wynberg Boys’ High.
-            </p>
-          </li>
-        </ul>
-      </section>
-
-      <section class="bg-white" id="newsletters">
-        <div class="mx-auto max-w-6xl px-4 py-12">
-          <h2 class="text-3xl font-bold text-phoenix">Notices &amp; newsletters</h2>
-          <p class="mt-3 max-w-3xl text-slate-700">
-            Downloadable circulars will sit here once the document centre is
-            approved. For now, contact the office for the latest stationery
-            lists, indemnity forms, and code of conduct.
-          </p>
-          <ul class="mt-6 list-disc space-y-2 pl-5 text-slate-700">
-            <li>Term 4 parent circular — request from reception</li>
-            <li>Exam rules reminder — issued in register class</li>
-            <li>Admissions pop-up centre dates — see the <a href="../admissions.html">Admissions page</a></li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="mx-auto max-w-6xl px-4 py-12" id="facebook">
-        <h2 class="text-3xl font-bold text-phoenix">Live Facebook feed</h2>
-        <p class="mt-3 max-w-3xl text-slate-700">
-          Follow Phoenix Secondary School on Facebook for match photos, event
-          reminders, and weather-related notices.
+    <!-- Hero / Banner -->
+    <section class="section" style="background-color: var(--secondary-slate, #1E293B); color: #FFFFFF; padding: 3rem 0; text-align: center;">
+      <div class="container">
+        <span class="badge badge-gold" style="margin-bottom: 0.75rem; display: inline-block;">Term 4 Updates</span>
+        <h2 style="font-size: 2.25rem; margin-bottom: 0.5rem; color: #FFFFFF">News & Term Planner</h2>
+        <p style="max-width: 600px; margin: 0 auto; color: #CBD5E1;">
+          Stay updated with official announcements, exam timetables, school circulars, and upcoming community events at Phoenix Secondary School.
         </p>
-        <div class="mt-6 overflow-hidden rounded-lg border border-slate-200 bg-white">
-          <iframe
-            title="Phoenix Secondary School Facebook page"
-            class="h-[500px] w-full"
-            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2F309752229742341&amp;tabs=timeline&amp;width=500&amp;height=500&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true"
-            loading="lazy"
-          ></iframe>
+      </div>
+    </section>
+
+    <!-- Main Content Section -->
+     <main id="main-content" class="section">
+      <div class="container">
+
+        <!-- Calendar Category Filter Controls -->
+        <div class="filter-controls" style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2rem; justify-content: center;">
+          <button class="btn btn-primary" data-calendar-filter="all">All Notices</button>
+          <button class="btn btn-outline" data-calendar-filter="exams">Exams & Assessment</button>
+          <button class="btn btn-outline" data-calendar-filter="events">Events & Ceremonies</button>
+          <button class="btn btn-outline" data-calendar-filter="holidays">Term Dates & Holidays</button>
         </div>
-      </section>
+
+        <!-- News & Event Grid -->
+        <div class="grid-3">
+          <!-- Notice Card 1: Exams -->
+          <article class="card" data-calendar-item="exams">
+            <div class="card-body">
+              <span class="badge badge-red" style="margin-bottom: 0.5rem; display: inline-block;">Exams • Nov 2026</span>
+              <h3 class="card-title" style="font-size: 1.25rem; margin-bottom: 0.5rem;">Grade 12 NSC Final Examinations</h3>
+              <p class="card-text" style="color: var(--text-muted, #64748B); font-size: 0.9rem; margin-bottom: 1rem;">
+                National Senior Certificate examinations commence across all invigilation centres. Candidates must arrive 30 minutes prior to paper start times.
+              </p>
+              <a href="#" class="btn btn-outline" style="font-size: 0.87rem;">Download Timetable (PDF)</a>
+            </div>
+          </article>
+
+          <!-- Notice Card 2: Events -->
+          <article class="card" data-calendar-item="events">
+            <div class="card-body">
+              <span class="badge badge-gold" style="margin-bottom: 0.5rem; display: inline-block;">Ceremony • Term 4</span>
+              <h3 class="card-title" style="font-size: 1.25rem; margin-bottom: 0.5rem;">Grade 12 Valedictory Service</h3>
+              <p class="card-text" style="color: var(--text-muted, #64748B); font-size: 0.95rem; margin-bottom: 1rem;">
+                Celebrating the Class of 2026. Parents and guardians are invited to join the academic awards presentation and farewell assembly.
+              </p>
+              <a href="#" class="btn btn-outline" style="font-size: 0.875rem;">View Event Details</a>
+            </div>
+          </article>
+
+          <!-- Notice Card 3: Exams -->
+          <article class="card" data-calendar-item="exams">
+            <div class="card-body">
+              <span class="badge badge-red" style="margin-bottom: 0.5rem; display: inline-block;">Exams • Grades 8- 11</span>
+              <h3 class="card-title" style="font-size: 1.25rem; margin-bottom: 0.5rem;">End-of-Year Internal Examinations</h3>
+              <p class="card-text" style="color: var(--text-muted, #64748B); font-size: 0.95rem; margin-bottom: 1rem;">
+                November assessment timetable for GET and FET phases. Study packs and revision sessions available daily after school.
+              </p>
+              <a href="#" class="btn btn-outline" style="font-size: 0.875rem;">Download Schedule (PDF)</a>
+            </div>
+          </article>
+
+          <!-- Notice Card 4: Holidays -->
+          <article class="card" data-calendar-item="holidays">
+            <div class="card-body">
+              <span class="badge badge-red" style="margin-bottom: 0.5rem; display: inline-block;">Term Calendar</span>
+              <h3 class="card-title" style="font-size: 1.25rem; margin-bottom: 0.5rem;">Term 4 School Closure Date</h3>
+              <p class="card-text" style="color: var(--text-muted, #64748B); font-size: 0.95rem; margin-bottom: 1rem;">
+                Official WCED school holiday commencement for learners. Report card distribution schedule to be released via SMS notification.
+              </p>
+              <a href="#" class="btn btn-outline" style="font-size: 0.875rem;">View School Calendar</a>
+            </div>
+          </article>
+
+          <!-- Notice Card 5: Events -->
+          <article class="card" data-calendar-item="events">
+            <div class="card-body">
+              <span class="badge badge-gold" style="margin-bottom: 0.5rem; display: inline-block;">Global Exchange</span>
+              <h3 class="card-title" style="font-size: 1.25rem; margin-bottom: 0.5rem;">Kreisgymnasium Exchange Showcase</h3>
+              <p class="card-text" style="color: var(--text-muted, #64748B); font-size: 0.95rem; margin-bottom: 1rem;">
+                Grade 11 German exchange participants present their cultural findings and collaborative project outcomes in the main hall.
+              </p>
+              <a href="#" class="btn btn-outline" style="font-size: 0.875rem;">Read Full Story</a>
+            </div>
+          </article>
+
+          <!-- Notice Card 6: Holidays -->
+          <article class="card" data-calendar-item="holidays">
+            <div class="card-body">
+              <span class="badge badge-red" style="margin-bottom: 0.5rem; display: inline-block;">WCED Circular</span>
+              <h3 class="card-title" style="font-size: 1.25rem; margin-bottom: 0.5rem;">2027 Academic Year Commencement</h3>
+              <p class="card-text" style="color: var(--text-muted, #64748B); font-size: 0.95rem; margin-bottom: 1rem;">
+                WCED official opening dates for educators and learners for the 2027 school year, including orientation timetable.
+              </p>
+              <a href="#" class="btn btn-outline" style="font-size: 0.875rem;">Download Circular (PDF)</a>
+            </div>
+          </article> 
+        </div>
+      </div>
     </main>
 
-    <footer class="bg-black py-8 text-sm text-white">
-      <div class="mx-auto max-w-6xl px-4">
-        <p>Phoenix Secondary School (Phoenix Sekondêr) • Silverstream Road, Manenberg, 7764</p>
-        <p class="mt-1">(021) 638 4577 • phoenixsecondaryschool@gmail.com</p>
-        <p class="mt-3 text-slate-400">Building Brighter Futures</p>
+    <!-- Global Footer -->
+    <footer class="site-footer" style="background-color: var(--secondary-slate, #1E293B); color: #94A3B8; padding: 2rem 0; margin-top: 3rem;">
+      <div class="container" style="text-align: center;">
+        <p style="margin-bottom: 0.5rem; color: #FFFFFF;">
+          <strong>Phoenix Secondary School</strong> | Silverstream Road, Manenberg, 7764
+        </p>
+        <p style="margin: 0; font-size: 0.875rem;">
+          © 2026 Phoenix Secondary School. All rights reserved. | POPIA Compliant |
+          <a href="login.html" style="color: #94A3B8; text-decoration: underline;">Staff Portal Login</a>
+        </p>
       </div>
     </footer>
 
-    <script src="../js/main.js" defer></script>
+    <!-- Master JavaScript File -->
+    <script src="js/main.js" defer></script>
   </body>
 </html>
