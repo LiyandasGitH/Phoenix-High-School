@@ -196,12 +196,19 @@ ul {
     gap: 1rem;
 }
 
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 .brand-crest {
     height: 55px;
     width: auto;
 }
 
 .brand-text .school-name {
+    display: block;
     font-size: 1.25rem;
     font-weight: 800;
     color: var(--primary-red);
@@ -210,6 +217,7 @@ ul {
 }
 
 .brand-text .school-motto {
+    display: block;
     font-size: 0.8rem;
     color: var(--text-muted);
     font-style: italic;
@@ -550,38 +558,561 @@ ul {
 }
 
 /* ==================================================
+   CONTACT PAGE
+   ================================================== */
+.contact-hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: clamp(3.75rem, 7vw, 6.5rem) 0;
+    background:
+        radial-gradient(ellipse at 2% 5%, rgba(217, 119, 6, 0.1), transparent 28rem),
+        linear-gradient(135deg, #fff 0%, #fbf8f5 100%);
+}
+
+.contact-hero::before {
+    content: "";
+    position: absolute;
+    top: -13rem;
+    right: -9rem;
+    z-index: -1;
+    width: 32rem;
+    height: 32rem;
+    border: 1px solid rgba(139, 0, 0, 0.1);
+    border-radius: 50%;
+    box-shadow: 0 0 0 3rem rgba(139, 0, 0, 0.025), 0 0 0 6rem rgba(139, 0, 0, 0.02);
+}
+
+.contact-hero-content {
+    position: relative;
+    z-index: 0;
+}
+
+.contact-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    gap: clamp(2.5rem, 6vw, 5.5rem);
+    align-items: center;
+}
+
+.contact-hero-copy {
+    max-width: 570px;
+}
+
+.contact-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1.25rem;
+    color: var(--primary-red);
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.contact-eyebrow span {
+    width: 0.55rem;
+    height: 0.55rem;
+    border-radius: 50%;
+    background: var(--accent-gold);
+    box-shadow: 0 0 0 5px rgba(217, 119, 6, 0.14);
+}
+
+.contact-hero-copy h1 {
+    max-width: 12ch;
+    margin-bottom: 1.25rem;
+    color: var(--secondary-slate);
+    font-size: clamp(2.7rem, 5.3vw, 4.65rem);
+    letter-spacing: -0.055em;
+    line-height: 1.02;
+}
+
+.contact-hero-copy h1 span {
+    color: var(--primary-red);
+}
+
+.contact-hero-description {
+    max-width: 48ch;
+    margin-bottom: 1.8rem;
+    color: var(--text-muted);
+    font-size: 1.08rem;
+    line-height: 1.8;
+}
+
+.contact-hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.contact-hero-actions .btn {
+    min-height: 48px;
+}
+
+.contact-hero-actions .btn span {
+    font-size: 1.1rem;
+}
+
+.contact-text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    min-height: 44px;
+    color: var(--secondary-slate);
+    font-weight: 700;
+}
+
+.contact-text-link:hover {
+    color: var(--primary-red);
+}
+
+.contact-hero-proof {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    margin-top: 2.5rem;
+    color: var(--text-muted);
+    font-size: 0.86rem;
+    line-height: 1.5;
+}
+
+.contact-proof-mark {
+    display: grid;
+    width: 48px;
+    height: 48px;
+    flex: 0 0 auto;
+    place-items: center;
+    border: 1px solid rgba(139, 0, 0, 0.14);
+    border-radius: 50%;
+    background: var(--white);
+    color: var(--primary-red);
+    font-size: 0.9rem;
+    font-weight: 800;
+}
+
+.contact-hero-visual {
+    position: relative;
+    min-height: 380px;
+    padding: 0 0 1.4rem 1.4rem;
+}
+
+.contact-hero-visual::before {
+    content: "";
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+    z-index: -1;
+    width: 42%;
+    height: 42%;
+    border-radius: 1.5rem;
+    background: var(--accent-gold);
+}
+
+.contact-hero-visual::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    width: 40%;
+    height: 45%;
+    border-radius: 1.5rem;
+    background: var(--primary-red);
+}
+
+.contact-hero-visual > img {
+    width: 100%;
+    height: 100%;
+    min-height: 380px;
+    border-radius: 1.25rem;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0 24px 60px rgba(30, 41, 59, 0.18);
+}
+
+.contact-image-note {
+    position: absolute;
+    right: -1rem;
+    bottom: 0.35rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    max-width: min(340px, 82%);
+    padding: 0.9rem 1.1rem;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    border-radius: var(--radius-md);
+    background: var(--white);
+    box-shadow: var(--shadow-lg);
+}
+
+.contact-image-note-mark {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    flex: 0 0 auto;
+    place-items: center;
+    padding: 0.1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    background: var(--white);
+    object-fit: contain;
+}
+
+.contact-image-note strong,
+.contact-image-note small {
+    display: block;
+}
+
+.contact-image-note strong {
+    color: var(--secondary-slate);
+    font-size: 0.88rem;
+    line-height: 1.35;
+}
+
+.contact-image-note small {
+    margin-top: 0.2rem;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.8fr);
+    gap: 2rem;
+    align-items: start;
+}
+
+.contact-form-card .card-body,
+.contact-info-card .card-body {
+    padding: 2rem;
+}
+
+.contact-card-heading {
+    margin-top: 0.75rem;
+}
+
+.contact-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.15rem 1rem;
+    margin-top: 1.5rem;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form-field-wide {
+    grid-column: 1 / -1;
+}
+
+.form-field label {
+    color: var(--secondary-slate);
+    font-size: 0.92rem;
+    font-weight: 700;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    width: 100%;
+    min-height: 46px;
+    padding: 0.7rem 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    background: var(--white);
+    color: var(--text-main);
+    font: inherit;
+}
+
+.form-field textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.form-optional {
+    color: var(--text-muted);
+    font-size: 0.82rem;
+    font-weight: 400;
+}
+
+.form-note {
+    margin-bottom: 1rem;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.contact-sidebar {
+    display: grid;
+    gap: 1.25rem;
+}
+
+.contact-details {
+    display: grid;
+    gap: 1.15rem;
+    margin: 1.5rem 0;
+}
+
+.contact-detail {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.contact-detail:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.contact-detail dt {
+    margin-bottom: 0.2rem;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.contact-detail dd {
+    color: var(--secondary-slate);
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.contact-detail dd a {
+    font-size: 0.9rem;
+}
+
+.contact-hours-note {
+    margin-bottom: 1.25rem;
+    color: var(--text-muted);
+    font-size: 0.88rem;
+}
+
+.contact-whatsapp-link {
+    width: 100%;
+}
+
+.contact-welcome {
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    background: var(--secondary-slate);
+    color: rgba(255, 255, 255, 0.82);
+}
+
+.contact-welcome-mark {
+    margin-bottom: 0.2rem;
+    color: var(--accent-gold);
+    font-family: Georgia, serif;
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.contact-welcome h2 {
+    color: var(--white);
+    font-size: 1.2rem;
+}
+
+.contact-welcome p:last-child {
+    margin-bottom: 0;
+    font-size: 0.92rem;
+}
+
+.visit-layout {
+    display: grid;
+    gap: 1rem;
+}
+
+.directions-form {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.75rem;
+}
+
+.directions-field {
+    display: grid;
+    flex: 1;
+    gap: 0.35rem;
+}
+
+.directions-field label {
+    font-weight: 700;
+}
+
+.directions-field input {
+    width: 100%;
+    min-height: 48px;
+    padding: 0.65rem 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    background: var(--white);
+    color: var(--text-main);
+    font: inherit;
+}
+
+.directions-field input:focus {
+    outline: 3px solid rgba(139, 0, 0, 0.2);
+    border-color: var(--primary-red);
+}
+
+.directions-status {
+    min-height: 1.5em;
+    margin: 0;
+    color: var(--text-muted);
+}
+
+.map-frame {
+    height: clamp(350px, 55vw, 620px);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    background: var(--bg-light);
+    box-shadow: var(--shadow-sm);
+}
+
+.map-frame iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.faq-container {
+    max-width: 900px;
+}
+
+.faq-list {
+    display: grid;
+    gap: 0.8rem;
+}
+
+.faq-item {
+    padding: 1.15rem 1.35rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    background: var(--white);
+    box-shadow: var(--shadow-sm);
+}
+
+.faq-item summary {
+    color: var(--secondary-slate);
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.faq-item summary::marker {
+    color: var(--primary-red);
+}
+
+.faq-item p {
+    margin: 0.8rem 0 0;
+    color: var(--text-muted);
+}
+
+.whatsapp-float {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    z-index: 1100;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    min-height: 54px;
+    padding: 0.7rem 1rem;
+    border: 0;
+    border-radius: 999px;
+    background: #128C4A;
+    color: var(--white);
+    box-shadow: var(--shadow-lg);
+    font-size: 0.92rem;
+    font-weight: 700;
+}
+
+.whatsapp-float:hover {
+    background: #0B6B38;
+    color: var(--white);
+}
+
+.whatsapp-float svg {
+    width: 24px;
+    height: 24px;
+    flex: 0 0 auto;
+    fill: currentColor;
+}
+
+/* ==================================================
    9. FOOTER SECTION
    ================================================== */
 .site-footer {
-    background-color: var(--secondary-slate);
-    color: rgba(255, 255, 255, 0.8);
-    padding: 4rem 0 2rem;
+    background:
+        radial-gradient(ellipse at 5% 0%, rgba(139, 0, 0, 0.22), transparent 28rem),
+        var(--secondary-slate);
+    color: rgba(255, 255, 255, 0.76);
+    padding: 4rem 0 1.5rem;
     border-top: 4px solid var(--primary-red);
 }
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1.5fr;
-    gap: 2.5rem;
-    margin-bottom: 3rem;
+    grid-template-columns: minmax(250px, 1.7fr) repeat(3, minmax(130px, 0.8fr));
+    gap: clamp(1.5rem, 4vw, 3.5rem);
+    margin-bottom: 2.75rem;
 }
 
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    margin-bottom: 1.15rem;
+    color: var(--white);
+}
+
+.footer-brand:hover {
+    color: var(--white);
+}
+
+.footer-brand img {
+    width: 60px;
+    height: 60px;
+    flex: 0 0 auto;
+    padding: 0.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    background: var(--white);
+    object-fit: contain;
+}
+
+.footer-brand strong,
+.footer-brand small {
+    display: block;
+}
+
+.footer-brand strong {
+    color: var(--white);
+    font-size: 1.05rem;
+    line-height: 1.3;
+}
+
+.footer-brand small {
+    margin-top: 0.2rem;
+    color: rgba(255, 255, 255, 0.67);
+    font-size: 0.78rem;
+    font-style: italic;
+    line-height: 1.45;
+}
+
+.footer-col h3,
 .footer-col h4 {
     color: var(--white);
-    font-size: 1.1rem;
-    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
     position: relative;
-    padding-bottom: 0.4rem;
-}
-
-.footer-col h4::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 30px;
-    height: 2px;
-    background-color: var(--accent-gold);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
 }
 
 .footer-col p, 
@@ -590,8 +1121,19 @@ ul {
     line-height: 1.8;
 }
 
+.site-footer a:not(.footer-brand) {
+    color: rgba(255, 255, 255, 0.76);
+}
+
+.site-footer a:not(.footer-brand):hover {
+    color: var(--accent-gold);
+}
+
 .footer-links li a {
-    color: rgba(255, 255, 255, 0.7);
+    display: inline-flex;
+    align-items: center;
+    min-height: 40px;
+    color: rgba(255, 255, 255, 0.76);
     transition: color var(--transition-fast);
 }
 
@@ -600,12 +1142,22 @@ ul {
 }
 
 .footer-bottom {
-    padding-top: 2rem;
+    padding-top: 1.35rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 0.85rem;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.footer-col p a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 40px;
 }
 
 .footer-legal a {
@@ -620,6 +1172,37 @@ ul {
 /* ==================================================
    10. RESPONSIVE DESIGN (MEDIA QUERIES)
    ================================================== */
+@media (min-width: 769px) and (max-width: 1100px) {
+    .header-container {
+        gap: 1rem;
+    }
+
+    .brand-logo {
+        gap: 0.6rem;
+    }
+
+    .brand-crest {
+        height: 46px;
+    }
+
+    .brand-text .school-name {
+        font-size: 1rem;
+    }
+
+    .brand-text .school-motto {
+        font-size: 0.7rem;
+    }
+
+    .main-nav {
+        gap: clamp(0.55rem, 1vw, 0.9rem);
+    }
+
+    .nav-link {
+        font-size: 0.84rem;
+        white-space: nowrap;
+    }
+}
+
 /* Tablet Breakpoint (under 992px) */
 @media (max-width: 992px) {
     .grid-4 {
@@ -627,11 +1210,29 @@ ul {
     }
     
     .footer-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: minmax(0, 1.4fr) repeat(2, minmax(130px, 1fr));
     }
 
     .hero-title {
         font-size: 2.4rem;
+    }
+
+    .contact-layout {
+        grid-template-columns: minmax(0, 1.25fr) minmax(240px, 0.75fr);
+        gap: 1.25rem;
+    }
+
+    .contact-hero-grid {
+        gap: 2rem;
+    }
+
+    .contact-hero-visual,
+    .contact-hero-visual > img {
+        min-height: 320px;
+    }
+
+    .map-frame {
+        height: clamp(320px, 55vw, 500px);
     }
 }
 
@@ -639,6 +1240,22 @@ ul {
 @media (max-width: 768px) {
     .header-container {
         height: 70px;
+    }
+
+    .brand-logo {
+        gap: 0.65rem;
+    }
+
+    .brand-crest {
+        height: 46px;
+    }
+
+    .brand-text .school-name {
+        font-size: clamp(0.9rem, 3.2vw, 1.15rem);
+    }
+
+    .brand-text .school-motto {
+        font-size: 0.72rem;
     }
 
     .mobile-toggle {
@@ -657,6 +1274,12 @@ ul {
         box-shadow: var(--shadow-md);
         border-bottom: 2px solid var(--primary-red);
         display: none;
+    }
+
+    .main-nav .nav-link {
+        display: flex;
+        align-items: center;
+        min-height: 44px;
     }
 
     .main-nav.is-open {
@@ -693,9 +1316,85 @@ ul {
         font-size: 1rem;
     }
 
+    .contact-hero {
+        padding: 3.5rem 0;
+    }
+
+    .contact-hero-grid,
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-hero-copy {
+        max-width: 620px;
+    }
+
+    .contact-hero-copy h1 {
+        max-width: 13ch;
+        font-size: clamp(2.5rem, 10vw, 3.5rem);
+    }
+
+    .contact-hero-visual,
+    .contact-hero-visual > img {
+        min-height: 280px;
+    }
+
+    .contact-hero-visual {
+        padding: 0 0 1rem 1rem;
+    }
+
+    .contact-image-note {
+        top: 1rem;
+        right: auto;
+        bottom: auto;
+        left: 1rem;
+    }
+
+    .contact-form {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-detail dd {
+        font-size: 0.9rem;
+    }
+
+    .contact-detail dd a {
+        font-size: 0.82rem;
+    }
+
+    .form-field-wide {
+        grid-column: auto;
+    }
+
+    .contact-form-card .card-body,
+    .contact-info-card .card-body {
+        padding: 1.4rem;
+    }
+
+    .directions-form {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .whatsapp-float {
+        right: 1rem;
+        bottom: 1rem;
+        min-height: 50px;
+        padding: 0.65rem 0.85rem;
+    }
+
     .footer-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+
+    .site-footer {
+        padding-bottom: 5.25rem;
+    }
+
+    .footer-brand img {
+        width: 54px;
+        height: 54px;
     }
 
     .footer-bottom {
@@ -811,7 +1510,8 @@ textarea:focus-visible {
     .hero-actions,
     .no-print,
     .site-footer .footer-links,
-    .site-footer .footer-legal {
+    .site-footer .footer-legal,
+    .whatsapp-float {
         display: none !important;
     }
 
@@ -868,6 +1568,3 @@ textarea:focus-visible {
         background: transparent !important;
     }
 }
-
-
-

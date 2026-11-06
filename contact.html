@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Phoenix Secondary School in Manenberg, Cape Town.">
+    <meta name="description" content="Contact Phoenix Secondary School in Manenberg, Cape Town. Call, email, get directions, or send the school a message.">
     <title>Contact | Phoenix Secondary School</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/main.js" defer></script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <header class="site-header">
         <div class="container header-container">
             <a href="index.html" class="brand-logo">
-                <img class="brand-crest" src="images/logo-crest.png" alt="">
+                <img class="brand-crest" src="images/logo.jpeg" alt="">
                 <span class="brand-text">
                     <span class="school-name">Phoenix Secondary School</span>
                     <span class="school-motto">Building Brighter Futures</span>
@@ -33,38 +34,185 @@
             </nav>
         </div>
     </header>
-    <main id="main-content" class="container">
-        <section class="section">
-            <div class="section-header">
-                <h1 class="section-title">Contact the School</h1>
-                <p class="section-subtitle">Get in touch with Phoenix Secondary School.</p>
+
+    <main id="main-content">
+        <section class="contact-hero" aria-labelledby="contact-hero-title">
+            <div class="container contact-hero-content">
+                <div class="contact-hero-grid">
+                    <div class="contact-hero-copy">
+                        <p class="contact-eyebrow"><span aria-hidden="true"></span> Phoenix Secondary School · Manenberg</p>
+                        <h1 id="contact-hero-title">Let’s make your next step <span>clear.</span></h1>
+                        <p class="contact-hero-description">
+                            Speak with our school team about admissions, learning, or life at Phoenix.
+                            We’re here to help learners and families find the right way forward.
+                        </p>
+                        <div class="contact-hero-actions">
+                            <a href="tel:+27216384577" class="btn btn-primary">Call the school <span aria-hidden="true">↗</span></a>
+                            <a href="#send-message" class="contact-text-link">Or send us a message <span aria-hidden="true">↓</span></a>
+                        </div>
+                        <div class="contact-hero-proof">
+                            <span class="contact-proof-mark" aria-hidden="true">40+</span>
+                            <span>Rooted in Manenberg<br>and building brighter futures since 1983</span>
+                        </div>
+                    </div>
+                    <div class="contact-hero-visual">
+                        <img src="images/WhatsApp%20Image%202026-11-02%20at%2013.11.19.jpeg" alt="Phoenix Secondary School campus in Manenberg" width="1600" height="1200" fetchpriority="high">
+                        <div class="contact-image-note">
+                            <img class="contact-image-note-mark" src="images/logo.jpeg" alt="">
+                            <span><strong>A school at the heart of its community</strong><small>Silverstream Road, Manenberg</small></span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="grid-2">
-                <article class="card">
-                    <div class="card-body">
-                        <h2 class="card-title">School office</h2>
-                        <p class="card-text">Silverstream Road<br>Manenberg, Cape Town, 7764</p>
-                        <p><a class="btn btn-primary" href="tel:+27216384577">(021) 638 4577</a></p>
-                        <p><a class="btn btn-outline" href="mailto:phoenixsecondaryschool@gmail.com">phoenixsecondaryschool@gmail.com</a></p>
-                        <p class="card-text">Please contact the office to confirm current opening hours before visiting.</p>
+        </section>
+
+        <section class="section" aria-labelledby="contact-options-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" id="contact-options-title">How can we help?</h2>
+                    <p class="section-subtitle">Choose the easiest way to reach the school office.</p>
+                </div>
+
+                <div class="contact-layout">
+                    <section class="card contact-form-card" id="send-message" aria-labelledby="message-title">
+                        <div class="card-body">
+                            <span class="badge badge-red">Send a message</span>
+                            <h2 class="card-title contact-card-heading" id="message-title">Write to our team</h2>
+                            <p class="card-text">Share a few details and your email app will open with your message ready to send.</p>
+                            <form class="contact-form" action="mailto:phoenixsecondaryschool@gmail.com" method="post" enctype="text/plain">
+                                <div class="form-field">
+                                    <label for="contact-name">Your name</label>
+                                    <input id="contact-name" name="Name" type="text" autocomplete="name" required>
+                                </div>
+                                <div class="form-field">
+                                    <label for="contact-email">Email address</label>
+                                    <input id="contact-email" name="Email" type="email" autocomplete="email" required>
+                                </div>
+                                <div class="form-field">
+                                    <label for="contact-phone">Phone number <span class="form-optional">(optional)</span></label>
+                                    <input id="contact-phone" name="Phone" type="tel" autocomplete="tel">
+                                </div>
+                                <div class="form-field">
+                                    <label for="contact-topic">What is your message about?</label>
+                                    <select id="contact-topic" name="Topic" required>
+                                        <option value="" selected disabled>Select a topic</option>
+                                        <option>Admissions</option>
+                                        <option>Current learner or family</option>
+                                        <option>Academics</option>
+                                        <option>General enquiry</option>
+                                        <option>Community or partnership</option>
+                                    </select>
+                                </div>
+                                <div class="form-field form-field-wide">
+                                    <label for="contact-message">Your message</label>
+                                    <textarea id="contact-message" name="Message" rows="5" required></textarea>
+                                </div>
+                                <div class="form-field-wide">
+                                    <p class="form-note" id="contact-form-note">This form uses your device’s email app. If it doesn’t open, email us directly at <a href="mailto:phoenixsecondaryschool@gmail.com">phoenixsecondaryschool@gmail.com</a>.</p>
+                                    <button class="btn btn-primary" type="submit">Continue to email</button>
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+
+                    <aside class="contact-sidebar" aria-label="School contact details">
+                        <section class="card contact-info-card" aria-labelledby="contact-details-title">
+                            <div class="card-body">
+                                <span class="badge badge-gold">Contact details</span>
+                                <h2 class="card-title contact-card-heading" id="contact-details-title">Talk to the school</h2>
+                                <dl class="contact-details">
+                                    <div class="contact-detail">
+                                        <dt>Call the office</dt>
+                                        <dd><a href="tel:+27216384577">(021) 638 4577</a></dd>
+                                    </div>
+                                    <div class="contact-detail">
+                                        <dt>Email</dt>
+                                        <dd><a href="mailto:phoenixsecondaryschool@gmail.com">phoenixsecondaryschool@gmail.com</a></dd>
+                                    </div>
+                                    <div class="contact-detail">
+                                        <dt>Visit us</dt>
+                                        <dd>Silverstream Road<br>Manenberg, Cape Town, 7764</dd>
+                                    </div>
+                                </dl>
+                                <p class="contact-hours-note">Please call ahead to confirm office availability before visiting.</p>
+                                <a class="btn btn-outline contact-whatsapp-link" href="https://wa.me/27216384577?text=Hello%20Phoenix%20Secondary%20School" target="_blank" rel="noopener noreferrer">Chat with us on WhatsApp</a>
+                            </div>
+                        </section>
+
+                        <section class="contact-welcome">
+                            <p class="contact-welcome-mark" aria-hidden="true">“</p>
+                            <h2>Every conversation opens a door.</h2>
+                            <p>We look forward to welcoming learners, families, and friends of Phoenix.</p>
+                        </section>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt" id="visit-us" aria-labelledby="visit-heading">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" id="visit-heading">Come visit Phoenix</h2>
+                    <p class="section-subtitle">Find us on Silverstream Road in the heart of Manenberg.</p>
+                </div>
+                <div class="visit-layout">
+                    <form class="directions-form" data-directions-form>
+                        <div class="directions-field">
+                            <label for="directions-origin">Get directions from</label>
+                            <input id="directions-origin" name="origin" type="text" autocomplete="street-address" placeholder="Enter your starting address" required>
+                        </div>
+                        <button class="btn btn-primary" type="submit">Show route</button>
+                    </form>
+                    <p class="directions-status" data-directions-status aria-live="polite">Enter your starting point to see the route to Phoenix on the map.</p>
+                    <div class="map-frame">
+                        <iframe
+                            src="https://maps.google.com/maps?q=Phoenix%20Secondary%20School%2C%20Silverstream%20Road%2C%20Manenberg%2C%20Cape%20Town&z=15&output=embed"
+                            title="Map showing Phoenix Secondary School in Manenberg; enter a starting address above to view directions here"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            allowfullscreen>
+                        </iframe>
                     </div>
-                </article>
-                <article class="card">
-                    <div class="card-body">
-                        <h2 class="card-title">Find us</h2>
-                        <p class="card-text">Use the address above to plan your visit. Check your route before travelling.</p>
-                        <a class="btn btn-secondary" href="https://www.google.com/maps/search/?api=1&amp;query=Phoenix+Secondary+School+Silverstream+Road+Manenberg+Cape+Town" target="_blank" rel="noopener noreferrer">Open map</a>
-                    </div>
-                </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" aria-labelledby="faq-heading">
+            <div class="container faq-container">
+                <div class="section-header">
+                    <h2 class="section-title" id="faq-heading">Frequently asked questions</h2>
+                    <p class="section-subtitle">A few quick answers to help you get started.</p>
+                </div>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>Where is Phoenix Secondary School?</summary>
+                        <p>Our campus is on Silverstream Road, Manenberg, Cape Town, 7764. Enter your starting address above the map to view directions on this page.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>How can I speak with the school office?</summary>
+                        <p>Call <a href="tel:+27216384577">(021) 638 4577</a> or email <a href="mailto:phoenixsecondaryschool@gmail.com">phoenixsecondaryschool@gmail.com</a>. Please call ahead to check office availability before visiting.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>What grades and languages does the school serve?</summary>
+                        <p>Phoenix is a dual-medium school for Grades 8 to 12, offering learning in English and Afrikaans.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Where can I find admissions information?</summary>
+                        <p>Visit our <a href="admissions.html">Admissions page</a> for school registration information, or contact the office with your questions.</p>
+                    </details>
+                </div>
             </div>
         </section>
     </main>
+
     <footer class="site-footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h3>Phoenix Secondary School</h3>
-                    <p>Phoenix Sekondêr · Building Brighter Futures</p>
+                    <a class="footer-brand" href="index.html">
+                        <img src="images/logo.jpeg" alt="">
+                        <span><strong>Phoenix Secondary School</strong><small>Phoenix Sekondêr · Building Brighter Futures</small></span>
+                    </a>
                     <p>A dual-medium public school serving Manenberg since 1983.</p>
                 </div>
                 <div class="footer-col">
@@ -74,8 +222,7 @@
                 <div class="footer-col">
                     <h3>Contact</h3>
                     <p><a href="tel:+27216384577">(021) 638 4577</a></p>
-                    <p><a href="/cdn-cgi/l/email-protection#5121393e343f38292234323e3f353023282232393e3e3d11363c30383d7f323e3c"><span class="__cf_email__" data-cfemail="f7879f9892999e8f84929498999396858e84949f98989bb7909a969e9bd994989a">[email&#160;protected]</span></a></p>
-                    <p><a href="/cdn-cgi/l/email-protection#75051d1a101b1c0d5b061016350216101106161d1a1a19065b121a035b0f14"><span class="__cf_email__" data-cfemail="74041c1b111a1d0c5a071117340317111007171c1b1b18075a131b025a0e15">[email&#160;protected]</span></a></p>
+                    <p><a href="mailto:phoenixsecondaryschool@gmail.com">phoenixsecondaryschool@gmail.com</a></p>
                 </div>
                 <div class="footer-col">
                     <h3>Quick links</h3>
@@ -92,6 +239,5 @@
             </div>
         </div>
     </footer>
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 </body>
 </html>
