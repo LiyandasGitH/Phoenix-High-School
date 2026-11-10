@@ -280,6 +280,30 @@ ul {
     display: flex;
     gap: 0.75rem;
 }
+.header-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0 1.1rem;
+    background: var(--primary-red);
+    color: var(--white);
+    font-size: 0.82rem;
+    font-weight: 700;
+    white-space: nowrap;
+    border-radius: 999px;
+    border: 1px solid var(--primary-red);
+    box-shadow: var(--shadow-sm);
+    transition: background-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.header-action:hover,
+.header-action:focus-visible {
+    background: var(--primary-red-hover);
+    color: var(--white);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
 
 /* Mobile Hamburger Button */
 .mobile-toggle {
