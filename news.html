@@ -67,79 +67,109 @@
           <button class="btn btn-outline" data-calendar-filter="holidays">Term Dates & Holidays</button>
         </div>
 
-        <!-- News & Event Grid -->
-        <div class="grid-3">
-          <!-- Notice Card 1: Exams -->
-          <article class="card" data-calendar-item="exams">
-            <div class="card-body">
-              <span class="badge badge-red" style="margin-bottom: 0.5rem; display: inline-block;">Exams • Nov 2026</span>
-              <h3 class="card-title" style="font-size: 1.25rem; margin-bottom: 0.5rem;">Grade 12 NSC Final Examinations</h3>
-              <p class="card-text" style="color: var(--text-muted, #64748B); font-size: 0.9rem; margin-bottom: 1rem;">
-                National Senior Certificate examinations commence across all invigilation centres. Candidates must arrive 30 minutes prior to paper start times.
-              </p>
-              <a href="#" class="btn btn-outline" style="font-size: 0.87rem;">Download Timetable (PDF)</a>
-            </div>
-          </article>
+        <!-- Blog Layout Container -->
+        <div class="blog-container" style="display: flex; gap: 2.5rem; flex-wrap: wrap;">
 
-          <!-- Notice Card 2: Events -->
-          <article class="card" data-calendar-item="events">
-            <div class="card-body">
-              <span class="badge badge-gold" style="margin-bottom: 0.5rem; display: inline-block;">Ceremony • Term 4</span>
-              <h3 class="card-title" style="font-size: 1.25rem; margin-bottom: 0.5rem;">Grade 12 Valedictory Service</h3>
-              <p class="card-text" style="color: var(--text-muted, #64748B); font-size: 0.95rem; margin-bottom: 1rem;">
-                Celebrating the Class of 2026. Parents and guardians are invited to join the academic awards presentation and farewell assembly.
-              </p>
-              <a href="#" class="btn btn-outline" style="font-size: 0.875rem;">View Event Details</a>
-            </div>
-          </article>
+          <!-- MAIN COLUMN: Featured Story & Editorial Feed -->
+          <div class="blog-main" style="flex: 2; min-width: 300px;">
 
-          <!-- Notice Card 3: Exams -->
-          <article class="card" data-calendar-item="exams">
-            <div class="card-body">
-              <span class="badge badge-red" style="margin-bottom: 0.5rem; display: inline-block;">Exams • Grades 8- 11</span>
-              <h3 class="card-title" style="font-size: 1.25rem; margin-bottom: 0.5rem;">End-of-Year Internal Examinations</h3>
-              <p class="card-text" style="color: var(--text-muted, #64748B); font-size: 0.95rem; margin-bottom: 1rem;">
-                November assessment timetable for GET and FET phases. Study packs and revision sessions available daily after school.
-              </p>
-              <a href="#" class="btn btn-outline" style="font-size: 0.875rem;">Download Schedule (PDF)</a>
-            </div>
-          </article>
+            <!-- Featured Story Banner with Visual Overlay -->
+            <article class="card" style="margin-bottom: 2rem; overflow: hidden; border-radius: var(--radius-lg, 12px);">
+              <div style="background-color: var(--secondary-slate, #1E293B); height: 240px; display: flex; align-items: flex-end; padding: 1.5rem; color: #FFFFFF; background-image: linear-gradient(to top, rgba(30, 41, 59, 0.95), rgba(30, 41, 59, 0.4)), url('images/hero-bg.jpg'); background-size: cover; background-position: center;">
+                <span class="badge badge-gold" style="font-weight: 600; font-size: 0.85rem ; padding: 0.4rem 0.8rem;">Featured Story • Term 4</span>
+              </div>
+              <div class="card-body" style="padding: 1.75rem;">
+                <div style="display: flex; gap: 0.75rem; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap;">
+                  <span class="badge badge-red">Academic Showcase</span>
+                  <span style="font-size: 0.85rem; color: var(--text-muted, #64748B);">08 November 2026</span>
+                </div>
+                <h3 style="font-size: 1.6rem; color: var(--secondary-slate, #1E293B); margin-bottom: 0.75rem; font-weight: 700;">
+                  Kreisgymnasium Heinsberg Exchange Delegates Present Cultural Findings
+                </h3>
+                <p style="color: var(--text-muted, #64748B); font-size: 1rem; line-height: 1.6; margin-bottom: 1.25rem;">
+                  Grade 11 learners participating in our signature international partnership shared their research and collaborative project outcomes with parents and educators in the main assembly hall this week.
+                </p>
+                <a href="academics.html" class="btn btn-primary" style="font-size: 0.9rem;">Read Full Blog Post →</a>
+              </div>
+            </article>
 
-          <!-- Notice Card 4: Holidays -->
-          <article class="card" data-calendar-item="holidays">
-            <div class="card-body">
-              <span class="badge badge-red" style="margin-bottom: 0.5rem; display: inline-block;">Term Calendar</span>
-              <h3 class="card-title" style="font-size: 1.25rem; margin-bottom: 0.5rem;">Term 4 School Closure Date</h3>
-              <p class="card-text" style="color: var(--text-muted, #64748B); font-size: 0.95rem; margin-bottom: 1rem;">
-                Official WCED school holiday commencement for learners. Report card distribution schedule to be released via SMS notification.
-              </p>
-              <a href="#" class="btn btn-outline" style="font-size: 0.875rem;">View School Calendar</a>
-            </div>
-          </article>
+            <!-- Editorial Article 2 with Styled Media Badge Thumbnail -->
+            <article class="card" style="margin-bottom: 1.5rem; display: flex; flex-wrap: wrap; gap: 1.25rem; align-items: center; padding: 1.25rem;">
+              <div style="flex: 1; min-width: 200px; height: 150px; background: linear-gradient(135deg, var(--primary-red, #8B0000)), #5C0000; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #FFFFFF; font-weight: bold; text-align: center; padding: 1rem; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.15);">
+                <span style="font-size: 1.5rem; margin-bottom: 0.25rem;">📝</span>
+                <span style="font-size: 0.95rem; font-weight: 700;">Grade 12 NSC Exams</span>
+                <span style="font-size: 0.75rem; color: #FECACA; font-weight: normal; margin-top: 0.25rem;">Official Timetable</span>
+              </div>
+              <div style="flex: 2; min-width: 240px;">
+                <span class="badge badge-red" style="margin-bottom: 0.5rem; display: inline-block;">Exams & Notices</span>
+                <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--secondary-slate, #1E293B); font-weight: 700;">
+                  NSC Examination Invigilation & Candidate Instructions
+                </h4>
+                <p style="color: var(--text-muted, #64748B); font-size: 0.9rem; margin-bottom: 0.75rem; line-height: 1.5;">
+                  Official guidelines for Grade 12 candidates. Ensure all learners arrive 30 minutes prior to session commencement with certified identification.
+                </p>
+                <a href="#" class="btn btn-outline" style="font-size: 0.85rem; padding: 0.4rem 0.8rem;">Download Timetable (PDF)</a>
+              </div>
+            </article>
 
-          <!-- Notice Card 5: Events -->
-          <article class="card" data-calendar-item="events">
-            <div class="card-body">
-              <span class="badge badge-gold" style="margin-bottom: 0.5rem; display: inline-block;">Global Exchange</span>
-              <h3 class="card-title" style="font-size: 1.25rem; margin-bottom: 0.5rem;">Kreisgymnasium Exchange Showcase</h3>
-              <p class="card-text" style="color: var(--text-muted, #64748B); font-size: 0.95rem; margin-bottom: 1rem;">
-                Grade 11 German exchange participants present their cultural findings and collaborative project outcomes in the main hall.
-              </p>
-              <a href="#" class="btn btn-outline" style="font-size: 0.875rem;">Read Full Story</a>
-            </div>
-          </article>
+            <!-- Editorial Article 3 -->
+            <article class="card" style="margin-bottom: 1.5rem; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; padding: 1.25rem;">
+              <div style="flex: 1; min-width: 180px; height: 140px; background-color: var(--secondary-slate, #1E293B); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #FFFFFF; font-weight: bold; text-align: center; padding: 1rem;">
+                U19 Soccer League Victory
+              </div>
+              <div style="flex: 2; min-width: 240px;">
+                <span class="badge badge-gold" style="margin-bottom: 0.5rem; display: inline-block;">Student Life & Sport</span>
+                <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--secondary-slate, #1E293B);">
+                  Phoenix U19 First Team Claims Inter-School Derby Match
+                </h4>
+                <p style="color: var(--text-muted, #64748B); font-size: 0.9rem; margin-bottom: 0.75rem; line-height: 1.5;">
+                  Highlights and match report from Friday's fixture. Congratulations to our senior squad for representing the school with outstanding sportsmanship.
+                </p>
+                <a href="student-life.html" class="btn btn-outline" style="font-size: 0.85rem; padding: 0.4rem 0.8rem;">View Sports Gallery</a>
+              </div>
+            </article>
 
-          <!-- Notice Card 6: Holidays -->
-          <article class="card" data-calendar-item="holidays">
-            <div class="card-body">
-              <span class="badge badge-red" style="margin-bottom: 0.5rem; display: inline-block;">WCED Circular</span>
-              <h3 class="card-title" style="font-size: 1.25rem; margin-bottom: 0.5rem;">2027 Academic Year Commencement</h3>
-              <p class="card-text" style="color: var(--text-muted, #64748B); font-size: 0.95rem; margin-bottom: 1rem;">
-                WCED official opening dates for educators and learners for the 2027 school year, including orientation timetable.
-              </p>
-              <a href="#" class="btn btn-outline" style="font-size: 0.875rem;">Download Circular (PDF)</a>
+          </div>
+
+          <!-- SIDEBAR CONTAINER -->
+          <aside class="blog-sidebar" style="flex: 1; min-width: 280px; display: flex; flex-direction: column; gap: 1.75rem;">
+
+            <!-- Facebook Social Feed Widget Card -->
+            <div class="card" style="padding: 1.5rem; background: var(--bg-card, #FFFFFF); border: 1px solid var(--border-color, #E2E8F0);">
+              <span class="badge badge-gold" style="margin-bottom: 0.75rem; display: inline-block;">Live Social Feed</span>
+              <h4 style="font-size: 1.15rem; color: var(--secondary-slate, #1E293B); margin-bottom: 0.5rem; font-weight: 700;">Facebook Page Updates</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted, #64748B); margin-bottom: 1rem; line-height: 1.4;">
+                Follow official announcements, sports photos, and community posts directly from Phoenix Secondary School.
+              </p> 
+
+              <!-- Facebook Interactive Embed Container -->
+              <div style="border: 1px solid #E2E8F0; border-radius: 6px; overflow: hidden; background: #F8FAFC; text-align: center; padding: 1.5rem 1rem;">
+                <div style="font-size: 2rem; margin-bottom: 0.25rem;">📘</div>
+                <p style="font-size: 0.95rem; font-weight: 700; color: var(--secondary-slate, #1E293B); margin-bottom: 0.25rem;">
+                  Phoenix Secondary School
+                </p>
+                <p style="font-size: 0.8rem; color: var(--text-muted, #64748B); margin-bottom: 1rem;">
+                  @PhoenixSecondaryManenberg
+                </p>
+                <a href="[suspicious link removed]" target="\_blank" rel="noopener" class="btn btn-primary" style="font-size: 0.85rem; padding: 0.55rem 1rem; width: 100%; display: inline-block; text-align: center;">
+                  Visit Official Facebook Page →
+                </a>
+              </div>
             </div>
-          </article> 
+
+            <!-- Notice Filter Category Tabs -->
+            <div class="card" style="padding: 1.5rem; background: var(--bg-card, #FFFFFF); border: 1px solid var(--border-color, #E2E8F0);">
+              <h4 style="font-size: 1.15rem; color: var(--secondary-slate, #1E293B); margin-bottom: 1rem; font-weight: 700;">Filter Notices</h4>
+              <div class="filter-controls" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                <button class="btn btn-primary" data-calendar-filter="all" style="text-align: left;">All Notices</button>
+                <button class="btn btn-outline" data-calendar-filter="exams" style="text-align: left;">Exams & Assessment</button>
+                <button class="btn btn-outline" data-calendar-filter="events" style="text-align: left;">Events & Ceremonies</button>
+                <button class="btn btn-outline" data-calendar-filter="holidays" style="text-align: left;">Term Dates & Holidays</button>
+              </div>
+            </div>
+
+          </aside>
+
         </div>
 
         <!-- Newsletter Subscription Section -->
@@ -172,7 +202,7 @@
             </article>
           </div>
         </section>
-        
+
       </div>
     </main>
 
