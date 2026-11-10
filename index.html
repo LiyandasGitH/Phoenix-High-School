@@ -8,8 +8,13 @@
               content="Welcome to Phoenix High Secondary School. Explore our academics, sports, and admissions information.">
 
         <title>Phoenix Secondary School | Home</title>
-
+        <link rel="icon" href="favicon.svg" type="image/svg+xml">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+        <link rel="manifest" href="site.webmanifest">
         <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/hero-slider.css">
     </head>
 
     <body>
@@ -41,18 +46,128 @@
                 </button>
 
                 <nav id="site-nav" class="main-nav" aria-label="Main navigation">
-                    <a class="nav-link" href="index.html" aria-current="page">Home</a>
+                    <a class="nav-link active" href="index.html" aria-current="page">Home</a>
                     <a class="nav-link" href="about.html">About</a>
                     <a class="nav-link" href="academics.html">Academics</a>
-                    <a class="nav-link" href="admissions.html">Admissions</a>
+                    <a class="nav-link nav-mobile-only" href="admissions.html">Admissions</a>
                     <a class="nav-link" href="student-life.html">Student Life</a>
                     <a class="nav-link" href="news.html">News</a>
                     <a class="nav-link" href="contact.html">Contact</a>
                 </nav>
+                <a class="header-action" href="admissions.html">Admissions</a>
             </div>
         </header>
 
-        <!-- announcement ticker -->
+        
+
+        <!-- main content -->
+        <main id="main-content">
+            <section class="hero-slider" data-hero-slider data-current-slide="0" role="region" aria-label="Phoenix Secondary School highlights" aria-roledescription="carousel" tabindex="0">
+                <div class="hero-backdrop" aria-hidden="true"></div>
+                <div class="hero-grain" aria-hidden="true"></div>
+
+                <article class="hero-slide is-active" data-slide aria-hidden="false" aria-roledescription="slide" aria-label="Slide 1 of 5">
+                    <figure class="hero-visual">
+                        <img src="images/campus-courtyard-1280.webp" alt="" fetchpriority="high">
+                        <figcaption><span class="hero-visual-index">01</span> A welcoming place to learn and grow</figcaption>
+                    </figure>
+                    <div class="hero-copy">
+                        <p class="hero-overline">Learn <span aria-hidden="true">·</span> Grow <span aria-hidden="true">·</span> Achieve</p>
+                        <h1 class="hero-title">A brighter future starts <em>here.</em></h1>
+                        <p class="hero-description">Discover a welcoming school community where every learner is encouraged to grow, achieve, and shape what comes next.</p>
+                        <div class="hero-actions">
+                            <a class="hero-button hero-button-primary" href="about.html">Discover Phoenix <span aria-hidden="true">↗</span></a>
+                            <a class="hero-button hero-button-ghost" href="admissions.html">Admissions information <span aria-hidden="true">→</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="hero-slide" data-slide aria-hidden="true" inert aria-roledescription="slide" aria-label="Slide 2 of 5">
+                    <figure class="hero-visual">
+                        <img src="images/school-hall-960.webp" alt="" loading="lazy">
+                        <figcaption><span class="hero-visual-index">02</span> Learning that opens doors</figcaption>
+                    </figure>
+                    <div class="hero-copy">
+                        <p class="hero-overline">Curiosity becomes confidence</p>
+                        <h2 class="hero-title">Room to learn. <em>Space to excel.</em></h2>
+                        <p class="hero-description">Explore the subjects, guidance, and learning opportunities that help Phoenix learners build a strong foundation for the future.</p>
+                        <div class="hero-actions">
+                            <a class="hero-button hero-button-primary" href="academics.html">Explore academics <span aria-hidden="true">↗</span></a>
+                            <a class="hero-button hero-button-ghost" href="contact.html">Talk to our team <span aria-hidden="true">→</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="hero-slide" data-slide aria-hidden="true" inert aria-roledescription="slide" aria-label="Slide 3 of 5">
+                    <figure class="hero-visual">
+                        <img src="images/fb-netball.jpg" alt="" loading="lazy">
+                        <figcaption><span class="hero-visual-index">03</span> Teamwork, energy, and Phoenix pride</figcaption>
+                    </figure>
+                    <div class="hero-copy">
+                        <p class="hero-overline">Find your place. Find your people.</p>
+                        <h2 class="hero-title">More than a classroom. <em>A community.</em></h2>
+                        <p class="hero-description">From sport to shared experiences, learners have opportunities to connect, build confidence, and celebrate being part of Phoenix.</p>
+                        <div class="hero-actions">
+                            <a class="hero-button hero-button-primary" href="student-life.html">Explore student life <span aria-hidden="true">↗</span></a>
+                            <a class="hero-button hero-button-ghost" href="news.html">See school stories <span aria-hidden="true">→</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="hero-slide" data-slide aria-hidden="true" inert aria-roledescription="slide" aria-label="Slide 4 of 5">
+                    <figure class="hero-visual">
+                        <img src="images/exchange-program.jpeg" alt="" loading="lazy">
+                        <figcaption><span class="hero-visual-index">04</span> Learning and memories beyond the classroom</figcaption>
+                    </figure>
+                    <div class="hero-copy">
+                        <p class="hero-overline">A school connected to its community</p>
+                        <h2 class="hero-title">Every experience helps us <em>rise.</em></h2>
+                        <p class="hero-description">Phoenix is a place to discover new perspectives, make lasting connections, and grow together as a school community.</p>
+                        <div class="hero-actions">
+                            <a class="hero-button hero-button-primary" href="about.html">Meet our school <span aria-hidden="true">↗</span></a>
+                            <a class="hero-button hero-button-ghost" href="news.html">Read our latest news <span aria-hidden="true">→</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="hero-slide" data-slide aria-hidden="true" inert aria-roledescription="slide" aria-label="Slide 5 of 5">
+                    <figure class="hero-visual">
+                        <img src="images/school-garden-960.webp" alt="" loading="lazy">
+                        <figcaption><span class="hero-visual-index">05</span> Growing knowledge and possibility</figcaption>
+                    </figure>
+                    <div class="hero-copy">
+                        <p class="hero-overline">Your next chapter can start today</p>
+                        <h2 class="hero-title">Make Phoenix part of <em>your story.</em></h2>
+                        <p class="hero-description">Thinking about joining Phoenix? Find admissions information and contact the school for help with the next steps.</p>
+                        <div class="hero-actions">
+                            <a class="hero-button hero-button-primary" href="admissions.html">Start with admissions <span aria-hidden="true">↗</span></a>
+                            <a class="hero-button hero-button-ghost" href="contact.html">Get in touch <span aria-hidden="true">→</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <button class="hero-arrow hero-arrow-prev" type="button" data-hero-prev aria-label="Show previous slide">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg>
+                </button>
+                <button class="hero-arrow hero-arrow-next" type="button" data-hero-next aria-label="Show next slide">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
+                </button>
+
+                <div class="hero-slider-footer">
+                    <p class="hero-slide-count" data-hero-count>01 <i>/</i> 05</p>
+                    <div class="hero-pagination" role="group" aria-label="Choose a highlight">
+                        <button class="hero-indicator is-active" type="button" data-hero-indicator="0" aria-label="Show slide 1: Welcome to Phoenix" aria-current="true"><span></span></button>
+                        <button class="hero-indicator" type="button" data-hero-indicator="1" aria-label="Show slide 2: Academics"><span></span></button>
+                        <button class="hero-indicator" type="button" data-hero-indicator="2" aria-label="Show slide 3: Student life"><span></span></button>
+                        <button class="hero-indicator" type="button" data-hero-indicator="3" aria-label="Show slide 4: Community"><span></span></button>
+                        <button class="hero-indicator" type="button" data-hero-indicator="4" aria-label="Show slide 5: Admissions"><span></span></button>
+                    </div>
+                    <p class="hero-scroll-cue"><span></span> Scroll to explore</p>
+                </div>
+
+                <p class="sr-only" data-hero-status role="status" aria-live="polite" aria-atomic="true"></p>
+            </section>
+            <!-- announcement ticker -->
         <div class="announcement-ticker">
             <div class="container ticker-content">
                 <span>
@@ -62,32 +177,7 @@
             </div>
         </div>
 
-        <!-- main content -->
-        <main id="main-content" class="container">
-
-        <!--    welcome section -->
-            <section class="hero">
-                <div class="hero-content">
-                    <p class="hero-tagline">Learn • Grow • Achieve</p>
-                    <h1 class="hero-title">Welcome to Phoenix Secondary School!</h1>
-                    <p class="hero-description">
-                    Discover a learning community dedicated to academic achievement,
-                    personal growth, sports, and preparing
-                    learners for a successful future
-                    </p>
-
-                    <div class="hero-actions">
-                        <a href="admissions.html" class="btn btn-primary">
-                            Admissions Information
-                        </a>
-
-                        <a href="about.html" class="btn btn-secondary">
-                            Learn More About Us
-                        </a>
-                    </div>
-                </div>
-            </section>
-
+            <div class="container">
             <section class="section" aria-labelledby="highlights-heading">
                 <div class="section-header">
                     <h2 id="highlights-heading" class="section-title">Explore Our School</h2>
@@ -182,6 +272,7 @@
 
                 </div>
             </section>
+            </div>
         </main>
 
         <!-- site footer -->
@@ -221,8 +312,8 @@
             </div>
         </footer>
 
-        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
-
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
         <script src="js/main.js" defer></script>
+        <script src="js/hero-slider.js" defer></script>
     </body>
 </html>

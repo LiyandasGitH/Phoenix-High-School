@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://liyandasgith.github.io/Phoenix-High-School/sitemap.xml
