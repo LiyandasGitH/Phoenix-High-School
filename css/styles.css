@@ -260,6 +260,10 @@ ul {
     position: relative;
 }
 
+.main-nav .nav-link.nav-mobile-only {
+    display: none;
+}
+
 .nav-link:hover,
 .nav-link.active {
     color: var(--primary-red);
@@ -1310,6 +1314,10 @@ ul {
         height: 70px;
     }
 
+    .header-container > .header-action {
+        display: none;
+    }
+
     .brand-logo {
         gap: 0.65rem;
     }
@@ -1348,6 +1356,10 @@ ul {
         display: flex;
         align-items: center;
         min-height: 44px;
+    }
+
+    .main-nav .nav-link.nav-mobile-only {
+        display: flex;
     }
 
     .main-nav.is-open {
