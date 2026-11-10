@@ -14,6 +14,337 @@
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
+    <style id="phoenix-contact-hero-redesign">
+        /* Phoenix Secondary School — contact hero only */
+        .contact-hero.contact-hero--redesign {
+            --phoenix-red: #c8102e;
+            --phoenix-yellow: #ffc72c;
+            --phoenix-black: #111111;
+            --phoenix-white: #ffffff;
+            position: relative;
+            isolation: isolate;
+            display: flex;
+            align-items: center;
+            min-height: clamp(680px, calc(100svh - 82px), 830px);
+            padding: 86px 0 150px;
+            overflow: hidden;
+            color: var(--phoenix-white);
+            background-color: var(--phoenix-black);
+            background-image:
+                linear-gradient(90deg,
+                    rgba(8, 8, 8, .94) 0%,
+                    rgba(8, 8, 8, .84) 31%,
+                    rgba(8, 8, 8, .57) 55%,
+                    rgba(8, 8, 8, .20) 100%),
+                linear-gradient(0deg, rgba(8, 8, 8, .76) 0%, transparent 27%),
+                url("images/contact_hero.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center 52%;
+        }
+
+        .contact-hero.contact-hero--redesign::before {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            inset: 0 auto 0 0;
+            width: 7px;
+            background: var(--phoenix-red);
+        }
+
+        .contact-hero--redesign .contact-hero__inner {
+            position: relative;
+            z-index: 2;
+            width: min(90%, 1280px);
+            margin-inline: auto;
+        }
+
+        .contact-hero--redesign .contact-hero__copy {
+            width: min(100%, 690px);
+        }
+
+        .contact-hero--redesign .contact-hero__eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin: 0 0 25px;
+            color: var(--phoenix-yellow);
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 2.6px;
+            line-height: 1.5;
+            text-transform: uppercase;
+        }
+
+        .contact-hero--redesign .contact-hero__eyebrow::before {
+            content: "";
+            display: block;
+            width: 36px;
+            height: 3px;
+            flex: 0 0 36px;
+            background: var(--phoenix-red);
+        }
+
+        .contact-hero--redesign .contact-hero__title {
+            max-width: 680px;
+            margin: 0 0 23px;
+            color: var(--phoenix-white);
+            font-size: clamp(52px, 6.4vw, 86px);
+            font-weight: 900;
+            letter-spacing: -3.5px;
+            line-height: .99;
+            text-wrap: balance;
+        }
+
+        .contact-hero--redesign .contact-hero__title span {
+            display: block;
+            color: var(--phoenix-yellow);
+        }
+
+        .contact-hero--redesign .contact-hero__description {
+            max-width: 570px;
+            margin: 0 0 34px;
+            color: rgba(255,255,255,.88);
+            font-size: 16px;
+            line-height: 1.85;
+        }
+
+        .contact-hero--redesign .contact-hero__actions {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .contact-hero--redesign .contact-hero__button {
+            min-height: 54px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 0 23px;
+            border: 2px solid transparent;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: .45px;
+            text-decoration: none;
+            transition: background-color .2s ease, color .2s ease,
+                        border-color .2s ease, transform .2s ease;
+        }
+
+        .contact-hero--redesign .contact-hero__button:focus-visible,
+        .contact-hero--redesign .contact-hero__location:focus-visible {
+            outline: 3px solid var(--phoenix-yellow);
+            outline-offset: 4px;
+        }
+
+        .contact-hero--redesign .contact-hero__button--primary {
+            background: var(--phoenix-red);
+            border-color: var(--phoenix-red);
+            color: var(--phoenix-white);
+        }
+
+        .contact-hero--redesign .contact-hero__button--primary:hover {
+            background: #a90d26;
+            border-color: #a90d26;
+            transform: translateY(-2px);
+        }
+
+        .contact-hero--redesign .contact-hero__button--secondary {
+            background: rgba(255,255,255,.07);
+            border-color: rgba(255,255,255,.75);
+            color: var(--phoenix-white);
+            backdrop-filter: blur(5px);
+        }
+
+        .contact-hero--redesign .contact-hero__button--secondary:hover {
+            background: var(--phoenix-white);
+            border-color: var(--phoenix-white);
+            color: var(--phoenix-black);
+            transform: translateY(-2px);
+        }
+
+        .contact-hero--redesign .contact-hero__button svg {
+            width: 17px;
+            height: 17px;
+            flex: 0 0 17px;
+        }
+
+        .contact-hero--redesign .contact-hero__since {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            margin-top: 37px;
+            color: rgba(255,255,255,.83);
+            font-size: 12px;
+            line-height: 1.55;
+        }
+
+        .contact-hero--redesign .contact-hero__since-mark {
+            display: grid;
+            width: 48px;
+            height: 48px;
+            flex: 0 0 48px;
+            place-items: center;
+            border: 1px solid rgba(255,199,44,.65);
+            border-radius: 50%;
+            color: var(--phoenix-yellow);
+            font-size: 15px;
+            font-weight: 900;
+        }
+
+        .contact-hero--redesign .contact-hero__since strong {
+            display: block;
+            margin-bottom: 2px;
+            color: var(--phoenix-white);
+            font-size: 12px;
+        }
+
+        .contact-hero--redesign .contact-hero__bottom {
+            position: absolute;
+            z-index: 2;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            padding: 21px 0;
+            border-top: 1px solid rgba(255,255,255,.17);
+            background: rgba(10,10,10,.55);
+            backdrop-filter: blur(8px);
+        }
+
+        .contact-hero--redesign .contact-hero__bottom-inner {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 25px;
+            width: min(90%, 1280px);
+            margin-inline: auto;
+        }
+
+        .contact-hero--redesign .contact-hero__detail {
+            display: flex;
+            align-items: center;
+            min-width: 0;
+            gap: 12px;
+        }
+
+        .contact-hero--redesign .contact-hero__detail-icon {
+            display: grid;
+            width: 42px;
+            height: 42px;
+            flex: 0 0 42px;
+            place-items: center;
+            border-radius: 3px;
+            background: var(--phoenix-red);
+            color: var(--phoenix-white);
+        }
+
+        .contact-hero--redesign .contact-hero__detail-icon svg {
+            width: 19px;
+            height: 19px;
+        }
+
+        .contact-hero--redesign .contact-hero__detail-label {
+            display: block;
+            margin-bottom: 4px;
+            color: var(--phoenix-yellow);
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+        }
+
+        .contact-hero--redesign .contact-hero__detail-value,
+        .contact-hero--redesign a.contact-hero__detail-value {
+            display: block;
+            overflow-wrap: anywhere;
+            color: var(--phoenix-white);
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 1.4;
+            text-decoration: none;
+        }
+
+        .contact-hero--redesign a.contact-hero__detail-value:hover {
+            color: var(--phoenix-yellow);
+        }
+
+        @media (max-width: 900px) {
+            .contact-hero.contact-hero--redesign {
+                min-height: 760px;
+                background-position: 57% center;
+            }
+            .contact-hero--redesign .contact-hero__copy {
+                max-width: 620px;
+            }
+            .contact-hero--redesign .contact-hero__bottom-inner {
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .contact-hero.contact-hero--redesign {
+                min-height: 830px;
+                align-items: flex-start;
+                padding: 105px 0 245px;
+                background-image:
+                    linear-gradient(90deg, rgba(8,8,8,.91), rgba(8,8,8,.68)),
+                    linear-gradient(0deg, rgba(8,8,8,.82), transparent 45%),
+                    url("images/contact_hero.webp");
+                background-position: 59% center;
+            }
+            .contact-hero--redesign .contact-hero__inner,
+            .contact-hero--redesign .contact-hero__bottom-inner {
+                width: min(90%, 520px);
+            }
+            .contact-hero--redesign .contact-hero__eyebrow {
+                margin-bottom: 20px;
+                font-size: 9px;
+                letter-spacing: 1.7px;
+            }
+            .contact-hero--redesign .contact-hero__title {
+                margin-bottom: 19px;
+                font-size: clamp(46px, 12vw, 61px);
+                letter-spacing: -2px;
+                line-height: 1.02;
+            }
+            .contact-hero--redesign .contact-hero__description {
+                margin-bottom: 25px;
+                font-size: 14px;
+                line-height: 1.75;
+            }
+            .contact-hero--redesign .contact-hero__actions {
+                align-items: stretch;
+                flex-direction: column;
+                max-width: 310px;
+            }
+            .contact-hero--redesign .contact-hero__button {
+                width: 100%;
+            }
+            .contact-hero--redesign .contact-hero__since {
+                margin-top: 25px;
+            }
+            .contact-hero--redesign .contact-hero__bottom {
+                padding: 15px 0;
+            }
+            .contact-hero--redesign .contact-hero__bottom-inner {
+                grid-template-columns: 1fr;
+                gap: 13px;
+            }
+            .contact-hero--redesign .contact-hero__detail-icon {
+                width: 37px;
+                height: 37px;
+                flex-basis: 37px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .contact-hero--redesign .contact-hero__button {
+                transition: none;
+            }
+        }
+    </style>
+
     <script src="js/main.js" defer></script>
 </head>
 <body>
@@ -45,31 +376,72 @@
     </header>
 
     <main id="main-content">
-        <section class="contact-hero" aria-labelledby="contact-hero-title">
-            <div class="container contact-hero-content">
-                <div class="contact-hero-grid">
-                    <div class="contact-hero-copy">
-                        <p class="contact-eyebrow"><span aria-hidden="true"></span> Phoenix Secondary School · Manenberg</p>
-                        <h1 id="contact-hero-title">Let’s make your next step <span>clear.</span></h1>
-                        <p class="contact-hero-description">
-                            Speak with our school team about admissions, learning, or life at Phoenix.
-                            We’re here to help learners and families find the right way forward.
-                        </p>
-                        <div class="contact-hero-actions">
-                            <a href="tel:+27216384577" class="btn btn-primary">Call the school <span aria-hidden="true">↗</span></a>
-                            <a href="#send-message" class="contact-text-link">Or send us a message <span aria-hidden="true">↓</span></a>
-                        </div>
-                        <div class="contact-hero-proof">
-                            <span class="contact-proof-mark" aria-hidden="true">40+</span>
-                            <span>Rooted in Manenberg<br>and building brighter futures since 1983</span>
-                        </div>
+        <section class="contact-hero contact-hero--redesign" aria-labelledby="contact-hero-title">
+            <div class="contact-hero__inner">
+                <div class="contact-hero__copy">
+                    <p class="contact-hero__eyebrow">Phoenix Secondary School · Manenberg</p>
+                    <h1 class="contact-hero__title" id="contact-hero-title">We’re Here <span>For You.</span></h1>
+                    <p class="contact-hero__description">
+                        Whether you’re a parent, learner, former learner or member of our community,
+                        our school team is ready to help. Get in touch and we’ll guide you to the
+                        right person.
+                    </p>
+                    <div class="contact-hero__actions">
+                        <a href="tel:+27216384577" class="contact-hero__button contact-hero__button--primary">
+                            Call the school
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                        <a href="#send-message" class="contact-hero__button contact-hero__button--secondary">
+                            Send us a message
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M12 5v14m-7-7 7 7 7-7"/>
+                            </svg>
+                        </a>
                     </div>
-                    <div class="contact-hero-visual">
-                        <img src="images/WhatsApp%20Image%202026-11-02%20at%2013.11.19.jpeg" alt="Phoenix Secondary School campus in Manenberg" width="1600" height="1200" fetchpriority="high">
-                        <div class="contact-image-note">
-                            <img class="contact-image-note-mark" src="images/logo.jpeg" alt="">
-                            <span><strong>A school at the heart of its community</strong><small>Silverstream Road, Manenberg</small></span>
-                        </div>
+                    
+                </div>
+            </div>
+
+            <div class="contact-hero__bottom">
+                <div class="contact-hero__bottom-inner">
+                    <div class="contact-hero__detail">
+                        <span class="contact-hero__detail-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
+                                <circle cx="12" cy="10" r="2.5"/>
+                            </svg>
+                        </span>
+                        <span>
+                            <span class="contact-hero__detail-label">School Hours</span>
+                            <a class="contact-hero__detail-value" href="#visit-us">Monday - Friday: 08:00 - 14:30</a>
+                        </span>
+                    </div>
+
+                    <div class="contact-hero__detail">
+                        <span class="contact-hero__detail-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 8.9a16 16 0 0 0 6 6l1.2-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.8 2.1Z"/>
+                            </svg>
+                        </span>
+                        <span>
+                            <span class="contact-hero__detail-label">Call the school</span>
+                            <a class="contact-hero__detail-value" href="tel:+27216384577">(021) 638 4577</a>
+                        </span>
+                    </div>
+
+                    <div class="contact-hero__detail">
+                        <span class="contact-hero__detail-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="m12 3 9 4.5-9 4.5-9-4.5L12 3Z"/>
+                                <path d="M7 10.5v5c3 2.5 7 2.5 10 0v-5M21 8v7"/>
+                            </svg>
+                        </span>
+                        <span>
+                            <span class="contact-hero__detail-label">Our school motto</span>
+                            <span class="contact-hero__detail-value">Building Brighter Futures</span>
+                        </span>
                     </div>
                 </div>
             </div>
