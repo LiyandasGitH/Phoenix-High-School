@@ -1048,9 +1048,9 @@ ul {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.55rem;
     min-height: 54px;
-    padding: 0.7rem 1rem;
+    width: 54px;
+    padding: 0;
     border: 0;
     border-radius: 999px;
     background: #128C4A;
@@ -1468,7 +1468,8 @@ ul {
         right: 1rem;
         bottom: 1rem;
         min-height: 50px;
-        padding: 0.65rem 0.85rem;
+        width: 50px;
+        padding: 0;
     }
 
     .footer-grid {

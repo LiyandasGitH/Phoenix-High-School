@@ -1,100 +1,35 @@
 .home-header {
     position: fixed;
     inset: 0 0 auto;
-    z-index: 20;
-    border: 0;
-    background: linear-gradient(180deg, rgba(9, 12, 27, 0.62), transparent);
-    box-shadow: none;
-    transition: background 220ms ease, box-shadow 220ms ease;
+    z-index: 1000;
+    border-bottom: 0;
+    background-color: transparent;
+    transition: background-color 220ms ease;
 }
 
 .home-header.is-scrolled {
-    background: #fff;
-    box-shadow: 0 4px 18px rgba(15, 23, 42, 0.12);
+    background-color: var(--bg-card);
 }
 
-.home-header .header-container {
-    height: 88px;
-}
-
-.home-header .brand-logo {
-    flex: 0 1 auto;
-    gap: 0.75rem;
-}
-
-.home-header .brand-crest {
-    width: 48px;
-    height: 48px;
-    flex: 0 0 auto;
-    border: 2px solid rgba(255, 210, 31, 0.8);
-    border-radius: 50%;
-    background: #fff;
-    object-fit: cover;
-    object-position: center;
-}
-
-.home-header .brand-text .school-name {
-    display: block;
+.home-header:not(.is-scrolled) .brand-text .school-motto,
+.home-header:not(.is-scrolled) .nav-link,
+.home-header:not(.is-scrolled) .nav-link:hover,
+.home-header:not(.is-scrolled) .nav-link:focus-visible {
     color: #fff;
-    font-size: 1.05rem;
-    letter-spacing: 0.01em;
-    line-height: 1.15;
-    white-space: nowrap;
-    transition: color 220ms ease;
-}
-
-.home-header .brand-text .school-motto {
-    display: block;
-    margin-top: 0.2rem;
-    color: #ffd21f;
-    font-size: 0.69rem;
-    font-style: normal;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    line-height: 1.2;
-    text-transform: uppercase;
-    white-space: nowrap;
-    transition: color 220ms ease;
-}
-
-.home-header .main-nav {
-    gap: clamp(1.25rem, 3vw, 2.5rem);
-}
-
-.home-header .nav-link {
-    color: rgba(255, 255, 255, 0.82);
-    font-size: 0.88rem;
-    font-weight: 500;
-    letter-spacing: 0.025em;
-    transition: color 220ms ease;
-}
-
-.home-header .nav-link:hover,
-.home-header .nav-link:focus-visible {
-    color: #ffd21f;
-}
-
-.home-header .mobile-toggle {
-    color: #fff;
-    transition: color 220ms ease;
-}
-
-.home-header.is-scrolled .brand-text .school-name,
-.home-header.is-scrolled .nav-link {
-    color: #1e293b;
 }
 
 .home-header.is-scrolled .brand-text .school-motto {
-    color: #8b0000;
+    color: var(--text-muted);
+}
+
+.home-header.is-scrolled .nav-link {
+    color: var(--secondary-slate);
 }
 
 .home-header.is-scrolled .nav-link:hover,
-.home-header.is-scrolled .nav-link:focus-visible {
-    color: #8b0000;
-}
-
-.home-header.is-scrolled .mobile-toggle {
-    color: #1e293b;
+.home-header.is-scrolled .nav-link:focus-visible,
+.home-header.is-scrolled .nav-link.active {
+    color: var(--primary-red);
 }
 
 .hero-slider {
@@ -610,49 +545,19 @@
 }
 
 @media (max-width: 768px) {
-    .home-header .header-container {
-        height: 70px;
-    }
-
-    .home-header .brand-crest {
-        width: 42px;
-        height: 42px;
-    }
-
-    .home-header .brand-text .school-name {
-        font-size: clamp(0.76rem, 3.7vw, 0.94rem);
-    }
-
-    .home-header .brand-text .school-motto {
-        font-size: clamp(0.55rem, 2.4vw, 0.65rem);
-        letter-spacing: 0.07em;
-    }
-
-    .home-header .main-nav {
-        top: 70px;
+    .home-header:not(.is-scrolled) .main-nav {
         background: rgba(8, 9, 10, 0.97);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-top: 0;
-        backdrop-filter: blur(18px);
+        border-color: rgba(255, 255, 255, 0.1);
     }
 
-    .home-header.is-scrolled .main-nav {
-        background: #fff;
-        border-color: rgba(15, 23, 42, 0.1);
-        backdrop-filter: none;
+    .home-header:not(.is-scrolled) .main-nav .nav-link {
+        color: #fff;
     }
 
-    .home-header .main-nav .nav-link {
-        color: rgba(255, 255, 255, 0.85);
-    }
-
-    .home-header.is-scrolled .main-nav .nav-link {
-        color: #1e293b;
-    }
-
-    .home-header.is-scrolled .main-nav .nav-link:hover,
-    .home-header.is-scrolled .main-nav .nav-link:focus-visible {
-        color: #8b0000;
+    .home-header:not(.is-scrolled) .main-nav .nav-link:hover,
+    .home-header:not(.is-scrolled) .main-nav .nav-link:focus-visible,
+    .home-header:not(.is-scrolled) .main-nav .nav-link.active {
+        color: #fff;
     }
 
     .hero-slider {

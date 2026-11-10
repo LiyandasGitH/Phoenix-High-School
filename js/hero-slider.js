@@ -17,6 +17,20 @@
   var remaining = 6000;
   var pauseReasons = new Set();
   var pointer = {};
+  var header = document.querySelector(".home-header");
+
+  if (header) {
+    function updateHeaderBackground() {
+      header.classList.toggle(
+        "is-scrolled",
+        slider.getBoundingClientRect().bottom <= header.offsetHeight
+      );
+    }
+
+    window.addEventListener("scroll", updateHeaderBackground, { passive: true });
+    window.addEventListener("resize", updateHeaderBackground);
+    updateHeaderBackground();
+  }
 
   function wrapWords() {
     slides.forEach(function (slide) {
