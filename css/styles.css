@@ -1612,3 +1612,7 @@ textarea:focus-visible {
         background: transparent !important;
     }
 }
+
+[hidden] {
+   display: none !important; 
+}
