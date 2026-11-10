@@ -8,6 +8,9 @@
 
     <!-- Master Stylesheet Link -->
     <link rel="stylesheet" href="css/styles.css" />
+
+     <!-- Master JavaScript File -->
+    <script src="js/main.js" defer></script>
   </head>
   <body>
 
@@ -16,31 +19,31 @@
 
     <!-- Header Navigation -->
     <header class="site-header">
-      <div class="container" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0;">
-        <div class="brand">
-          <a href="index.html" style="text-decoration: none; color: inherit;">
-            <h1 style="font-size: 1.5rem; margin: 0; color: var(--primary-red, #8B0000);">Phoenix Secondary School</h1>
-            <p style="margin: 0; font-size: 0.85rem; color: var(--text-muted, #64748B);">Building Brighter Futures | Manenberg</p>
-          </a>
-        </div>
+      <div class="container header-container">
+        <!-- Brand Logo & School Crest -->
+        <a href="index.html" class="brand-logo">
+          <img class="brand-crest" src="images/logo.jpeg" alt="Phoenix Secondary School Crest">
+          <span class="brand-text">
+            <span class="school-name">Phoenix Secondary School</span>
+            <span class="school-motto">Building Brighter Futures</span>
+          </span>
+        </a>
+
+        <!-- Mobile Hamburger Toggle Button -->
+        <button type="button" class="mobile-toggle" data-nav-toggle aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+          <span class="sr-only">Open main menu</span>☰
+        </button>
 
         <!-- Navigation Bar -->
-         <nav id="site-nav" class="nav-menu">
-          <ul style="display: flex; list-style: none; gap: 1rem; margin: 0; padding: 0;">
-            <li><a href="index.html">Home</a>
-            <li><a href="about.html">About</a></li>
-            <li><a href="academics.html">Academics</a></li>
-            <li><a href="admissions.html">Admissions</a></li></li>
-            <li><a href="student-life.html">Student Life</a></li>
-            <li><a href="news.html" class="active" style="font-weight: bold; color: var(--primary-red, #8B0000);">News</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-         </nav>
-
-         <!-- Mobile Hamburger Toggle Button -->
-          <button class="mobile-toggle" data-nav-toggle aria-label="Toggle navigation menu" style="display: none;">
-            ☰
-          </button>
+        <nav id="site-nav" class="main-nav" aria-label="Main navigation">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="academics.html">Academics</a>
+          <a class="nav-link" href="admissions.html">Admissions</a>
+          <a class="nav-link" href="student-life.html">Student Life</a>
+          <a class="nav-link active" href="news.html" aria-current="page">News</a>
+          <a class="nav-link" href="contact.html">Contact</a>
+        </nav>
       </div>
     </header>
 
@@ -74,12 +77,16 @@
           <div class="blog-main" style="flex: 2; min-width: 300px;">
 
             <!-- Featured Story Banner with Visual Overlay -->
-            <article class="card" style="margin-bottom: 2rem; overflow: hidden; border-radius: var(--radius-lg, 12px);">
-              <div style="background-color: var(--secondary-slate, #1E293B); height: 240px; display: flex; align-items: flex-end; padding: 1.5rem; color: #FFFFFF; background-image: linear-gradient(to top, rgba(30, 41, 59, 0.95), rgba(30, 41, 59, 0.4)), url('images/hero-bg.jpg'); background-size: cover; background-position: center;">
-                <span class="badge badge-gold" style="font-weight: 600; font-size: 0.85rem ; padding: 0.4rem 0.8rem;">Featured Story • Term 4</span>
+            <article class="card" data-calendar-item="events" style="margin-bottom: 2rem; overflow: hidden; border-radius: var(--radius-lg, 12px);">
+              <!-- Exchange Program Photo Container -->
+              <div style="width: 100%; height: 240px; overflow: hidden;">
+                <img src="images/exchange-program.jpeg" alt="Phoenix Secondary and Kreisgymnasium Heinsberg Student Exchange" style="width: 100%; height: 100%; object-fit: cover;">
               </div>
+
+              <!-- Article Details -->
               <div class="card-body" style="padding: 1.75rem;">
-                <div style="display: flex; gap: 0.75rem; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap;">
+                <div>
+                  <span class="badge badge-gold">Featured Story • Term 4</span>
                   <span class="badge badge-red">Academic Showcase</span>
                   <span style="font-size: 0.85rem; color: var(--text-muted, #64748B);">08 November 2026</span>
                 </div>
@@ -93,13 +100,14 @@
               </div>
             </article>
 
-            <!-- Editorial Article 2 with Styled Media Badge Thumbnail -->
-            <article class="card" style="margin-bottom: 1.5rem; display: flex; flex-wrap: wrap; gap: 1.25rem; align-items: center; padding: 1.25rem;">
-              <div style="flex: 1; min-width: 200px; height: 150px; background: linear-gradient(135deg, var(--primary-red, #8B0000)), #5C0000; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #FFFFFF; font-weight: bold; text-align: center; padding: 1rem; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.15);">
-                <span style="font-size: 1.5rem; margin-bottom: 0.25rem;">📝</span>
-                <span style="font-size: 0.95rem; font-weight: 700;">Grade 12 NSC Exams</span>
-                <span style="font-size: 0.75rem; color: #FECACA; font-weight: normal; margin-top: 0.25rem;">Official Timetable</span>
+            <!-- Editorial Article 2: Grade 12 NSC Exams -->
+            <article class="card" data-calendar-item="exams" style="margin-bottom: 1.5rem; display: flex; flex-wrap: wrap; gap: 1.25rem; align-items: center; padding: 1.25rem;">
+              <!-- Exam Photo Thumbnail Container -->
+              <div style="flex: 1; min-width: 200px; height: 150px; overflow: hidden; border-radius: 8px;">
+                <img src="images/exams-img.jpg" alt="Phoenix Secondary Grade 12 Exams" style="width: 100%; height: 100%; object-fit: cover;">
               </div>
+
+              <!-- Article Details -->
               <div style="flex: 2; min-width: 240px;">
                 <span class="badge badge-red" style="margin-bottom: 0.5rem; display: inline-block;">Exams & Notices</span>
                 <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--secondary-slate, #1E293B); font-weight: 700;">
@@ -112,18 +120,21 @@
               </div>
             </article>
 
-            <!-- Editorial Article 3 -->
-            <article class="card" style="margin-bottom: 1.5rem; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; padding: 1.25rem;">
-              <div style="flex: 1; min-width: 180px; height: 140px; background-color: var(--secondary-slate, #1E293B); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #FFFFFF; font-weight: bold; text-align: center; padding: 1rem;">
-                U19 Soccer League Victory
+            <!-- Editorial Article 3: Netball Tournament Showcase (March Facebook Post)-->
+            <article class="card" data-calendar-item="events" style="margin-bottom: 1.5rem; display: flex; flex-wrap: wrap; gap: 1.25rem; align-items: center; padding: 1.25rem;">
+              <!-- Facebook Post Photo Thumbnail Container -->
+              <div style="flex: 1; min-width: 200px; height: 150px; overflow: hidden;; border-radius: 8px;">
+                <img src="images/fb-netball.jpg" alt="Phoenix Secondary Annual Netball Tournament" style="width: 100%; height: 100%; object-fit: cover;">
               </div>
+
+              <!-- Article Details -->
               <div style="flex: 2; min-width: 240px;">
                 <span class="badge badge-gold" style="margin-bottom: 0.5rem; display: inline-block;">Student Life & Sport</span>
-                <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--secondary-slate, #1E293B);">
-                  Phoenix U19 First Team Claims Inter-School Derby Match
+                <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--secondary-slate, #1E293B); font-weight: 700;">
+                  Phoenix Secondary Participates in Annual Law Enforcement Netball Tournament
                 </h4>
                 <p style="color: var(--text-muted, #64748B); font-size: 0.9rem; margin-bottom: 0.75rem; line-height: 1.5;">
-                  Highlights and match report from Friday's fixture. Congratulations to our senior squad for representing the school with outstanding sportsmanship.
+                  Highlights and tournament recap from our annual netball showcase. Congratulations to all teams, educators, and supporters for representing Phoenix Secondary with pride.
                 </p>
                 <a href="student-life.html" class="btn btn-outline" style="font-size: 0.85rem; padding: 0.4rem 0.8rem;">View Sports Gallery</a>
               </div>
@@ -135,7 +146,7 @@
           <aside class="blog-sidebar" style="flex: 1; min-width: 280px; display: flex; flex-direction: column; gap: 1.75rem;">
 
             <!-- Facebook Social Feed Widget Card -->
-            <div class="card" style="padding: 1.5rem; background: var(--bg-card, #FFFFFF); border: 1px solid var(--border-color, #E2E8F0);">
+            <div class="card" style="padding: 1.25rem; background: var(--bg-card, #FFFFFF); border: 1px solid var(--border-color, #E2E8F0); border-radius: var(--radius-lg, 12px);">
               <span class="badge badge-gold" style="margin-bottom: 0.75rem; display: inline-block;">Live Social Feed</span>
               <h4 style="font-size: 1.15rem; color: var(--secondary-slate, #1E293B); margin-bottom: 0.5rem; font-weight: 700;">Facebook Page Updates</h4>
               <p style="font-size: 0.85rem; color: var(--text-muted, #64748B); margin-bottom: 1rem; line-height: 1.4;">
@@ -151,7 +162,7 @@
                 <p style="font-size: 0.8rem; color: var(--text-muted, #64748B); margin-bottom: 1rem;">
                   @PhoenixSecondaryManenberg
                 </p>
-                <a href="[suspicious link removed]" target="\_blank" rel="noopener" class="btn btn-primary" style="font-size: 0.85rem; padding: 0.55rem 1rem; width: 100%; display: inline-block; text-align: center;">
+                <a href="https://web.facebook.com/p/Phoenix-Secondary-School-Manenberg-100057652381114" target="\_blank" rel="noopener" class="btn btn-primary" style="font-size: 0.85rem; padding: 0.55rem 1rem; width: 100%; display: inline-block; text-align: center;">
                   Visit Official Facebook Page →
                 </a>
               </div>
@@ -244,7 +255,5 @@
     </footer>
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 
-    <!-- Master JavaScript File -->
-    <script src="js/main.js" defer></script>
   </body>
 </html>
