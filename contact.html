@@ -459,23 +459,23 @@
                         <div class="card-body">
                             <span class="badge badge-red">Send a message</span>
                             <h2 class="card-title contact-card-heading" id="message-title">Write to our team</h2>
-                            <p class="card-text">Share a few details and your email app will open with your message ready to send.</p>
-                            <form class="contact-form" action="mailto:phoenixsecondaryschool@gmail.com" method="post" enctype="text/plain">
+                            <p class="card-text">Share a few details and your message will be sent to the school office.</p>
+                            <form class="contact-form" data-contact-form action="send-email.php" method="post" accept-charset="UTF-8">
                                 <div class="form-field">
                                     <label for="contact-name">Your name</label>
-                                    <input id="contact-name" name="Name" type="text" autocomplete="name" required>
+                                    <input id="contact-name" name="name" type="text" autocomplete="name" required>
                                 </div>
                                 <div class="form-field">
                                     <label for="contact-email">Email address</label>
-                                    <input id="contact-email" name="Email" type="email" autocomplete="email" required>
+                                    <input id="contact-email" name="email" type="email" autocomplete="email" required>
                                 </div>
                                 <div class="form-field">
                                     <label for="contact-phone">Phone number <span class="form-optional">(optional)</span></label>
-                                    <input id="contact-phone" name="Phone" type="tel" autocomplete="tel">
+                                    <input id="contact-phone" name="phone" type="tel" autocomplete="tel">
                                 </div>
                                 <div class="form-field">
                                     <label for="contact-topic">What is your message about?</label>
-                                    <select id="contact-topic" name="Topic" required>
+                                    <select id="contact-topic" name="topic" required>
                                         <option value="" selected disabled>Select a topic</option>
                                         <option>Admissions</option>
                                         <option>Current learner or family</option>
@@ -486,11 +486,11 @@
                                 </div>
                                 <div class="form-field form-field-wide">
                                     <label for="contact-message">Your message</label>
-                                    <textarea id="contact-message" name="Message" rows="5" required></textarea>
+                                    <textarea id="contact-message" name="message" rows="5" minlength="10" maxlength="10000" required></textarea>
                                 </div>
                                 <div class="form-field-wide">
-                                    <p class="form-note" id="contact-form-note">This form uses your device’s email app. If it doesn’t open, email us directly at <a href="mailto:phoenixsecondaryschool@gmail.com">phoenixsecondaryschool@gmail.com</a>.</p>
-                                    <button class="btn btn-primary" type="submit">Continue to email</button>
+                                    <p class="form-note" id="contact-form-note">If you have trouble submitting, email us directly at <a href="mailto:phoenixsecondaryschool@gmail.com">phoenixsecondaryschool@gmail.com</a>.</p>
+                                    <button class="btn btn-primary" type="submit">Send message</button>
                                 </div>
                             </form>
                         </div>
@@ -648,5 +648,6 @@
             </div>
         </div>
     </footer>
+    <script src="js/contact.js" defer></script>
 </body>
 </html>
