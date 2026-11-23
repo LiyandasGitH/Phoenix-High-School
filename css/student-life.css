@@ -102,6 +102,10 @@
     isolation: isolate;
 }
 
+.page-student-life main section[id] {
+    scroll-margin-top: calc(var(--header-height) + 1rem);
+}
+
 .life-hero-photo::after {
     position: absolute;
     z-index: 0;
@@ -157,6 +161,7 @@
     border: 5px solid var(--bg-light);
     border-radius: 50%;
     background: var(--accent-gold);
+    box-shadow: 0 10px 24px rgba(30, 41, 59, 0.18);
     color: var(--secondary-slate);
     font-size: 0.85rem;
     font-weight: 900;
@@ -749,136 +754,5 @@
     .life-gallery-item {
         break-inside: avoid;
         page-break-inside: avoid;
-    }
-}
-
-.page-student-life .header-container {
-    gap: 1rem;
-}
-
-.page-student-life .brand-logo {
-    flex-shrink: 0;
-}
-
-.page-student-life .main-nav {
-    gap: clamp(0.15rem, 0.75vw, 0.65rem);
-}
-
-.page-student-life .nav-link {
-    display: inline-flex;
-    align-items: center;
-    min-height: 42px;
-    border-radius: var(--radius-md);
-    padding: 0.45rem 0.65rem;
-    font-size: clamp(0.78rem, 0.95vw, 0.92rem);
-    white-space: nowrap;
-    transition: color var(--transition-fast), background-color var(--transition-fast);
-}
-
-.page-student-life .nav-link:hover {
-    background: rgba(139, 0, 0, 0.07);
-}
-
-.page-student-life .nav-link.active {
-    background: rgba(139, 0, 0, 0.1);
-    color: var(--primary-red);
-}
-
-.page-student-life .nav-link.active::after {
-    display: none;
-}
-
-@media (max-width: 900px) {
-    .page-student-life .header-container {
-        height: 74px;
-    }
-
-    .page-student-life .mobile-toggle {
-        display: grid;
-        width: 46px;
-        height: 46px;
-        flex: 0 0 46px;
-        place-items: center;
-        border: 1px solid var(--border-color);
-        border-radius: var(--radius-md);
-        background: var(--bg-card);
-        color: var(--secondary-slate);
-        font-size: 0;
-        transition: border-color var(--transition-fast), background-color var(--transition-fast);
-    }
-
-    .page-student-life .mobile-toggle::after {
-        content: "\2630";
-        font-size: 1.35rem;
-        line-height: 1;
-    }
-
-    .page-student-life .mobile-toggle[aria-expanded="true"]::after {
-        content: "\00D7";
-        font-size: 1.8rem;
-    }
-
-    .page-student-life .mobile-toggle:hover {
-        border-color: var(--primary-red);
-        background: rgba(139, 0, 0, 0.05);
-    }
-
-    .page-student-life .main-nav {
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        display: none;
-        width: min(90vw, var(--container-max-width));
-        max-height: calc(100dvh - 90px);
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0.2rem;
-        overflow-y: auto;
-        transform: translateX(-50%);
-        border: 1px solid var(--border-color);
-        border-top: 3px solid var(--primary-red);
-        border-radius: 0 0 var(--radius-lg) var(--radius-lg);
-        padding: 0.65rem;
-        background: var(--bg-card);
-        box-shadow: var(--shadow-lg);
-    }
-
-    .page-student-life .main-nav.is-open {
-        display: flex;
-    }
-
-    .page-student-life .nav-link {
-        min-height: 48px;
-        padding: 0.7rem 0.85rem;
-        font-size: 0.95rem;
-    }
-}
-
-@media (max-width: 380px) {
-    .page-student-life .header-container {
-        height: 70px;
-    }
-
-    .page-student-life .brand-logo {
-        gap: 0.45rem;
-    }
-
-    .page-student-life .brand-crest {
-        height: 40px;
-    }
-
-    .page-student-life .brand-text .school-name {
-        max-width: 14ch;
-        font-size: 0.88rem;
-    }
-
-    .page-student-life .brand-text .school-motto {
-        font-size: 0.68rem;
-    }
-
-    .page-student-life .mobile-toggle {
-        width: 42px;
-        height: 42px;
-        flex-basis: 42px;
     }
 }
