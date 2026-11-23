@@ -1,0 +1,884 @@
+.page-student-life {
+    background: var(--bg-light);
+}
+
+.page-student-life .life-hero {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(3.5rem, 7vw, 6.5rem) 0;
+    background:
+        radial-gradient(circle at 8% 85%, rgba(217, 119, 6, 0.12), transparent 18rem),
+        linear-gradient(120deg, #FFFFFF 0%, #F8FAFC 58%, #F1F5F9 100%);
+}
+
+.life-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.92fr);
+    gap: clamp(2.5rem, 6vw, 5.5rem);
+    align-items: center;
+}
+
+.life-hero-copy {
+    position: relative;
+    z-index: 1;
+    max-width: 610px;
+}
+
+.life-eyebrow,
+.life-kicker {
+    color: var(--primary-red);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.life-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1.15rem;
+}
+
+.life-eyebrow span {
+    color: var(--accent-gold);
+}
+
+.life-hero h1 {
+    max-width: 11ch;
+    margin: 0 0 1.25rem;
+    color: var(--secondary-slate);
+    font-size: clamp(3rem, 6vw, 5.4rem);
+    letter-spacing: -0.065em;
+    line-height: 0.98;
+}
+
+.life-hero-description {
+    max-width: 50ch;
+    margin-bottom: 1.75rem;
+    color: var(--text-muted);
+    font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+    line-height: 1.75;
+}
+
+.page-student-life .life-hero-actions {
+    justify-content: flex-start;
+}
+
+.life-hero-outline {
+    border-color: var(--border-color);
+    color: var(--secondary-slate);
+}
+
+.life-hero-outline:hover {
+    border-color: var(--secondary-slate);
+    background: var(--secondary-slate);
+    color: var(--white);
+}
+
+.life-hero-themes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin-top: 2rem;
+}
+
+.life-hero-themes li {
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    padding: 0.35rem 0.8rem;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-weight: 650;
+}
+
+.life-hero-photo {
+    position: relative;
+    min-height: 430px;
+    border-radius: var(--radius-lg);
+    background: var(--secondary-slate);
+    box-shadow: var(--shadow-lg);
+    isolation: isolate;
+}
+
+.life-hero-photo::after {
+    position: absolute;
+    z-index: 0;
+    inset: 45% 0 0;
+    border-radius: inherit;
+    background: linear-gradient(transparent, rgba(15, 23, 42, 0.78));
+    content: "";
+}
+
+.life-hero-photo img {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    object-fit: cover;
+    object-position: center;
+}
+
+.life-hero-photo figcaption {
+    position: absolute;
+    z-index: 1;
+    right: 1.5rem;
+    bottom: 1.35rem;
+    left: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    color: var(--white);
+    font-size: 0.82rem;
+}
+
+.life-hero-photo figcaption span:first-child {
+    font-weight: 750;
+}
+
+.life-hero-photo figcaption span:last-child {
+    color: rgba(255, 255, 255, 0.78);
+    text-align: right;
+}
+
+.life-photo-stamp {
+    position: absolute;
+    z-index: 2;
+    top: 1.25rem;
+    right: -1.1rem;
+    display: grid;
+    width: 92px;
+    height: 92px;
+    place-content: center;
+    transform: rotate(8deg);
+    border: 5px solid var(--bg-light);
+    border-radius: 50%;
+    background: var(--accent-gold);
+    color: var(--secondary-slate);
+    font-size: 0.85rem;
+    font-weight: 900;
+    line-height: 1.05;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.life-activities {
+    padding-top: 4.5rem;
+}
+
+.life-section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.life-section-heading > div {
+    max-width: 620px;
+}
+
+.life-section-heading .life-kicker {
+    margin-bottom: 0.65rem;
+}
+
+.life-section-heading .section-title {
+    display: block;
+    margin-bottom: 0;
+    padding-bottom: 0.75rem;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    letter-spacing: -0.04em;
+    text-align: left;
+}
+
+.life-section-heading .section-title::after {
+    left: 0;
+    transform: none;
+}
+
+.life-section-heading .section-subtitle {
+    max-width: 430px;
+    margin: 0 0 0.2rem;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.life-jump-links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 2.5rem 0 4.5rem;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.life-jump-links a {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    min-height: 66px;
+    padding: 0.8rem 1rem;
+    color: var(--text-muted);
+    font-size: 0.76rem;
+    font-weight: 750;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.life-jump-links a + a {
+    border-left: 1px solid var(--border-color);
+}
+
+.life-jump-links a:hover {
+    background: var(--white);
+    color: var(--primary-red);
+}
+
+.life-jump-links a:first-child {
+    color: var(--primary-red);
+}
+
+.life-jump-links a span {
+    color: var(--secondary-slate);
+    font-size: 0.9rem;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+.life-block-heading {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 1.4rem;
+}
+
+.life-block-heading .life-kicker {
+    margin-bottom: 0.25rem;
+}
+
+.life-block-heading h3 {
+    margin: 0;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    letter-spacing: -0.035em;
+}
+
+.life-number {
+    display: grid;
+    width: 54px;
+    height: 54px;
+    flex: 0 0 54px;
+    place-items: center;
+    border-radius: 50%;
+    background: rgba(139, 0, 0, 0.09);
+    color: var(--primary-red);
+    font-size: 0.9rem;
+    font-weight: 850;
+}
+
+.life-sport-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.8fr);
+    gap: 1.5rem;
+}
+
+.life-soccer-card {
+    border-top: 4px solid var(--primary-red);
+}
+
+.life-soccer-card .card-body,
+.life-netball-card .card-body {
+    height: 100%;
+    padding: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.life-soccer-card .card-title,
+.life-netball-card .card-title {
+    margin-top: 1rem;
+    color: var(--secondary-slate);
+    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+    letter-spacing: -0.035em;
+}
+
+.life-soccer-card .card-text,
+.life-netball-card .card-text {
+    max-width: 62ch;
+    line-height: 1.7;
+}
+
+.life-squad-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin-top: 1.7rem;
+}
+
+.life-squad-list li {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    border-left: 2px solid var(--accent-gold);
+    padding: 0.3rem 0.75rem;
+}
+
+.life-squad-list li span:first-child {
+    color: var(--primary-red);
+    font-size: 1.15rem;
+    font-weight: 850;
+}
+
+.life-squad-list li span:last-child {
+    color: var(--text-muted);
+    font-size: 0.76rem;
+    line-height: 1.4;
+}
+
+.life-netball-card {
+    position: relative;
+    overflow: hidden;
+    border-top: 4px solid var(--accent-gold);
+}
+
+.life-netball-mark {
+    position: absolute;
+    top: 0.6rem;
+    right: 1rem;
+    color: rgba(217, 119, 6, 0.12);
+    font-size: 7rem;
+    font-weight: 900;
+    letter-spacing: -0.1em;
+    line-height: 1;
+}
+
+.life-netball-card .card-body {
+    position: relative;
+    z-index: 1;
+}
+
+.life-text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin-top: 0.6rem;
+    color: var(--primary-red);
+    font-size: 0.9rem;
+    font-weight: 750;
+}
+
+.life-text-link span {
+    transition: transform var(--transition-fast);
+}
+
+.life-text-link:hover span {
+    transform: translateX(4px);
+}
+
+.life-community {
+    margin-top: 5rem;
+    padding: 5rem 0;
+    background: #FFFFFF;
+}
+
+.life-community-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 1.5rem;
+}
+
+.life-leadership-card {
+    position: relative;
+    overflow: hidden;
+    min-height: 350px;
+    border-radius: var(--radius-lg);
+    padding: clamp(1.75rem, 4vw, 3rem);
+    background: var(--secondary-slate);
+    color: #E2E8F0;
+    isolation: isolate;
+}
+
+.life-leadership-card h3 {
+    position: relative;
+    z-index: 1;
+    max-width: 12ch;
+    margin: 1.5rem 0 1rem;
+    color: var(--white);
+    font-size: clamp(2rem, 4vw, 3rem);
+    letter-spacing: -0.05em;
+    line-height: 1.05;
+}
+
+.life-leadership-card p {
+    position: relative;
+    z-index: 1;
+    max-width: 54ch;
+    margin-bottom: 1.5rem;
+    color: #CBD5E1;
+    line-height: 1.7;
+}
+
+.life-leadership-card .btn {
+    position: relative;
+    z-index: 1;
+}
+
+.life-card-index {
+    position: relative;
+    z-index: 1;
+    color: var(--accent-gold);
+    font-size: 0.86rem;
+    font-weight: 850;
+    letter-spacing: 0.1em;
+}
+
+.life-card-index span {
+    margin-left: 0.4rem;
+    color: #CBD5E1;
+    font-size: 0.68rem;
+}
+
+.life-orbit {
+    position: absolute;
+    z-index: -1;
+    right: -3rem;
+    bottom: -7rem;
+    width: 22rem;
+    height: 22rem;
+    border: 1px solid rgba(255, 255, 255, 0.17);
+    border-radius: 50%;
+}
+
+.life-orbit-two {
+    right: -0.5rem;
+    bottom: -9.5rem;
+    width: 18rem;
+    height: 18rem;
+    border-color: rgba(217, 119, 6, 0.5);
+}
+
+.life-exchange-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(1.75rem, 4vw, 3rem);
+    border-left: 4px solid var(--accent-gold);
+}
+
+.life-exchange-topline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.life-exchange-symbol {
+    display: grid;
+    width: 46px;
+    height: 46px;
+    place-items: center;
+    border-radius: 50%;
+    background: rgba(139, 0, 0, 0.08);
+    color: var(--primary-red);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.life-exchange-card .card-title {
+    max-width: 15ch;
+    margin: 1.5rem 0 0.75rem;
+    font-size: clamp(1.6rem, 3vw, 2.1rem);
+    letter-spacing: -0.04em;
+}
+
+.life-exchange-card .card-text {
+    line-height: 1.75;
+}
+
+.life-campus {
+    padding-top: 5rem;
+}
+
+.life-campus-heading {
+    margin-bottom: 2.25rem;
+}
+
+.life-gallery {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    grid-template-rows: 230px 230px;
+    gap: 1rem;
+}
+
+.life-gallery-item {
+    position: relative;
+    overflow: hidden;
+    min-height: 210px;
+    border-radius: var(--radius-md);
+    background: var(--secondary-slate);
+}
+
+.life-gallery-item::after {
+    position: absolute;
+    inset: 35% 0 0;
+    background: linear-gradient(transparent, rgba(15, 23, 42, 0.82));
+    content: "";
+}
+
+.life-gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-normal);
+}
+
+.life-gallery-item:hover img {
+    transform: scale(1.035);
+}
+
+.life-gallery-courtyard {
+    grid-row: span 2;
+}
+
+.life-gallery-courtyard img {
+    object-position: center;
+}
+
+.life-gallery-garden img {
+    object-position: center 58%;
+}
+
+.life-gallery-item figcaption {
+    position: absolute;
+    z-index: 1;
+    right: 1.25rem;
+    bottom: 1.1rem;
+    left: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    color: var(--white);
+}
+
+.life-gallery-item figcaption span {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.75rem;
+}
+
+.life-gallery-item figcaption strong {
+    font-size: 1rem;
+}
+
+.life-photo-note {
+    margin: 1rem 0 0;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+.life-invite {
+    margin-top: 4rem;
+    padding: 3.5rem 0;
+    background:
+        radial-gradient(circle at 92% 10%, rgba(217, 119, 6, 0.2), transparent 17rem),
+        var(--secondary-slate);
+}
+
+.life-invite-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.life-invite .life-kicker {
+    color: #FBBF24;
+}
+
+.life-invite h2 {
+    margin: 0 0 0.5rem;
+    color: var(--white);
+    font-size: clamp(2rem, 4vw, 3rem);
+    letter-spacing: -0.045em;
+}
+
+.life-invite p:not(.life-kicker) {
+    max-width: 60ch;
+    margin: 0;
+    color: #CBD5E1;
+}
+
+@media (max-width: 900px) {
+    .life-hero-grid {
+        grid-template-columns: minmax(0, 1fr) minmax(280px, 0.8fr);
+        gap: 2rem;
+    }
+
+    .life-hero-photo {
+        min-height: 360px;
+    }
+
+    .life-sport-grid {
+        grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .life-hero-grid,
+    .life-community-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .life-hero {
+        padding: 3.5rem 0;
+    }
+
+    .life-hero h1 {
+        max-width: 12ch;
+    }
+
+    .life-hero-photo {
+        min-height: 340px;
+    }
+
+    .life-photo-stamp {
+        right: 0.75rem;
+    }
+
+    .life-section-heading {
+        display: block;
+    }
+
+    .life-section-heading .section-subtitle {
+        margin-top: 1rem;
+    }
+
+    .life-jump-links {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 2rem 0 3.5rem;
+    }
+
+    .life-jump-links a:nth-child(3) {
+        border-left: 0;
+        border-top: 1px solid var(--border-color);
+    }
+
+    .life-jump-links a:nth-child(4) {
+        border-top: 1px solid var(--border-color);
+    }
+
+    .life-sport-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .life-community {
+        margin-top: 3.5rem;
+        padding: 3.5rem 0;
+    }
+
+    .life-leadership-card {
+        min-height: 320px;
+    }
+
+    .life-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: 280px 190px;
+    }
+
+    .life-gallery-courtyard {
+        grid-column: span 2;
+        grid-row: auto;
+    }
+
+    .life-invite-inner {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .life-hero-photo {
+        min-height: 280px;
+    }
+
+    .life-hero-photo figcaption {
+        right: 1rem;
+        left: 1rem;
+        font-size: 0.72rem;
+    }
+
+    .page-student-life .life-hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .life-squad-list {
+        grid-template-columns: 1fr;
+        gap: 0.65rem;
+    }
+
+    .life-squad-list li {
+        flex-direction: row;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .life-gallery {
+        grid-template-columns: 1fr;
+        grid-template-rows: 260px 220px 220px;
+    }
+
+    .life-gallery-courtyard {
+        grid-column: auto;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .page-student-life *,
+    .page-student-life *::before,
+    .page-student-life *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+@media print {
+    .life-hero-photo,
+    .life-gallery-item {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+}
+
+.page-student-life .header-container {
+    gap: 1rem;
+}
+
+.page-student-life .brand-logo {
+    flex-shrink: 0;
+}
+
+.page-student-life .main-nav {
+    gap: clamp(0.15rem, 0.75vw, 0.65rem);
+}
+
+.page-student-life .nav-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 42px;
+    border-radius: var(--radius-md);
+    padding: 0.45rem 0.65rem;
+    font-size: clamp(0.78rem, 0.95vw, 0.92rem);
+    white-space: nowrap;
+    transition: color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.page-student-life .nav-link:hover {
+    background: rgba(139, 0, 0, 0.07);
+}
+
+.page-student-life .nav-link.active {
+    background: rgba(139, 0, 0, 0.1);
+    color: var(--primary-red);
+}
+
+.page-student-life .nav-link.active::after {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .page-student-life .header-container {
+        height: 74px;
+    }
+
+    .page-student-life .mobile-toggle {
+        display: grid;
+        width: 46px;
+        height: 46px;
+        flex: 0 0 46px;
+        place-items: center;
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-md);
+        background: var(--bg-card);
+        color: var(--secondary-slate);
+        font-size: 0;
+        transition: border-color var(--transition-fast), background-color var(--transition-fast);
+    }
+
+    .page-student-life .mobile-toggle::after {
+        content: "\2630";
+        font-size: 1.35rem;
+        line-height: 1;
+    }
+
+    .page-student-life .mobile-toggle[aria-expanded="true"]::after {
+        content: "\00D7";
+        font-size: 1.8rem;
+    }
+
+    .page-student-life .mobile-toggle:hover {
+        border-color: var(--primary-red);
+        background: rgba(139, 0, 0, 0.05);
+    }
+
+    .page-student-life .main-nav {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        display: none;
+        width: min(90vw, var(--container-max-width));
+        max-height: calc(100dvh - 90px);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.2rem;
+        overflow-y: auto;
+        transform: translateX(-50%);
+        border: 1px solid var(--border-color);
+        border-top: 3px solid var(--primary-red);
+        border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+        padding: 0.65rem;
+        background: var(--bg-card);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .page-student-life .main-nav.is-open {
+        display: flex;
+    }
+
+    .page-student-life .nav-link {
+        min-height: 48px;
+        padding: 0.7rem 0.85rem;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .page-student-life .header-container {
+        height: 70px;
+    }
+
+    .page-student-life .brand-logo {
+        gap: 0.45rem;
+    }
+
+    .page-student-life .brand-crest {
+        height: 40px;
+    }
+
+    .page-student-life .brand-text .school-name {
+        max-width: 14ch;
+        font-size: 0.88rem;
+    }
+
+    .page-student-life .brand-text .school-motto {
+        font-size: 0.68rem;
+    }
+
+    .page-student-life .mobile-toggle {
+        width: 42px;
+        height: 42px;
+        flex-basis: 42px;
+    }
+}
