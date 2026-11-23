@@ -25,6 +25,12 @@
     <!-- Keyboard Accessibility Skip Link -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
+    <!-- Facebook SDK Root & Script -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous"
+            src="[suspicious link removed]">
+    </script>
+
     <!-- Header Navigation -->
     <header class="site-header">
       <div class="container header-container">
@@ -205,7 +211,9 @@
                 </p>
 
                 <!-- Subscription Form -->
-                <form class="newsletter-form" action="#" method="post" onsubmit="even.preventDefault(); alert('Thank you for subscribing! School circulars will be sent to your email.');" style="display: flex; gap: 0.75rem; max-width: 520px; margin: 0 auto; flex-wrap: wrap; justify-content: center;">
+                <form id="newsletter-form" class="newsletter-form" action="#" method="post"
+                      onsubmit="handleNewsletterSubmit(event)"
+                      style="display: flex; gap: 0.75rem; max-width: 520px; margin: 0 auto; flex-wrap: wrap; justify-content: center;">
                   <div class="form-field" style="flex: 1; min-width: 260;">
                     <label for="newsletter-email" class="sr-only">Email address</label>
                     <input id="newsletter-email" name="email" type="email" autocomplete="email" placeholder="Enter your email address.." required style="width: 100%; min-height: 48px; padding: 0.75rem 1rem; border: 1px solid var(--border-color, #CBD5E1); border-radius: var(--radius-sm, 4px); font-size: 0.95rem;">
@@ -214,6 +222,10 @@
                     Subscribe Now
                   </button>
                 </form>
+
+                <!-- In Page User Feedback Banner -->
+                <div id="newsletter-feedback" style="display: none; max-width: 520px; margin: 1rem auto 0; padding: 0.85rem 1.25rem; border-radius: var(--radius-sm, 4px); font-size: 0.9rem; text-align: center; transition: all 0.3s ease;"></div>
+                
                 <p style="margin-top: 1rem; font-size: 0.8rem; color: var(--text-muted, #64748B);">
                   Your information is confidential and will only be used for official Phoenix Secondary School communications.
                 </p>
