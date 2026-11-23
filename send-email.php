@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+// Keep runtime notices out of the JSON response; details belong in the server log.
+ini_set('display_errors', '0');
+ini_set('log_errors', '1');
+
 /**
  * Phoenix Secondary School contact form handler.
  *

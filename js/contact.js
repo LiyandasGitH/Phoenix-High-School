@@ -23,12 +23,17 @@
           body: new FormData(form),
           headers: { Accept: "application/json" }
         });
+        var responseText = await response.text();
         var result;
 
         try {
-          result = await response.json();
+          result = JSON.parse(responseText);
         } catch (error) {
-          throw new Error("The server returned an unexpected response. Please try again.");
+          throw new Error(
+            "The email service returned an invalid response (HTTP " + response.status + "). " +
+            "Check that send-email.php is deployed and PHP is enabled on the website host. " +
+            "You can email phoenixsecondaryschool@gmail.com directly."
+          );
         }
 
         if (!response.ok || !result.success) {
