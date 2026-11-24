@@ -518,6 +518,14 @@ ul {
     padding: 3rem 0;
 }
 
+.quick-hub .section-title {
+    color: var(--white);
+}
+
+.quick-hub .section-subtitle {
+    color: rgba(255, 255, 255, 0.8);
+}
+
 .quick-hub-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -529,6 +537,8 @@ ul {
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: var(--radius-md);
     padding: 1.5rem;
+    color: var(--white);
+    text-decoration: none;
     transition: background-color var(--transition-fast);
 }
 
