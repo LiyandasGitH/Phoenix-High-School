@@ -289,6 +289,53 @@
     gap: 1.5rem;
 }
 
+.life-activity-source {
+    margin: 1rem 0 0;
+    color: var(--text-muted);
+    font-size: 0.82rem;
+    line-height: 1.5;
+}
+
+.life-activity-source a {
+    color: var(--primary-red);
+    font-weight: 750;
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+}
+
+.life-extra-spotlight {
+    display: grid;
+    grid-template-columns: minmax(180px, 0.8fr) minmax(240px, 1.2fr) auto;
+    gap: 1rem 1.5rem;
+    align-items: center;
+    margin-top: 1.5rem;
+    border-left: 4px solid var(--accent-gold);
+    padding: 1.25rem 1.5rem;
+    background: #FFFFFF;
+}
+
+.life-extra-spotlight .life-kicker,
+.life-extra-spotlight h4,
+.life-extra-spotlight p {
+    margin-bottom: 0;
+}
+
+.life-extra-spotlight h4 {
+    margin-top: 0.35rem;
+    color: var(--secondary-slate);
+    font-size: 1.2rem;
+}
+
+.life-extra-spotlight > p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.life-extra-spotlight .life-text-link {
+    margin-top: 0;
+}
+
 .life-soccer-card {
     border-top: 4px solid var(--primary-red);
 }
@@ -674,6 +721,14 @@
         grid-template-columns: 1fr;
     }
 
+    .life-extra-spotlight {
+        grid-template-columns: 1fr 1.2fr;
+    }
+
+    .life-extra-spotlight .life-text-link {
+        grid-column: 1 / -1;
+    }
+
     .life-community {
         margin-top: 3.5rem;
         padding: 3.5rem 0;
@@ -724,6 +779,11 @@
         flex-direction: row;
         align-items: center;
         gap: 0.75rem;
+    }
+
+    .life-extra-spotlight {
+        grid-template-columns: 1fr;
+        padding: 1rem;
     }
 
     .life-gallery {
