@@ -415,7 +415,7 @@
                         </span>
                         <span>
                             <span class="contact-hero__detail-label">School Hours</span>
-                            <a class="contact-hero__detail-value" href="#visit-us">Monday - Friday: 08:00 - 14:30</a>
+                            <span class="contact-hero__detail-value">Monday - Friday: 08:00 - 14:30</span>
                         </span>
                     </div>
 
@@ -492,6 +492,11 @@
                             <h2 class="card-title contact-card-heading" id="message-title">Write to our team</h2>
                             <p class="card-text">Share a few details and your message will be sent to the school office.</p>
                             <form class="contact-form" data-contact-form action="send-email.php" method="post" accept-charset="UTF-8">
+                                <div class="contact-form-honeypot" aria-hidden="true">
+                                    <label for="contact-website">Leave this field empty</label>
+                                    <input id="contact-website" name="website" type="text" tabindex="-1" autocomplete="off">
+                                </div>
+                                <p class="contact-form-status" data-contact-status role="status" aria-live="polite" aria-atomic="true" hidden></p>
                                 <div class="form-field">
                                     <label for="contact-name">Your name <span aria-hidden="true">*</span></label>
                                     <input id="contact-name" name="name" type="text" autocomplete="name" required>
