@@ -120,6 +120,41 @@
     document.body.appendChild(link);
   }
 
+/**
+   * *Handles newsletter subscription submission and renders inline user feedbacl.
+   * @param {Event} event - The form submission event.
+   */
+  document.addEventListener('DOMContentLoaded', function () {
+    const newsletterForm = document.getElementById('newsletter-form');
+
+    if (newsletterForm) {
+      newsletterForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+      
+        const emailInput = document.getElementById('newsletter-email');
+        const feedbackDiv = document.getElementById('newsletter-feedback');
+
+        if (!emailInput || !feedbackDiv) return;
+
+        const userEmail = emailInput.value.trim();
+
+        if (userEmail) {
+          feedbackDiv.style.backgroundColor = '#DCFCE7'; // Soft green background
+          feedbackDiv.style.color = '#166534';
+          feedbackDiv.style.border = '1px solid #86EFAC';
+          feedbackDiv.innerHTML = '<strong>✓ Subscription Successful!</strong> Official school circulars will be sent to <em>' + userEmail + '</em>.';
+          feedbackDiv.style.display = 'block';
+
+          emailInput.value = '';
+
+          setTimeout(function() {
+            feedbackDiv.style.display = 'none';
+          }, 6000);
+        }
+      });
+    }
+  });
+
   ready(function () {
     initMobileNav();
     initCalendarFilter();

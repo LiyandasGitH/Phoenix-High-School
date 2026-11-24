@@ -25,6 +25,12 @@
     <!-- Keyboard Accessibility Skip Link -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
+    <!-- Facebook SDK Root and asynchronous script -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous"
+            src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v27.0">
+    </script>
+
     <!-- Header Navigation -->
     <header class="site-header">
       <div class="container header-container">
@@ -161,18 +167,21 @@
                 Follow official announcements, sports photos, and community posts directly from Phoenix Secondary School.
               </p> 
 
-              <!-- Facebook Interactive Embed Container -->
-              <div style="border: 1px solid #E2E8F0; border-radius: 6px; overflow: hidden; background: #F8FAFC; text-align: center; padding: 1.5rem 1rem;">
-                <div style="font-size: 2rem; margin-bottom: 0.25rem;">📘</div>
-                <p style="font-size: 0.95rem; font-weight: 700; color: var(--secondary-slate, #1E293B); margin-bottom: 0.25rem;">
-                  Phoenix Secondary School
-                </p>
-                <p style="font-size: 0.8rem; color: var(--text-muted, #64748B); margin-bottom: 1rem;">
-                  @PhoenixSecondaryManenberg
-                </p>
-                <a href="https://web.facebook.com/p/Phoenix-Secondary-School-Manenberg-100057652381114" target="\_blank" rel="noopener" class="btn btn-primary" style="font-size: 0.85rem; padding: 0.55rem 1rem; width: 100%; display: inline-block; text-align: center;">
-                  Visit Official Facebook Page →
-                </a>
+              <!-- Official Facebook Page Plugin Container -->
+              <div class="fb-widget-wrapper" style="width: 100%; min-width: 280px; min-height: 500px; overflow: hidden;">
+                <div class="fb-page"
+                    data-href="https://www.facebook.com/p/Phoenix-Secondary-School-Manenberg-100057652381114/"
+                    data-tabs="timeline"
+                    data-width="340"
+                    data-height="500"
+                    data-small-header="false"
+                    data-adapt-container-width="true"
+                    data-hide-cover="false"
+                    data-show-facepile="true">
+                  <blockquote cite="https://www.facebook.com/p/Phoenix-Secondary-School-Manenberg-100057652381114/" class="fb-xfbml-parse-ignore">
+                    <a href="https://www.facebook.com/p/Phoenix-Secondary-School-Manenberg-100057652381114/">Phoenix Secondary School</a>
+                  </blockquote>
+                </div>
               </div>
             </div>
 
@@ -205,7 +214,9 @@
                 </p>
 
                 <!-- Subscription Form -->
-                <form class="newsletter-form" action="#" method="post" onsubmit="even.preventDefault(); alert('Thank you for subscribing! School circulars will be sent to your email.');" style="display: flex; gap: 0.75rem; max-width: 520px; margin: 0 auto; flex-wrap: wrap; justify-content: center;">
+                <form id="newsletter-form" class="newsletter-form" action="#" method="post"
+                      onsubmit="handleNewsletterSubmit(event)"
+                      style="display: flex; gap: 0.75rem; max-width: 520px; margin: 0 auto; flex-wrap: wrap; justify-content: center;">
                   <div class="form-field" style="flex: 1; min-width: 260;">
                     <label for="newsletter-email" class="sr-only">Email address</label>
                     <input id="newsletter-email" name="email" type="email" autocomplete="email" placeholder="Enter your email address.." required style="width: 100%; min-height: 48px; padding: 0.75rem 1rem; border: 1px solid var(--border-color, #CBD5E1); border-radius: var(--radius-sm, 4px); font-size: 0.95rem;">
@@ -214,6 +225,10 @@
                     Subscribe Now
                   </button>
                 </form>
+
+                <!-- In Page User Feedback Banner -->
+                <div id="newsletter-feedback" style="display: none; max-width: 520px; margin: 1rem auto 0; padding: 0.85rem 1.25rem; border-radius: var(--radius-sm, 4px); font-size: 0.9rem; text-align: center; transition: all 0.3s ease;"></div>
+
                 <p style="margin-top: 1rem; font-size: 0.8rem; color: var(--text-muted, #64748B);">
                   Your information is confidential and will only be used for official Phoenix Secondary School communications.
                 </p>
