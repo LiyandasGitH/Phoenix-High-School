@@ -108,10 +108,10 @@
   function initWhatsAppChat() {
     var link = document.createElement("a");
     link.className = "whatsapp-float";
-    link.href = "https://wa.me/27216384577?text=Hello%20Phoenix%20Secondary%20School";
+    link.href = "https://whatsapp.com/channel/0029Vb8sCBqHFxOyT6q9uO1y";
     link.target = "_blank";
     link.rel = "noopener noreferrer";
-    link.setAttribute("aria-label", "Chat with Phoenix Secondary School on WhatsApp");
+    link.setAttribute("aria-label", "Open Phoenix Secondary School WhatsApp channel");
     link.innerHTML =
       '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">' +
       '<path d="M12 2a9.8 9.8 0 0 0-8.5 14.7L2 22l5.5-1.4A10 10 0 1 0 12 2Zm0 17.9a8 8 0 0 1-4.1-1.1l-.4-.2-3.2.8.9-3.1-.3-.5A8 8 0 1 1 12 19.9Z"/>' +

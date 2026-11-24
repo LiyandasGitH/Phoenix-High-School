@@ -5,12 +5,6 @@ declare(strict_types=1);
 ini_set('display_errors', '0');
 ini_set('log_errors', '1');
 
-/**
- * Phoenix Secondary School contact form handler.
- *
- * Place this file in the same directory as contact.html.
- * The web server must support PHP and have its mail transport configured.
- */
 
 header('Content-Type: application/json; charset=UTF-8');
 header('X-Content-Type-Options: nosniff');
