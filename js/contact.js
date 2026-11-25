@@ -4,7 +4,16 @@
   var form = document.querySelector("[data-contact-form]");
   if (form) {
     var submitButton = form.querySelector('button[type="submit"]');
+    var status = form.querySelector("[data-contact-status]");
     var originalButtonText = submitButton ? submitButton.textContent : "";
+
+    function showStatus(message, kind) {
+      if (!status) return;
+      status.textContent = message;
+      status.classList.toggle("is-success", kind === "success");
+      status.classList.toggle("is-error", kind === "error");
+      status.hidden = false;
+    }
 
     form.addEventListener("submit", async function (event) {
       event.preventDefault();
@@ -12,6 +21,7 @@
       if (!form.reportValidity() || form.dataset.submitting === "true") return;
 
       form.dataset.submitting = "true";
+      showStatus("Sending your message…", "pending");
       if (submitButton) {
         submitButton.disabled = true;
         submitButton.textContent = "Sending...";
@@ -29,11 +39,7 @@
         try {
           result = JSON.parse(responseText);
         } catch (error) {
-          throw new Error(
-            "The email service returned an invalid response (HTTP " + response.status + "). " +
-            "Check that send-email.php is deployed and PHP is enabled on the website host. " +
-            "You can email phoenixsecondaryschool@gmail.com directly."
-          );
+          throw new Error("We could not send your message right now. Please email phoenixsecondaryschool@gmail.com or call (021) 638 4577.");
         }
 
         if (!response.ok || !result.success) {
@@ -41,11 +47,12 @@
         }
 
         form.reset();
-        window.alert(result.message || "Thank you. Your message has been sent to Phoenix Secondary School.");
+        showStatus(result.message || "Thank you. Your message has been sent to Phoenix Secondary School.", "success");
       } catch (error) {
-        window.alert(error instanceof Error
+        var errorMessage = error instanceof Error && !(error instanceof TypeError)
           ? error.message
-          : "We could not send your message. Please try again or email the school directly.");
+          : "We could not send your message. Please try again or email the school directly.";
+        showStatus(errorMessage, "error");
       } finally {
         form.dataset.submitting = "false";
         if (submitButton) {

@@ -489,6 +489,14 @@ ul {
     padding: 3rem 0;
 }
 
+.quick-hub .section-title {
+    color: var(--white);
+}
+
+.quick-hub .section-subtitle {
+    color: rgba(255, 255, 255, 0.8);
+}
+
 .quick-hub-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -500,6 +508,8 @@ ul {
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: var(--radius-md);
     padding: 1.5rem;
+    color: var(--white);
+    text-decoration: none;
     transition: background-color var(--transition-fast);
 }
 
@@ -778,7 +788,7 @@ ul {
 
 .contact-layout {
     display: grid;
-    grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.8fr);
+    grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1.35fr);
     gap: 2rem;
     align-items: start;
 }
@@ -797,6 +807,45 @@ ul {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.15rem 1rem;
     margin-top: 1.5rem;
+}
+
+.contact-form-honeypot {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+.contact-form-status {
+    grid-column: 1 / -1;
+    margin: 0;
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    background: var(--white);
+    color: var(--text-main);
+    line-height: 1.5;
+}
+
+.contact-form-status[hidden] {
+    display: none;
+}
+
+.contact-form-status.is-success {
+    border-color: #2d7a46;
+    background: #f2faf4;
+    color: #205b34;
+}
+
+.contact-form-status.is-error {
+    border-color: #b42318;
+    background: #fff6f5;
+    color: #8a1c13;
 }
 
 .form-field {
@@ -831,6 +880,14 @@ ul {
 .form-field textarea {
     min-height: 140px;
     resize: vertical;
+}
+
+.contact-form .form-field input:focus,
+.contact-form .form-field select:focus,
+.contact-form .form-field textarea:focus {
+    border-color: #ffc72c;
+    outline: 3px solid #ffc72c;
+    outline-offset: 2px;
 }
 
 .form-optional {
@@ -1269,7 +1326,7 @@ ul {
     }
 
     .contact-layout {
-        grid-template-columns: minmax(0, 1.25fr) minmax(240px, 0.75fr);
+        grid-template-columns: minmax(240px, 0.75fr) minmax(0, 1.25fr);
         gap: 1.25rem;
     }
 

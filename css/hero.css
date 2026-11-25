@@ -1,0 +1,312 @@
+/* Phoenix Secondary School — reusable hero */
+        .phoenix-hero {
+            --phoenix-red: #c8102e;
+            --phoenix-yellow: #ffc72c;
+            --phoenix-black: #111111;
+            --phoenix-white: #ffffff;
+            position: relative;
+            isolation: isolate;
+            display: flex;
+            align-items: center;
+            min-height: clamp(680px, calc(100svh - 82px), 830px);
+            padding: 86px 0 150px;
+            overflow: hidden;
+            color: var(--phoenix-white);
+            background-color: var(--phoenix-black);
+        }
+
+        .phoenix-hero__background {
+            position: absolute;
+            z-index: 0;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 52%;
+        }
+
+        .phoenix-hero::after {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            inset: 0;
+            background-image:
+                linear-gradient(90deg,
+                    rgba(8, 8, 8, .94) 0%,
+                    rgba(8, 8, 8, .84) 31%,
+                    rgba(8, 8, 8, .57) 55%,
+                    rgba(8, 8, 8, .20) 100%),
+                linear-gradient(0deg, rgba(8, 8, 8, .76) 0%, transparent 27%);
+        }
+
+        .phoenix-hero::before {
+            content: "";
+            position: absolute;
+            z-index: 2;
+            inset: 0 auto 0 0;
+            width: 7px;
+            background: var(--phoenix-red);
+        }
+
+        .phoenix-hero .phoenix-hero__inner {
+            position: relative;
+            z-index: 3;
+            width: min(90%, 1280px);
+            margin-inline: auto;
+        }
+
+        .phoenix-hero .phoenix-hero__copy {
+            width: min(100%, 690px);
+        }
+
+        .phoenix-hero .phoenix-hero__eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin: 0 0 25px;
+            color: var(--phoenix-yellow);
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 2.6px;
+            line-height: 1.5;
+            text-transform: uppercase;
+        }
+
+        .phoenix-hero .phoenix-hero__eyebrow::before {
+            content: "";
+            display: block;
+            width: 36px;
+            height: 3px;
+            flex: 0 0 36px;
+            background: var(--phoenix-red);
+        }
+
+        .phoenix-hero .phoenix-hero__title {
+            max-width: 680px;
+            margin: 0 0 23px;
+            color: var(--phoenix-white);
+            font-size: clamp(52px, 6.4vw, 86px);
+            font-weight: 900;
+            letter-spacing: -3.5px;
+            line-height: .99;
+            text-wrap: balance;
+        }
+
+        .phoenix-hero .phoenix-hero__title span {
+            display: block;
+            color: var(--phoenix-yellow);
+        }
+
+        .phoenix-hero .phoenix-hero__description {
+            max-width: 570px;
+            margin: 0 0 34px;
+            color: rgba(255,255,255,.88);
+            font-size: 16px;
+            line-height: 1.85;
+        }
+
+        .phoenix-hero .phoenix-hero__actions {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .phoenix-hero .phoenix-hero__button {
+            min-height: 54px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 0 23px;
+            border: 2px solid transparent;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: .45px;
+            text-decoration: none;
+            transition: background-color .2s ease, color .2s ease,
+                        border-color .2s ease, transform .2s ease;
+        }
+
+        .phoenix-hero .phoenix-hero__button:focus-visible {
+            outline: 3px solid var(--phoenix-yellow);
+            outline-offset: 4px;
+        }
+
+        .phoenix-hero .phoenix-hero__button--primary {
+            background: var(--phoenix-red);
+            border-color: var(--phoenix-red);
+            color: var(--phoenix-white);
+        }
+
+        .phoenix-hero .phoenix-hero__button--primary:hover {
+            background: #a90d26;
+            border-color: #a90d26;
+            transform: translateY(-2px);
+        }
+
+        .phoenix-hero .phoenix-hero__button--secondary {
+            background: rgba(255,255,255,.07);
+            border-color: rgba(255,255,255,.75);
+            color: var(--phoenix-white);
+            backdrop-filter: blur(5px);
+        }
+
+        .phoenix-hero .phoenix-hero__button--secondary:hover {
+            background: var(--phoenix-white);
+            border-color: var(--phoenix-white);
+            color: var(--phoenix-black);
+            transform: translateY(-2px);
+        }
+
+        .phoenix-hero .phoenix-hero__button svg {
+            width: 17px;
+            height: 17px;
+            flex: 0 0 17px;
+        }
+
+        .phoenix-hero .phoenix-hero__bottom {
+            position: absolute;
+            z-index: 3;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            padding: 21px 0;
+            border-top: 1px solid rgba(255,255,255,.17);
+            background: rgba(10,10,10,.55);
+            backdrop-filter: blur(8px);
+        }
+
+        .phoenix-hero .phoenix-hero__bottom-inner {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 25px;
+            width: min(90%, 1280px);
+            margin-inline: auto;
+        }
+
+        .phoenix-hero .phoenix-hero__detail {
+            display: flex;
+            align-items: center;
+            min-width: 0;
+            gap: 12px;
+        }
+
+        .phoenix-hero .phoenix-hero__detail-icon {
+            display: grid;
+            width: 42px;
+            height: 42px;
+            flex: 0 0 42px;
+            place-items: center;
+            border-radius: 3px;
+            background: var(--phoenix-red);
+            color: var(--phoenix-white);
+        }
+
+        .phoenix-hero .phoenix-hero__detail-icon svg {
+            width: 19px;
+            height: 19px;
+        }
+
+        .phoenix-hero .phoenix-hero__detail-label {
+            display: block;
+            margin-bottom: 4px;
+            color: var(--phoenix-yellow);
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+        }
+
+        .phoenix-hero .phoenix-hero__detail-value,
+        .phoenix-hero a.phoenix-hero__detail-value {
+            display: block;
+            overflow-wrap: anywhere;
+            color: var(--phoenix-white);
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 1.4;
+            text-decoration: none;
+        }
+
+        .phoenix-hero a.phoenix-hero__detail-value:hover {
+            color: var(--phoenix-yellow);
+        }
+
+        @media (max-width: 900px) {
+            .phoenix-hero {
+                min-height: 760px;
+            }
+            .phoenix-hero__background {
+                object-position: 57% center;
+            }
+            .phoenix-hero .phoenix-hero__copy {
+                max-width: 620px;
+            }
+            .phoenix-hero .phoenix-hero__bottom-inner {
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .phoenix-hero {
+                min-height: 830px;
+                align-items: flex-start;
+                padding: 105px 0 245px;
+            }
+            .phoenix-hero::after {
+                background-image:
+                    linear-gradient(90deg, rgba(8,8,8,.91), rgba(8,8,8,.68)),
+                    linear-gradient(0deg, rgba(8,8,8,.82), transparent 45%);
+            }
+            .phoenix-hero__background {
+                object-position: 59% center;
+            }
+            .phoenix-hero .phoenix-hero__inner,
+            .phoenix-hero .phoenix-hero__bottom-inner {
+                width: min(90%, 520px);
+            }
+            .phoenix-hero .phoenix-hero__eyebrow {
+                margin-bottom: 20px;
+                font-size: 9px;
+                letter-spacing: 1.7px;
+            }
+            .phoenix-hero .phoenix-hero__title {
+                margin-bottom: 19px;
+                font-size: clamp(46px, 12vw, 61px);
+                letter-spacing: -2px;
+                line-height: 1.02;
+            }
+            .phoenix-hero .phoenix-hero__description {
+                margin-bottom: 25px;
+                font-size: 14px;
+                line-height: 1.75;
+            }
+            .phoenix-hero .phoenix-hero__actions {
+                align-items: stretch;
+                flex-direction: column;
+                max-width: 310px;
+            }
+            .phoenix-hero .phoenix-hero__button {
+                width: 100%;
+            }
+            .phoenix-hero .phoenix-hero__bottom {
+                padding: 15px 0;
+            }
+            .phoenix-hero .phoenix-hero__bottom-inner {
+                grid-template-columns: 1fr;
+                gap: 13px;
+            }
+            .phoenix-hero .phoenix-hero__detail-icon {
+                width: 37px;
+                height: 37px;
+                flex-basis: 37px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .phoenix-hero .phoenix-hero__button {
+                transition: none;
+            }
+        }
