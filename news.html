@@ -94,6 +94,64 @@
      <main id="main-content" class="section">
       <div class="container">
 
+        <!-- Upcoming Academic & Community Events Calendar -->
+        <section id="events-calendar" style="margin-bottom: 2.5rem;">
+          <div class="card" style="padding: 1.75rem; background: var(--bg-card, #FFFFFF); border: 1px solid var(--border-color, #E2E8F0); border-radius: var(--radius-lg, 12px); box-shadow: var(--shadow-sm, 0 1px 3px rgba(0,0,0,0.05));">
+
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem; border-bottom: 2px solid #F1F5F9; padding-bottom: 1rem;">
+              <div>
+                <h3 style="font-size: 1.3rem; color: var(--secondary-slate, #1E293B); font-weight: 700; margin: 0 0 0.25rem 0;">📅 Term 4 Upcoming Events &amp; Exam Schedule</h3>
+                <p style="font-size: 0.875rem; color: var(--text-muted, #64748B); margin: 0;">Key academic dates and community events for learners and parents.</p>
+              </div>
+              <span class="badge badge-red" style="padding: 0.4rem 0.8rem; font-size: 0.8rem;">Term 4 Planner</span>
+            </div>
+
+            <!-- Grid of Event Cards -->
+            <div class="grid-3" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem;">
+
+              <!-- Event 1: Exams -->
+              <div style="display: flex; gap: 1rem; align-items: center; padding: 1rem; background: #F8FAFC; border-radius: 8px; border: 1px solid #E2E8F0; border-left: 4px solid #8B0000;">
+                <div style="background: #1E293B; color: #FFFFFF; text-align: center; padding: 0.6rem; border-radius: 6px; min-width: 58px;">
+                  <span style="display: block; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; color: #F59E0B;">NOV</span>
+                  <span style="display: block; font-size: 1.3rem; font-weight: 800; line-height: 1;">28</span>
+                </div>
+                <div>
+                  <span class="badge badge-red" style="font-size: 0.7rem; margin-bottom: 0.25rem;">Exams</span>
+                  <h4 style="font-size: 0.95rem; font-weight: 700; color: #1E293B; margin: 0 0 0.25rem 0;">Grade 12 NSC Final Exams Conclude</h4>
+                  <p style="font-size: 0.8rem; color: #64748B; margin: 0;">08:00 AM • Main Assembly Hall</p>
+                </div>
+              </div>
+
+              <!-- Event 2: Ceremony -->
+              <div style="display: flex; gap: 1rem; align-items: center; padding: 1rem; background: #F8FAFC; border-radius: 8px; border: 1px solid #E2E8F0; border-left: 4px solid #D97706;">
+                <div style="background: #1E293B; color: #FFFFFF; text-align: center; padding: 0.6rem; border-radius: 6px; min-width: 58px;">
+                  <span style="display: block; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; color: #F59E0B;">DEC</span>
+                  <span style="display: block; font-size: 1.3rem; font-weight: 800; line-height: 1;">04</span>
+                </div>
+                <div>
+                  <span class="badge badge-gold" style="font-size: 0.7rem; margin-bottom: 0.25rem;">Ceremony</span>
+                  <h4 style="font-size: 0.95rem; font-weight: 700; color: #1E293B; margin: 0 0 0.25rem 0;">Annual Academic Awards Evening</h4>
+                  <p style="font-size: 0.8rem; color: #64748B; margin: 0;">18:00 PM • School Auditorium</p>
+                </div>
+              </div>
+
+              <!-- Event 3: Term Close -->
+              <div style="display: flex; gap: 1rem; align-items: center; padding: 1rem; background: #F8FAFC; border-radius: 8px; border: 1px solid #E2E8F0; border-left: 4px solid #2563EB;">
+                <div style="background: #1E293B; color: #FFFFFF; text-align: center; padding: 0.6rem; border-radius: 6px; min-width: 58px;">
+                  <span style="display: block; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; color: #F59E0B;">DEC</span>
+                  <span style="display: block; font-size: 1.3rem; font-weight: 800; line-height: 1;">09</span>
+                </div>
+                <div>
+                  <span class="badge" style="background: #DBEAFE; color: #1E40AF; font-size: 0.7rem; margin-bottom: 0.25rem;">Term Close</span>
+                  <h4 style="font-size: 0.95rem; font-weight: 700; color: #1E293B; margin: 0 0 0.25rem 0;">Term 4 Official School Close</h4>
+                  <p style="font-size: 0.8rem; color: #64748B; margin: 0;">11:00 AM • Learner Report Collection</p>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </section>
+
         <!-- Calendar Category Filter Controls -->
         <div class="filter-controls" style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2rem; justify-content: center;">
           <button class="btn btn-primary" data-calendar-filter="all">All Notices</button>
