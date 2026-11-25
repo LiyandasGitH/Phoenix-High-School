@@ -620,6 +620,25 @@
     font-size: 1rem;
 }
 
+.life-activity-photos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: 240px;
+    margin-top: 1.5rem;
+}
+
+.life-activity-photos .life-gallery-item {
+    grid-row: auto;
+}
+
+.life-activity-photos figcaption a {
+    align-self: flex-start;
+    margin-top: 0.25rem;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 0.72rem;
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+}
+
 .life-photo-note {
     margin: 1rem 0 0;
     color: var(--text-muted);
@@ -743,6 +762,10 @@
         grid-template-rows: 280px 190px;
     }
 
+    .life-activity-photos {
+        grid-template-rows: 220px;
+    }
+
     .life-gallery-courtyard {
         grid-column: span 2;
         grid-row: auto;
@@ -789,6 +812,11 @@
     .life-gallery {
         grid-template-columns: 1fr;
         grid-template-rows: 260px 220px 220px;
+    }
+
+    .life-activity-photos {
+        grid-template-columns: 1fr;
+        grid-template-rows: 220px 220px;
     }
 
     .life-gallery-courtyard {
