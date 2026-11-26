@@ -1704,6 +1704,30 @@ textarea:focus-visible {
     }
 }
 
+/* Sidebar Calendar Mobile Responsive Wrapper */
+@media (max-width: 480px) {
+    .sidebar-calendar-card {
+        padding: 0.75rem !important;
+    }
+
+    .calendar-iframe-wrapper {
+        position: relative;
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 8px;
+        border: 1px solid var(--border-color, #E2E8F0);
+    }
+
+    .calendar-iframe-wrapper iframe {
+        min-width: 320px;
+        width: 100%;
+        height: 380px;
+        display: block;
+    }
+}
+
 [hidden] {
    display: none !important; 
 }
